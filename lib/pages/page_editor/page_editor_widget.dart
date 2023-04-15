@@ -97,12 +97,6 @@ class _PageEditorWidgetState extends State<PageEditorWidget> {
               },
             ),
           ],
-          flexibleSpace: FlexibleSpaceBar(
-            background: Image.network(
-              '',
-              fit: BoxFit.cover,
-            ),
-          ),
           centerTitle: true,
           elevation: 0.0,
         ),
