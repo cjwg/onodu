@@ -184,42 +184,38 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 7.0),
+                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 15.0, 0.0, 0.0),
-                          child: FlutterFlowIconButton(
-                            borderColor: Colors.transparent,
-                            borderRadius: 30.0,
-                            borderWidth: 1.0,
-                            buttonSize: 40.0,
-                            icon: Icon(
-                              FFIcons.kinterfaceArrowsButtonLeft,
-                              color: FlutterFlowTheme.of(context).primaryText,
-                              size: 20.0,
-                            ),
-                            onPressed: () async {
-                              await _model.pageViewController?.previousPage(
-                                duration: Duration(milliseconds: 300),
-                                curve: Curves.ease,
-                              );
-                            },
+                        FlutterFlowIconButton(
+                          borderColor: Colors.transparent,
+                          borderRadius: 30.0,
+                          borderWidth: 1.0,
+                          buttonSize: 40.0,
+                          icon: Icon(
+                            FFIcons.kinterfaceArrowsButtonLeft,
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            size: 20.0,
                           ),
+                          onPressed: () async {
+                            await _model.pageViewController?.previousPage(
+                              duration: Duration(milliseconds: 300),
+                              curve: Curves.ease,
+                            );
+                          },
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 25.0, 0.0, 10.0),
+                              0.0, 25.0, 0.0, 25.0),
                           child: Text(
-                            'Palette',
+                            'Hello World',
                             style: FlutterFlowTheme.of(context)
-                                .titleMedium
+                                .bodyMedium
                                 .override(
                                   fontFamily: 'Poppins',
-                                  fontSize: 16.0,
+                                  fontSize: 18.0,
                                   fontWeight: FontWeight.w600,
                                 ),
                           ),
@@ -237,7 +233,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
-                            25.0, 8.0, 25.0, 0.0),
+                            25.0, 0.0, 25.0, 0.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
@@ -318,7 +314,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                       ),
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
-                            25.0, 0.0, 25.0, 8.0),
+                            25.0, 0.0, 25.0, 0.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(25.0),
