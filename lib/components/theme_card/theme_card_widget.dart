@@ -56,6 +56,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               width: 60.0,
@@ -63,7 +64,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
               child: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, -0.65),
                 child: widget.componentIcon!,
               ),
             ),
@@ -73,7 +74,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).primaryBackground,
                 ),
-                alignment: AlignmentDirectional(-1.0, 0.0),
+                alignment: AlignmentDirectional(-1.0, -0.65),
                 child: Text(
                   widget.componentName,
                   textAlign: TextAlign.start,
@@ -83,13 +84,17 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
             ),
             Container(
               width: 60.0,
+              height: MediaQuery.of(context).size.height * 1.0,
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
-              child: Icon(
-                Icons.chevron_right_rounded,
-                color: FlutterFlowTheme.of(context).primaryText,
-                size: 30.0,
+              child: Align(
+                alignment: AlignmentDirectional(0.0, -0.65),
+                child: Icon(
+                  Icons.chevron_right_rounded,
+                  color: FlutterFlowTheme.of(context).primaryText,
+                  size: 30.0,
+                ),
               ),
             ),
           ],
