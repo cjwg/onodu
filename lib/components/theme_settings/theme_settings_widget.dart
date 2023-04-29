@@ -237,7 +237,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
-                            25.0, 0.0, 25.0, 0.0),
+                            25.0, 8.0, 25.0, 0.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
