@@ -98,6 +98,10 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                         scrollDirection: Axis.vertical,
                         children: [
                           InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
                             onTap: () async {
                               await _model.pageViewController?.animateToPage(
                                 1,

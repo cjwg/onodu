@@ -76,6 +76,10 @@ class _TemplateWizardWidgetState extends State<TemplateWizardWidget> {
           scrollDirection: Axis.vertical,
           children: [
             InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () async {
                 context.pushNamed('ThemeWizard');
               },
@@ -89,6 +93,10 @@ class _TemplateWizardWidgetState extends State<TemplateWizardWidget> {
               ),
             ),
             InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () async {
                 context.pushNamed('ThemeWizard');
               },
@@ -102,6 +110,10 @@ class _TemplateWizardWidgetState extends State<TemplateWizardWidget> {
               ),
             ),
             InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () async {
                 context.pushNamed('ThemeWizard');
               },

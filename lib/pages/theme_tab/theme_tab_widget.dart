@@ -61,6 +61,10 @@ class _ThemeTabWidgetState extends State<ThemeTabWidget> {
           scrollDirection: Axis.vertical,
           children: [
             InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () async {
                 context.pushNamed('PageEditor');
               },
@@ -74,6 +78,10 @@ class _ThemeTabWidgetState extends State<ThemeTabWidget> {
               ),
             ),
             InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () async {
                 context.pushNamed('PageEditor');
               },
@@ -87,6 +95,10 @@ class _ThemeTabWidgetState extends State<ThemeTabWidget> {
               ),
             ),
             InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () async {
                 context.pushNamed('PageEditor');
               },

@@ -61,6 +61,10 @@ class _AnalyticsTabWidgetState extends State<AnalyticsTabWidget> {
           scrollDirection: Axis.vertical,
           children: [
             InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () async {
                 context.pushNamed('PageEditor');
               },
@@ -74,6 +78,10 @@ class _AnalyticsTabWidgetState extends State<AnalyticsTabWidget> {
               ),
             ),
             InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () async {
                 context.pushNamed('PageEditor');
               },
@@ -87,6 +95,10 @@ class _AnalyticsTabWidgetState extends State<AnalyticsTabWidget> {
               ),
             ),
             InkWell(
+              splashColor: Colors.transparent,
+              focusColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
               onTap: () async {
                 context.pushNamed('PageEditor');
               },
