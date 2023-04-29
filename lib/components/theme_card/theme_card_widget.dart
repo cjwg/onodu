@@ -45,55 +45,58 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width * 1.0,
-      height: 60.0,
-      decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).primaryBackground,
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            width: 60.0,
-            height: 60.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primaryBackground,
-            ),
-            child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
-              child: widget.componentIcon!,
-            ),
-          ),
-          Expanded(
-            child: Container(
-              width: 100.0,
-              height: MediaQuery.of(context).size.height * 1.0,
+    return Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+      child: Container(
+        width: MediaQuery.of(context).size.width * 1.0,
+        height: 80.0,
+        decoration: BoxDecoration(
+          color: FlutterFlowTheme.of(context).primaryBackground,
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              width: 60.0,
+              height: 60.0,
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
-              alignment: AlignmentDirectional(-1.0, 0.0),
-              child: Text(
-                widget.componentName,
-                textAlign: TextAlign.start,
-                style: FlutterFlowTheme.of(context).bodyMedium,
+              child: Align(
+                alignment: AlignmentDirectional(0.0, 0.0),
+                child: widget.componentIcon!,
               ),
             ),
-          ),
-          Container(
-            width: 60.0,
-            height: 60.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primaryBackground,
+            Expanded(
+              child: Container(
+                width: 100.0,
+                height: MediaQuery.of(context).size.height * 1.0,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).primaryBackground,
+                ),
+                alignment: AlignmentDirectional(-1.0, 0.0),
+                child: Text(
+                  widget.componentName,
+                  textAlign: TextAlign.start,
+                  style: FlutterFlowTheme.of(context).bodyMedium,
+                ),
+              ),
             ),
-            child: Icon(
-              Icons.chevron_right_rounded,
-              color: FlutterFlowTheme.of(context).primaryText,
-              size: 30.0,
+            Container(
+              width: 60.0,
+              height: 60.0,
+              decoration: BoxDecoration(
+                color: FlutterFlowTheme.of(context).primaryBackground,
+              ),
+              child: Icon(
+                Icons.chevron_right_rounded,
+                color: FlutterFlowTheme.of(context).primaryText,
+                size: 30.0,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

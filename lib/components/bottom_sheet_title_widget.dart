@@ -43,24 +43,24 @@ class _BottomSheetTitleWidgetState extends State<BottomSheetTitleWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(30.0, 25.0, 30.0, 10.0),
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Expanded(
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Expanded(
+          child: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 25.0),
             child: Text(
               widget.text,
-              style: FlutterFlowTheme.of(context).titleMedium.override(
+              textAlign: TextAlign.center,
+              style: FlutterFlowTheme.of(context).displaySmall.override(
                     fontFamily: 'Poppins',
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 21.0,
                   ),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
