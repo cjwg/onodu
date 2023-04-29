@@ -215,7 +215,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Poppins',
-                                  fontSize: 18.0,
+                                  fontSize: 20.0,
                                   fontWeight: FontWeight.bold,
                                 ),
                           ),
