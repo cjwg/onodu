@@ -46,7 +46,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+      padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 1.0,
         height: 80.0,
