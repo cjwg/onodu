@@ -59,7 +59,6 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
           children: [
             Container(
               width: 60.0,
-              height: 60.0,
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
@@ -71,7 +70,6 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
             Expanded(
               child: Container(
                 width: 100.0,
-                height: MediaQuery.of(context).size.height * 1.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).primaryBackground,
                 ),
@@ -85,7 +83,6 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
             ),
             Container(
               width: 60.0,
-              height: 60.0,
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
