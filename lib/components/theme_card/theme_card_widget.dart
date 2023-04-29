@@ -74,11 +74,13 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).primaryBackground,
                 ),
-                alignment: AlignmentDirectional(-1.0, -0.65),
+                alignment: AlignmentDirectional(-1.0, -0.6),
                 child: Text(
                   widget.componentName,
-                  textAlign: TextAlign.start,
-                  style: FlutterFlowTheme.of(context).bodyMedium,
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Poppins',
+                        fontWeight: FontWeight.w500,
+                      ),
                 ),
               ),
             ),
