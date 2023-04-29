@@ -210,13 +210,13 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 25.0, 0.0, 25.0),
                           child: Text(
-                            'Hello World',
+                            'Palette',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Poppins',
                                   fontSize: 18.0,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.bold,
                                 ),
                           ),
                         ),
