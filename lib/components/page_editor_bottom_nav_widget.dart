@@ -69,7 +69,7 @@ class _PageEditorBottomNavWidgetState extends State<PageEditorBottomNavWidget> {
                     return Padding(
                       padding: MediaQuery.of(bottomSheetContext).viewInsets,
                       child: Container(
-                        height: 700.0,
+                        height: 600.0,
                         child: ThemeSettingsWidget(),
                       ),
                     );
