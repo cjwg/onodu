@@ -13,21 +13,10 @@ class PaletteItemWidget extends StatefulWidget {
     Key? key,
     this.backgroundColor,
     this.colorPicker,
-    int? borderTopRightRadius,
-    int? borderBottomRightRadius,
-    int? borderBottomLeftRadius,
-    required this.borderTopLeftRadius,
-  })  : this.borderTopRightRadius = borderTopRightRadius ?? 0,
-        this.borderBottomRightRadius = borderBottomRightRadius ?? 0,
-        this.borderBottomLeftRadius = borderBottomLeftRadius ?? 0,
-        super(key: key);
+  }) : super(key: key);
 
   final Color? backgroundColor;
   final Future<dynamic> Function()? colorPicker;
-  final int borderTopRightRadius;
-  final int borderBottomRightRadius;
-  final int borderBottomLeftRadius;
-  final int? borderTopLeftRadius;
 
   @override
   _PaletteItemWidgetState createState() => _PaletteItemWidgetState();
