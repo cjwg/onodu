@@ -212,11 +212,9 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                           child: Text(
                             'Palette',
                             style: FlutterFlowTheme.of(context)
-                                .bodyMedium
+                                .displaySmall
                                 .override(
                                   fontFamily: 'Poppins',
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold,
                                 ),
                           ),
                         ),
