@@ -13,10 +13,21 @@ class PaletteItemWidget extends StatefulWidget {
     Key? key,
     this.backgroundColor,
     this.colorPicker,
-  }) : super(key: key);
+    int? borderTopRightRadius,
+    int? borderBottomRightRadius,
+    int? borderBottomLeftRadius,
+    required this.borderTopLeftRadius,
+  })  : this.borderTopRightRadius = borderTopRightRadius ?? 0,
+        this.borderBottomRightRadius = borderBottomRightRadius ?? 0,
+        this.borderBottomLeftRadius = borderBottomLeftRadius ?? 0,
+        super(key: key);
 
   final Color? backgroundColor;
   final Future<dynamic> Function()? colorPicker;
+  final int borderTopRightRadius;
+  final int borderBottomRightRadius;
+  final int borderBottomLeftRadius;
+  final int? borderTopLeftRadius;
 
   @override
   _PaletteItemWidgetState createState() => _PaletteItemWidgetState();
@@ -48,10 +59,9 @@ class _PaletteItemWidgetState extends State<PaletteItemWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 1.0,
-      height: 50.0,
+      height: 80.0,
       decoration: BoxDecoration(
         color: widget.backgroundColor,
-        borderRadius: BorderRadius.circular(0.0),
       ),
       child: Padding(
         padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
