@@ -1,3 +1,4 @@
+import '/components/edit_theme_palette_actions_widget.dart';
 import '/components/page_editor_bottom_nav_widget.dart';
 import '/components/section_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -117,6 +118,11 @@ class _PageEditorWidgetState extends State<PageEditorWidget> {
                 model: _model.pageEditorBottomNavModel,
                 updateCallback: () => setState(() {}),
                 child: PageEditorBottomNavWidget(),
+              ),
+              wrapWithModel(
+                model: _model.editThemePaletteActionsModel,
+                updateCallback: () => setState(() {}),
+                child: EditThemePaletteActionsWidget(),
               ),
             ],
           ),

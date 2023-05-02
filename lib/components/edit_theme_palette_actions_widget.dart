@@ -5,18 +5,20 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'edit_theme_actions_model.dart';
-export 'edit_theme_actions_model.dart';
+import 'edit_theme_palette_actions_model.dart';
+export 'edit_theme_palette_actions_model.dart';
 
-class EditThemeActionsWidget extends StatefulWidget {
-  const EditThemeActionsWidget({Key? key}) : super(key: key);
+class EditThemePaletteActionsWidget extends StatefulWidget {
+  const EditThemePaletteActionsWidget({Key? key}) : super(key: key);
 
   @override
-  _EditThemeActionsWidgetState createState() => _EditThemeActionsWidgetState();
+  _EditThemePaletteActionsWidgetState createState() =>
+      _EditThemePaletteActionsWidgetState();
 }
 
-class _EditThemeActionsWidgetState extends State<EditThemeActionsWidget> {
-  late EditThemeActionsModel _model;
+class _EditThemePaletteActionsWidgetState
+    extends State<EditThemePaletteActionsWidget> {
+  late EditThemePaletteActionsModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -27,7 +29,7 @@ class _EditThemeActionsWidgetState extends State<EditThemeActionsWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => EditThemeActionsModel());
+    _model = createModel(context, () => EditThemePaletteActionsModel());
   }
 
   @override
@@ -68,10 +70,10 @@ class _EditThemeActionsWidgetState extends State<EditThemeActionsWidget> {
               updateCallback: () => setState(() {}),
               child: ActionButtonWidget(
                 icon: Icon(
-                  Icons.save_alt,
-                  size: 30.0,
+                  Icons.auto_awesome,
+                  size: 25.0,
                 ),
-                title: 'Save',
+                title: 'Generate',
                 action: () async {},
               ),
             ),

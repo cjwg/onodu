@@ -1,6 +1,6 @@
 import '/components/bottom_sheet_title_widget.dart';
 import '/components/edit_theme_actions_widget.dart';
-import '/components/palette_editor_bottom_nav_widget.dart';
+import '/components/edit_theme_palette_actions_widget.dart';
 import '/components/palette_item_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -48,8 +48,8 @@ class ThemeSettingsModel extends FlutterFlowModel {
   late PaletteItemModel paletteItemModel4;
   // Model for PaletteItem component.
   late PaletteItemModel paletteItemModel5;
-  // Model for PaletteEditorBottomNav component.
-  late PaletteEditorBottomNavModel paletteEditorBottomNavModel;
+  // Model for EditThemePaletteActions component.
+  late EditThemePaletteActionsModel editThemePaletteActionsModel;
 
   /// Initialization and disposal methods.
 
@@ -68,8 +68,8 @@ class ThemeSettingsModel extends FlutterFlowModel {
     paletteItemModel3 = createModel(context, () => PaletteItemModel());
     paletteItemModel4 = createModel(context, () => PaletteItemModel());
     paletteItemModel5 = createModel(context, () => PaletteItemModel());
-    paletteEditorBottomNavModel =
-        createModel(context, () => PaletteEditorBottomNavModel());
+    editThemePaletteActionsModel =
+        createModel(context, () => EditThemePaletteActionsModel());
   }
 
   void dispose() {
@@ -87,7 +87,7 @@ class ThemeSettingsModel extends FlutterFlowModel {
     paletteItemModel3.dispose();
     paletteItemModel4.dispose();
     paletteItemModel5.dispose();
-    paletteEditorBottomNavModel.dispose();
+    editThemePaletteActionsModel.dispose();
   }
 
   /// Additional helper methods are added here.

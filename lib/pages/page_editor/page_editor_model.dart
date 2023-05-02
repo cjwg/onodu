@@ -1,3 +1,4 @@
+import '/components/edit_theme_palette_actions_widget.dart';
 import '/components/page_editor_bottom_nav_widget.dart';
 import '/components/section_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -14,6 +15,8 @@ class PageEditorModel extends FlutterFlowModel {
   late SectionModel sectionModel;
   // Model for PageEditorBottomNav component.
   late PageEditorBottomNavModel pageEditorBottomNavModel;
+  // Model for EditThemePaletteActions component.
+  late EditThemePaletteActionsModel editThemePaletteActionsModel;
 
   /// Initialization and disposal methods.
 
@@ -21,11 +24,14 @@ class PageEditorModel extends FlutterFlowModel {
     sectionModel = createModel(context, () => SectionModel());
     pageEditorBottomNavModel =
         createModel(context, () => PageEditorBottomNavModel());
+    editThemePaletteActionsModel =
+        createModel(context, () => EditThemePaletteActionsModel());
   }
 
   void dispose() {
     sectionModel.dispose();
     pageEditorBottomNavModel.dispose();
+    editThemePaletteActionsModel.dispose();
   }
 
   /// Additional helper methods are added here.
