@@ -112,11 +112,13 @@ class _PageEditorWidgetState extends State<PageEditorWidget> {
                   child: SectionWidget(),
                 ),
               ),
-              Container(
-                width: 100.0,
-                height: 100.0,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).primaryBackground,
+              Expanded(
+                child: Container(
+                  width: 100.0,
+                  height: 100.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).primaryBackground,
+                  ),
                 ),
               ),
               wrapWithModel(
