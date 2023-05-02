@@ -65,7 +65,7 @@ class _PaletteItemWidgetState extends State<PaletteItemWidget> {
               icon: Icon(
                 Icons.lock_outlined,
                 color: FlutterFlowTheme.of(context).primaryBackground,
-                size: 14.0,
+                size: 20.0,
               ),
               onPressed: () {
                 print('IconButton pressed ...');
@@ -79,7 +79,7 @@ class _PaletteItemWidgetState extends State<PaletteItemWidget> {
               icon: Icon(
                 Icons.view_carousel_sharp,
                 color: FlutterFlowTheme.of(context).primaryBackground,
-                size: 14.0,
+                size: 20.0,
               ),
               onPressed: () {
                 print('IconButton pressed ...');
@@ -93,7 +93,7 @@ class _PaletteItemWidgetState extends State<PaletteItemWidget> {
               icon: FaIcon(
                 FontAwesomeIcons.eyeDropper,
                 color: FlutterFlowTheme.of(context).primaryBackground,
-                size: 12.0,
+                size: 20.0,
               ),
               onPressed: () async {
                 await widget.colorPicker?.call();
