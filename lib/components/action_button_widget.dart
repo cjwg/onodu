@@ -63,7 +63,7 @@ class _ActionButtonWidgetState extends State<ActionButtonWidget> {
               borderColor: Colors.transparent,
               borderRadius: 30.0,
               borderWidth: 1.0,
-              buttonSize: 50.0,
+              buttonSize: 45.0,
               icon: widget.icon!,
               onPressed: () async {
                 await widget.action?.call();
