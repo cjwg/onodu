@@ -2,6 +2,7 @@ import '/components/action_button_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'edit_theme_actions_model.dart';
@@ -53,6 +54,10 @@ class _EditThemeActionsWidgetState extends State<EditThemeActionsWidget> {
               model: _model.actionButtonModel1,
               updateCallback: () => setState(() {}),
               child: ActionButtonWidget(
+                icon: FaIcon(
+                  FontAwesomeIcons.undoAlt,
+                ),
+                title: 'Undo',
                 action: () async {},
               ),
             ),
@@ -62,6 +67,10 @@ class _EditThemeActionsWidgetState extends State<EditThemeActionsWidget> {
               model: _model.actionButtonModel2,
               updateCallback: () => setState(() {}),
               child: ActionButtonWidget(
+                icon: FaIcon(
+                  FontAwesomeIcons.redoAlt,
+                ),
+                title: 'Redo',
                 action: () async {},
               ),
             ),
@@ -71,17 +80,10 @@ class _EditThemeActionsWidgetState extends State<EditThemeActionsWidget> {
               model: _model.actionButtonModel3,
               updateCallback: () => setState(() {}),
               child: ActionButtonWidget(
+                icon: Icon(
+                  Icons.save_alt,
+                ),
                 title: 'Save',
-                action: () async {},
-              ),
-            ),
-          ),
-          Expanded(
-            child: wrapWithModel(
-              model: _model.actionButtonModel4,
-              updateCallback: () => setState(() {}),
-              child: ActionButtonWidget(
-                title: 'Duplicate',
                 action: () async {},
               ),
             ),
