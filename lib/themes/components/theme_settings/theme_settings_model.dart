@@ -1,10 +1,11 @@
 import '/components/bottom_sheet_title_widget.dart';
+import '/components/edit_theme_actions_widget.dart';
 import '/components/palette_editor_bottom_nav_widget.dart';
 import '/components/palette_item_widget.dart';
-import '/components/theme_card/theme_card_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/themes/components/theme_card/theme_card_widget.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,6 +22,8 @@ class ThemeSettingsModel extends FlutterFlowModel {
   PageController? pageViewController;
   // Model for BottomSheetTitle component.
   late BottomSheetTitleModel bottomSheetTitleModel;
+  // Model for ThemeBrowser.
+  late ThemeCardModel themeBrowserModel;
   // Model for Palette.
   late ThemeCardModel paletteModel;
   // Model for Typography.
@@ -33,8 +36,8 @@ class ThemeSettingsModel extends FlutterFlowModel {
   late ThemeCardModel layoutModel;
   // Model for Animation.
   late ThemeCardModel animationModel;
-  // Model for ThemeBrowser.
-  late ThemeCardModel themeBrowserModel;
+  // Model for EditThemeActions component.
+  late EditThemeActionsModel editThemeActionsModel;
   // Model for PaletteItem component.
   late PaletteItemModel paletteItemModel1;
   // Model for PaletteItem component.
@@ -52,13 +55,14 @@ class ThemeSettingsModel extends FlutterFlowModel {
 
   void initState(BuildContext context) {
     bottomSheetTitleModel = createModel(context, () => BottomSheetTitleModel());
+    themeBrowserModel = createModel(context, () => ThemeCardModel());
     paletteModel = createModel(context, () => ThemeCardModel());
     typographyModel = createModel(context, () => ThemeCardModel());
     imagesModel = createModel(context, () => ThemeCardModel());
     buttonsModel = createModel(context, () => ThemeCardModel());
     layoutModel = createModel(context, () => ThemeCardModel());
     animationModel = createModel(context, () => ThemeCardModel());
-    themeBrowserModel = createModel(context, () => ThemeCardModel());
+    editThemeActionsModel = createModel(context, () => EditThemeActionsModel());
     paletteItemModel1 = createModel(context, () => PaletteItemModel());
     paletteItemModel2 = createModel(context, () => PaletteItemModel());
     paletteItemModel3 = createModel(context, () => PaletteItemModel());
@@ -70,13 +74,14 @@ class ThemeSettingsModel extends FlutterFlowModel {
 
   void dispose() {
     bottomSheetTitleModel.dispose();
+    themeBrowserModel.dispose();
     paletteModel.dispose();
     typographyModel.dispose();
     imagesModel.dispose();
     buttonsModel.dispose();
     layoutModel.dispose();
     animationModel.dispose();
-    themeBrowserModel.dispose();
+    editThemeActionsModel.dispose();
     paletteItemModel1.dispose();
     paletteItemModel2.dispose();
     paletteItemModel3.dispose();

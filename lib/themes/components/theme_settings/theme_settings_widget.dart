@@ -1,10 +1,11 @@
 import '/components/bottom_sheet_title_widget.dart';
+import '/components/edit_theme_actions_widget.dart';
 import '/components/palette_editor_bottom_nav_widget.dart';
 import '/components/palette_item_widget.dart';
-import '/components/theme_card/theme_card_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/themes/components/theme_card/theme_card_widget.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -76,13 +77,16 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                 PageController(initialPage: 0),
             scrollDirection: Axis.horizontal,
             children: [
-              Stack(
+              Column(
+                mainAxisSize: MainAxisSize.max,
                 children: [
-                  wrapWithModel(
-                    model: _model.bottomSheetTitleModel,
-                    updateCallback: () => setState(() {}),
-                    child: BottomSheetTitleWidget(
-                      text: 'Edit theme',
+                  Expanded(
+                    child: wrapWithModel(
+                      model: _model.bottomSheetTitleModel,
+                      updateCallback: () => setState(() {}),
+                      child: BottomSheetTitleWidget(
+                        text: 'Edit theme',
+                      ),
                     ),
                   ),
                   Align(
@@ -92,6 +96,16 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
                       children: [
+                        wrapWithModel(
+                          model: _model.themeBrowserModel,
+                          updateCallback: () => setState(() {}),
+                          child: ThemeCardWidget(
+                            componentIcon: Icon(
+                              Icons.apps,
+                            ),
+                            componentName: 'Browse themes',
+                          ),
+                        ),
                         InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -170,18 +184,13 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                             componentName: 'Animation',
                           ),
                         ),
-                        wrapWithModel(
-                          model: _model.themeBrowserModel,
-                          updateCallback: () => setState(() {}),
-                          child: ThemeCardWidget(
-                            componentIcon: Icon(
-                              Icons.apps,
-                            ),
-                            componentName: 'Browse themes',
-                          ),
-                        ),
                       ],
                     ),
+                  ),
+                  wrapWithModel(
+                    model: _model.editThemeActionsModel,
+                    updateCallback: () => setState(() {}),
+                    child: EditThemeActionsWidget(),
                   ),
                 ],
               ),

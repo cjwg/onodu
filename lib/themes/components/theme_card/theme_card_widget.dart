@@ -69,7 +69,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, -1.0),
                       child: widget.componentIcon!,
                     ),
                   ),
@@ -80,13 +80,17 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
                         color: FlutterFlowTheme.of(context).primaryBackground,
                       ),
                       alignment: AlignmentDirectional(-1.0, 0.0),
-                      child: Text(
-                        widget.componentName,
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Nunito',
-                              fontSize: 17.0,
-                              fontWeight: FontWeight.w500,
-                            ),
+                      child: Align(
+                        alignment: AlignmentDirectional(-1.0, -1.0),
+                        child: Text(
+                          widget.componentName,
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Nunito',
+                                    fontSize: 17.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                        ),
                       ),
                     ),
                   ),
@@ -97,7 +101,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, -1.0),
                       child: Icon(
                         Icons.chevron_right_rounded,
                         color: FlutterFlowTheme.of(context).primaryText,
