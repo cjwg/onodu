@@ -39,56 +39,56 @@ class _EditThemeActionsWidgetState extends State<EditThemeActionsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width * 1.0,
-      height: 80.0,
-      decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).primaryBackground,
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Expanded(
-            child: wrapWithModel(
+    return Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+      child: Container(
+        width: MediaQuery.of(context).size.width * 1.0,
+        height: 80.0,
+        decoration: BoxDecoration(
+          color: FlutterFlowTheme.of(context).primaryBackground,
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            wrapWithModel(
               model: _model.actionButtonModel1,
               updateCallback: () => setState(() {}),
               child: ActionButtonWidget(
                 icon: FaIcon(
                   FontAwesomeIcons.undoAlt,
+                  size: 25.0,
                 ),
                 title: 'Undo',
                 action: () async {},
               ),
             ),
-          ),
-          Expanded(
-            child: wrapWithModel(
+            wrapWithModel(
               model: _model.actionButtonModel2,
               updateCallback: () => setState(() {}),
               child: ActionButtonWidget(
                 icon: FaIcon(
                   FontAwesomeIcons.redoAlt,
+                  size: 25.0,
                 ),
                 title: 'Redo',
                 action: () async {},
               ),
             ),
-          ),
-          Expanded(
-            child: wrapWithModel(
+            wrapWithModel(
               model: _model.actionButtonModel3,
               updateCallback: () => setState(() {}),
               child: ActionButtonWidget(
                 icon: Icon(
                   Icons.save_alt,
+                  size: 30.0,
                 ),
                 title: 'Save',
                 action: () async {},
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

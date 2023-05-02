@@ -49,68 +49,63 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
       padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 1.0,
-        height: 65.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).primaryBackground,
         ),
         child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Expanded(
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    width: 60.0,
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 60.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).primaryBackground,
+                  ),
+                  child: Align(
+                    alignment: AlignmentDirectional(0.0, -1.0),
+                    child: widget.componentIcon!,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    width: 100.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
                     ),
+                    alignment: AlignmentDirectional(-1.0, 0.0),
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
-                      child: widget.componentIcon!,
-                    ),
-                  ),
-                  Expanded(
-                    child: Container(
-                      width: 100.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).primaryBackground,
-                      ),
-                      alignment: AlignmentDirectional(-1.0, 0.0),
-                      child: Align(
-                        alignment: AlignmentDirectional(-1.0, -1.0),
-                        child: Text(
-                          widget.componentName,
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Nunito',
-                                    fontSize: 17.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                        ),
+                      alignment: AlignmentDirectional(-1.0, -1.0),
+                      child: Text(
+                        widget.componentName,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Nunito',
+                              fontSize: 17.0,
+                              fontWeight: FontWeight.w500,
+                            ),
                       ),
                     ),
                   ),
-                  Container(
-                    width: 60.0,
-                    height: MediaQuery.of(context).size.height * 1.0,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                    ),
-                    child: Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
-                      child: Icon(
-                        Icons.chevron_right_rounded,
-                        color: FlutterFlowTheme.of(context).primaryText,
-                        size: 30.0,
-                      ),
+                ),
+                Container(
+                  width: 60.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).primaryBackground,
+                  ),
+                  child: Align(
+                    alignment: AlignmentDirectional(0.0, -1.0),
+                    child: Icon(
+                      Icons.chevron_right_rounded,
+                      color: FlutterFlowTheme.of(context).primaryText,
+                      size: 30.0,
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),
