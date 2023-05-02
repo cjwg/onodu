@@ -40,7 +40,7 @@ class _EditThemeActionsWidgetState extends State<EditThemeActionsWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 1.0,
         height: 80.0,
