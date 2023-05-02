@@ -49,7 +49,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
       padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 1.0,
-        height: 70.0,
+        height: 65.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).primaryBackground,
         ),
@@ -107,12 +107,6 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
                   ),
                 ],
               ),
-            ),
-            Divider(
-              thickness: 1.0,
-              indent: 20.0,
-              endIndent: 20.0,
-              color: FlutterFlowTheme.of(context).accent3,
             ),
           ],
         ),
