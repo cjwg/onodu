@@ -76,9 +76,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                 PageController(initialPage: 0),
             scrollDirection: Axis.horizontal,
             children: [
-              Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+              Stack(
                 children: [
                   wrapWithModel(
                     model: _model.bottomSheetTitleModel,
@@ -87,80 +85,83 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                       text: 'Edit theme',
                     ),
                   ),
-                  ListView(
-                    padding: EdgeInsets.zero,
-                    shrinkWrap: true,
-                    scrollDirection: Axis.vertical,
-                    children: [
-                      InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          await _model.pageViewController?.animateToPage(
-                            1,
-                            duration: Duration(milliseconds: 500),
-                            curve: Curves.ease,
-                          );
-                        },
-                        child: wrapWithModel(
-                          model: _model.paletteModel,
+                  Align(
+                    alignment: AlignmentDirectional(0.0, -0.25),
+                    child: ListView(
+                      padding: EdgeInsets.zero,
+                      shrinkWrap: true,
+                      scrollDirection: Axis.vertical,
+                      children: [
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            await _model.pageViewController?.animateToPage(
+                              1,
+                              duration: Duration(milliseconds: 500),
+                              curve: Curves.ease,
+                            );
+                          },
+                          child: wrapWithModel(
+                            model: _model.paletteModel,
+                            updateCallback: () => setState(() {}),
+                            child: ThemeCardWidget(
+                              componentIcon: Icon(
+                                Icons.palette_rounded,
+                                size: 28.0,
+                              ),
+                              componentName: 'Palette',
+                            ),
+                          ),
+                        ),
+                        wrapWithModel(
+                          model: _model.typographyModel,
                           updateCallback: () => setState(() {}),
                           child: ThemeCardWidget(
                             componentIcon: Icon(
-                              Icons.palette_rounded,
+                              FFIcons.kinterfaceTextFormattingSmallCaps,
                               size: 28.0,
                             ),
-                            componentName: 'Palette',
+                            componentName: 'Typography',
                           ),
                         ),
-                      ),
-                      wrapWithModel(
-                        model: _model.typographyModel,
-                        updateCallback: () => setState(() {}),
-                        child: ThemeCardWidget(
-                          componentIcon: Icon(
-                            FFIcons.kinterfaceTextFormattingSmallCaps,
-                            size: 28.0,
+                        wrapWithModel(
+                          model: _model.imagesModel,
+                          updateCallback: () => setState(() {}),
+                          child: ThemeCardWidget(
+                            componentIcon: Icon(
+                              FFIcons.kimagePictureOrientationSquare,
+                              size: 25.0,
+                            ),
+                            componentName: 'Images',
                           ),
-                          componentName: 'Typography',
                         ),
-                      ),
-                      wrapWithModel(
-                        model: _model.imagesModel,
-                        updateCallback: () => setState(() {}),
-                        child: ThemeCardWidget(
-                          componentIcon: Icon(
-                            FFIcons.kimagePictureOrientationSquare,
-                            size: 25.0,
+                        wrapWithModel(
+                          model: _model.buttonsModel,
+                          updateCallback: () => setState(() {}),
+                          child: ThemeCardWidget(
+                            componentIcon: Icon(
+                              FFIcons.kinterfaceTextFormattingTextSquare1,
+                              size: 25.0,
+                            ),
+                            componentName: 'Elements',
                           ),
-                          componentName: 'Images',
                         ),
-                      ),
-                      wrapWithModel(
-                        model: _model.buttonsModel,
-                        updateCallback: () => setState(() {}),
-                        child: ThemeCardWidget(
-                          componentIcon: Icon(
-                            FFIcons.kinterfaceTextFormattingTextSquare1,
-                            size: 25.0,
+                        wrapWithModel(
+                          model: _model.paddingModel,
+                          updateCallback: () => setState(() {}),
+                          child: ThemeCardWidget(
+                            componentIcon: Icon(
+                              FFIcons.kinterfaceEditAlignSelection1,
+                              size: 25.0,
+                            ),
+                            componentName: 'Layout',
                           ),
-                          componentName: 'Elements',
                         ),
-                      ),
-                      wrapWithModel(
-                        model: _model.paddingModel,
-                        updateCallback: () => setState(() {}),
-                        child: ThemeCardWidget(
-                          componentIcon: Icon(
-                            FFIcons.kinterfaceEditAlignSelection1,
-                            size: 25.0,
-                          ),
-                          componentName: 'Layout',
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),

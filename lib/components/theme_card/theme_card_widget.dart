@@ -53,52 +53,66 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).primaryBackground,
         ),
-        child: Row(
+        child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              width: 60.0,
-              decoration: BoxDecoration(
-                color: FlutterFlowTheme.of(context).primaryBackground,
-              ),
-              child: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
-                child: widget.componentIcon!,
-              ),
-            ),
             Expanded(
-              child: Container(
-                width: 100.0,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).primaryBackground,
-                ),
-                alignment: AlignmentDirectional(-1.0, 0.0),
-                child: Text(
-                  widget.componentName,
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Nunito',
-                        fontSize: 17.0,
-                        fontWeight: FontWeight.w500,
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: 60.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primaryBackground,
+                    ),
+                    child: Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: widget.componentIcon!,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      width: 100.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).primaryBackground,
                       ),
-                ),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      child: Text(
+                        widget.componentName,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Nunito',
+                              fontSize: 17.0,
+                              fontWeight: FontWeight.w500,
+                            ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 60.0,
+                    height: MediaQuery.of(context).size.height * 1.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).primaryBackground,
+                    ),
+                    child: Align(
+                      alignment: AlignmentDirectional(0.0, 0.0),
+                      child: Icon(
+                        Icons.chevron_right_rounded,
+                        color: FlutterFlowTheme.of(context).primaryText,
+                        size: 30.0,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-            Container(
-              width: 60.0,
-              height: MediaQuery.of(context).size.height * 1.0,
-              decoration: BoxDecoration(
-                color: FlutterFlowTheme.of(context).primaryBackground,
-              ),
-              child: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
-                child: Icon(
-                  Icons.chevron_right_rounded,
-                  color: FlutterFlowTheme.of(context).primaryText,
-                  size: 30.0,
-                ),
-              ),
+            Divider(
+              thickness: 1.0,
+              indent: 20.0,
+              endIndent: 20.0,
+              color: FlutterFlowTheme.of(context).accent3,
             ),
           ],
         ),
