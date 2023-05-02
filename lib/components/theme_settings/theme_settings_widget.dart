@@ -150,7 +150,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                           ),
                         ),
                         wrapWithModel(
-                          model: _model.paddingModel,
+                          model: _model.layoutModel,
                           updateCallback: () => setState(() {}),
                           child: ThemeCardWidget(
                             componentIcon: Icon(
@@ -158,6 +158,26 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                               size: 25.0,
                             ),
                             componentName: 'Layout',
+                          ),
+                        ),
+                        wrapWithModel(
+                          model: _model.animationModel,
+                          updateCallback: () => setState(() {}),
+                          child: ThemeCardWidget(
+                            componentIcon: Icon(
+                              Icons.animation,
+                            ),
+                            componentName: 'Animation',
+                          ),
+                        ),
+                        wrapWithModel(
+                          model: _model.themeBrowserModel,
+                          updateCallback: () => setState(() {}),
+                          child: ThemeCardWidget(
+                            componentIcon: Icon(
+                              Icons.apps,
+                            ),
+                            componentName: 'Browse themes',
                           ),
                         ),
                       ],

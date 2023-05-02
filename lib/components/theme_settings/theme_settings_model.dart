@@ -29,8 +29,12 @@ class ThemeSettingsModel extends FlutterFlowModel {
   late ThemeCardModel imagesModel;
   // Model for Buttons.
   late ThemeCardModel buttonsModel;
-  // Model for Padding.
-  late ThemeCardModel paddingModel;
+  // Model for Layout.
+  late ThemeCardModel layoutModel;
+  // Model for Animation.
+  late ThemeCardModel animationModel;
+  // Model for ThemeBrowser.
+  late ThemeCardModel themeBrowserModel;
   // Model for PaletteItem component.
   late PaletteItemModel paletteItemModel1;
   // Model for PaletteItem component.
@@ -52,7 +56,9 @@ class ThemeSettingsModel extends FlutterFlowModel {
     typographyModel = createModel(context, () => ThemeCardModel());
     imagesModel = createModel(context, () => ThemeCardModel());
     buttonsModel = createModel(context, () => ThemeCardModel());
-    paddingModel = createModel(context, () => ThemeCardModel());
+    layoutModel = createModel(context, () => ThemeCardModel());
+    animationModel = createModel(context, () => ThemeCardModel());
+    themeBrowserModel = createModel(context, () => ThemeCardModel());
     paletteItemModel1 = createModel(context, () => PaletteItemModel());
     paletteItemModel2 = createModel(context, () => PaletteItemModel());
     paletteItemModel3 = createModel(context, () => PaletteItemModel());
@@ -68,7 +74,9 @@ class ThemeSettingsModel extends FlutterFlowModel {
     typographyModel.dispose();
     imagesModel.dispose();
     buttonsModel.dispose();
-    paddingModel.dispose();
+    layoutModel.dispose();
+    animationModel.dispose();
+    themeBrowserModel.dispose();
     paletteItemModel1.dispose();
     paletteItemModel2.dispose();
     paletteItemModel3.dispose();
