@@ -82,7 +82,7 @@ class _PaletteEditorBottomNavWidgetState
             Text(
               'Undo',
               style: FlutterFlowTheme.of(context).bodySmall.override(
-                    fontFamily: 'Lato',
+                    fontFamily: 'Nunito',
                     fontSize: 11.0,
                     fontWeight: FontWeight.w500,
                   ),
@@ -123,7 +123,7 @@ class _PaletteEditorBottomNavWidgetState
             Text(
               'Generate',
               style: FlutterFlowTheme.of(context).bodySmall.override(
-                    fontFamily: 'Lato',
+                    fontFamily: 'Nunito',
                     fontSize: 11.0,
                     fontWeight: FontWeight.w500,
                   ),
@@ -150,7 +150,7 @@ class _PaletteEditorBottomNavWidgetState
             Text(
               'Redo',
               style: FlutterFlowTheme.of(context).bodySmall.override(
-                    fontFamily: 'Lato',
+                    fontFamily: 'Nunito',
                     fontSize: 11.0,
                     fontWeight: FontWeight.w500,
                   ),

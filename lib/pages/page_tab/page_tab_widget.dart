@@ -238,7 +238,7 @@ class _PageTabWidgetState extends State<PageTabWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Lato',
+                                              fontFamily: 'Nunito',
                                               fontSize: 11.0,
                                               fontWeight: FontWeight.w500,
                                             ),

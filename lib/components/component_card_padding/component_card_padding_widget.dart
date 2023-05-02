@@ -100,7 +100,7 @@ class _ComponentCardPaddingWidgetState
               height: 50.0,
               searchHintTextStyle:
                   FlutterFlowTheme.of(context).bodyLarge.override(
-                        fontFamily: 'Lato',
+                        fontFamily: 'Nunito',
                         color: FlutterFlowTheme.of(context).secondaryText,
                       ),
               textStyle: FlutterFlowTheme.of(context).bodyMedium,

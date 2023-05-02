@@ -55,7 +55,8 @@ class _BottomSheetTitleWidgetState extends State<BottomSheetTitleWidget> {
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).displaySmall.override(
                     fontFamily: 'Poppins',
-                    fontSize: 21.0,
+                    fontSize: 22.0,
+                    fontWeight: FontWeight.w600,
                   ),
             ),
           ),

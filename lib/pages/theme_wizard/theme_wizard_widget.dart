@@ -62,7 +62,7 @@ class _ThemeWizardWidgetState extends State<ThemeWizardWidget> {
           title: Text(
             'Choose a theme',
             style: FlutterFlowTheme.of(context).titleLarge.override(
-                  fontFamily: 'Lato',
+                  fontFamily: 'Nunito',
                   fontSize: 16.0,
                   fontWeight: FontWeight.w600,
                 ),

@@ -80,7 +80,7 @@ class _PageEditorBottomNavWidgetState extends State<PageEditorBottomNavWidget> {
             Text(
               'Theme',
               style: FlutterFlowTheme.of(context).bodySmall.override(
-                    fontFamily: 'Lato',
+                    fontFamily: 'Nunito',
                     fontSize: 11.0,
                     fontWeight: FontWeight.w500,
                   ),
@@ -121,7 +121,7 @@ class _PageEditorBottomNavWidgetState extends State<PageEditorBottomNavWidget> {
             Text(
               'Add',
               style: FlutterFlowTheme.of(context).bodySmall.override(
-                    fontFamily: 'Lato',
+                    fontFamily: 'Nunito',
                     fontSize: 11.0,
                     fontWeight: FontWeight.w500,
                   ),
@@ -148,7 +148,7 @@ class _PageEditorBottomNavWidgetState extends State<PageEditorBottomNavWidget> {
             Text(
               'Publish',
               style: FlutterFlowTheme.of(context).bodySmall.override(
-                    fontFamily: 'Lato',
+                    fontFamily: 'Nunito',
                     fontSize: 11.0,
                     fontWeight: FontWeight.w500,
                   ),

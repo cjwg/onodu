@@ -163,108 +163,108 @@ class ThemeTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get displayLargeFamily => 'Lato';
+  String get displayLargeFamily => 'Nunito';
   TextStyle get displayLarge => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 57.0,
         fontStyle: FontStyle.normal,
       );
-  String get displayMediumFamily => 'Lato';
+  String get displayMediumFamily => 'Nunito';
   TextStyle get displayMedium => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 45.0,
       );
-  String get displaySmallFamily => 'Lato';
+  String get displaySmallFamily => 'Nunito';
   TextStyle get displaySmall => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.bold,
         fontSize: 23.0,
       );
-  String get headlineLargeFamily => 'Lato';
+  String get headlineLargeFamily => 'Nunito';
   TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 32.0,
       );
-  String get headlineMediumFamily => 'Lato';
+  String get headlineMediumFamily => 'Nunito';
   TextStyle get headlineMedium => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 28.0,
       );
-  String get headlineSmallFamily => 'Lato';
+  String get headlineSmallFamily => 'Nunito';
   TextStyle get headlineSmall => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 24.0,
       );
-  String get titleLargeFamily => 'Lato';
+  String get titleLargeFamily => 'Nunito';
   TextStyle get titleLarge => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 20.0,
       );
-  String get titleMediumFamily => 'Lato';
+  String get titleMediumFamily => 'Nunito';
   TextStyle get titleMedium => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 16.0,
       );
-  String get titleSmallFamily => 'Lato';
+  String get titleSmallFamily => 'Nunito';
   TextStyle get titleSmall => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 14.0,
       );
-  String get labelLargeFamily => 'Lato';
+  String get labelLargeFamily => 'Nunito';
   TextStyle get labelLarge => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 14.0,
       );
-  String get labelMediumFamily => 'Lato';
+  String get labelMediumFamily => 'Nunito';
   TextStyle get labelMedium => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 12.0,
       );
-  String get labelSmallFamily => 'Lato';
+  String get labelSmallFamily => 'Nunito';
   TextStyle get labelSmall => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 11.0,
       );
-  String get bodyLargeFamily => 'Lato';
+  String get bodyLargeFamily => 'Nunito';
   TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get bodyMediumFamily => 'Lato';
+  String get bodyMediumFamily => 'Nunito';
   TextStyle get bodyMedium => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get bodySmallFamily => 'Lato';
+  String get bodySmallFamily => 'Nunito';
   TextStyle get bodySmall => GoogleFonts.getFont(
-        'Lato',
+        'Nunito',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,

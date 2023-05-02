@@ -57,8 +57,9 @@ class _ResetPasswordWidgetState extends State<ResetPasswordWidget> {
                     'Choose a new password',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Lato',
+                          fontFamily: 'Poppins',
                           fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
                         ),
                   ),
                 ),
@@ -136,7 +137,7 @@ class _ResetPasswordWidgetState extends State<ResetPasswordWidget> {
                       color: FlutterFlowTheme.of(context).primaryText,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Lato',
+                                fontFamily: 'Nunito',
                                 color: Colors.white,
                               ),
                       borderSide: BorderSide(
@@ -163,7 +164,7 @@ class _ResetPasswordWidgetState extends State<ResetPasswordWidget> {
                       color: Color(0x004B39EF),
                       textStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Lato',
+                                fontFamily: 'Nunito',
                                 decoration: TextDecoration.underline,
                               ),
                       borderSide: BorderSide(

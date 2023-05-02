@@ -62,7 +62,7 @@ class _TemplateWizardWidgetState extends State<TemplateWizardWidget> {
           title: Text(
             'Choose a template',
             style: FlutterFlowTheme.of(context).headlineSmall.override(
-                  fontFamily: 'Lato',
+                  fontFamily: 'Nunito',
                   fontSize: 16.0,
                   fontWeight: FontWeight.w600,
                 ),

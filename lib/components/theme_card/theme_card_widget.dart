@@ -78,7 +78,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
                 child: Text(
                   widget.componentName,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Nunito',
                         fontWeight: FontWeight.w500,
                       ),
                 ),

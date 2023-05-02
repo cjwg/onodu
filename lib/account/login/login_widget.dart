@@ -85,8 +85,9 @@ class _LoginWidgetState extends State<LoginWidget>
                     'Login',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Lato',
+                          fontFamily: 'Poppins',
                           fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
                         ),
                   ),
                 ),
@@ -208,7 +209,7 @@ class _LoginWidgetState extends State<LoginWidget>
                       color: Color(0x004B39EF),
                       textStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Lato',
+                                fontFamily: 'Nunito',
                                 decoration: TextDecoration.underline,
                               ),
                       borderSide: BorderSide(
@@ -237,7 +238,7 @@ class _LoginWidgetState extends State<LoginWidget>
                       color: FlutterFlowTheme.of(context).primaryText,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Lato',
+                                fontFamily: 'Nunito',
                                 color: Colors.white,
                               ),
                       borderSide: BorderSide(
@@ -269,7 +270,7 @@ class _LoginWidgetState extends State<LoginWidget>
                       color: Color(0x00101213),
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Lato',
+                                fontFamily: 'Nunito',
                                 color: FlutterFlowTheme.of(context).primaryText,
                               ),
                       borderSide: BorderSide(
@@ -302,7 +303,7 @@ class _LoginWidgetState extends State<LoginWidget>
                       color: Color(0x00101213),
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Lato',
+                                fontFamily: 'Nunito',
                                 color: FlutterFlowTheme.of(context).primaryText,
                               ),
                       borderSide: BorderSide(
@@ -329,7 +330,7 @@ class _LoginWidgetState extends State<LoginWidget>
                       color: Color(0x004B39EF),
                       textStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Lato',
+                                fontFamily: 'Nunito',
                                 decoration: TextDecoration.underline,
                               ),
                       borderSide: BorderSide(

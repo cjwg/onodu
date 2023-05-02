@@ -73,7 +73,7 @@ class _ListCardWidgetState extends State<ListCardWidget> {
                     widget.title,
                     textAlign: TextAlign.start,
                     style: FlutterFlowTheme.of(context).titleMedium.override(
-                          fontFamily: 'Lato',
+                          fontFamily: 'Nunito',
                           color: FlutterFlowTheme.of(context).primary,
                           fontSize: 24.0,
                         ),
@@ -81,7 +81,7 @@ class _ListCardWidgetState extends State<ListCardWidget> {
                   Text(
                     widget.subtitle,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Lato',
+                          fontFamily: 'Nunito',
                           color: FlutterFlowTheme.of(context).primary,
                           fontWeight: FontWeight.w500,
                         ),

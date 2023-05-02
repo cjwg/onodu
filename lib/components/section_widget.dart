@@ -82,7 +82,7 @@ class _SectionWidgetState extends State<SectionWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  fontFamily: 'Poppins',
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
                                   fontSize: 30.0,
@@ -109,7 +109,7 @@ class _SectionWidgetState extends State<SectionWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  fontFamily: 'Poppins',
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
                                   fontSize: 16.0,
@@ -134,7 +134,7 @@ class _SectionWidgetState extends State<SectionWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Montserrat',
+                                  fontFamily: 'Nunito',
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
                                   fontSize: 16.0,

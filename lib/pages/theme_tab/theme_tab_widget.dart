@@ -48,7 +48,7 @@ class _ThemeTabWidgetState extends State<ThemeTabWidget> {
           title: Text(
             'Onodu.',
             style: FlutterFlowTheme.of(context).titleLarge.override(
-                  fontFamily: 'Lato',
+                  fontFamily: 'Nunito',
                   fontWeight: FontWeight.w600,
                 ),
           ),

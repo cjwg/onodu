@@ -58,8 +58,9 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                     'Create account',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Lato',
+                          fontFamily: 'Poppins',
                           fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
                         ),
                   ),
                 ),
@@ -182,7 +183,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                       color: FlutterFlowTheme.of(context).primaryText,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Lato',
+                                fontFamily: 'Nunito',
                                 color: Colors.white,
                               ),
                       borderSide: BorderSide(
@@ -209,7 +210,7 @@ class _CreateAccountWidgetState extends State<CreateAccountWidget> {
                       color: Color(0x004B39EF),
                       textStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
-                                fontFamily: 'Lato',
+                                fontFamily: 'Nunito',
                                 decoration: TextDecoration.underline,
                               ),
                       borderSide: BorderSide(
