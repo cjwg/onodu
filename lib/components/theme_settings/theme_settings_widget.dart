@@ -197,9 +197,9 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .displaySmall
                                 .override(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 21.0,
-                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Nunito',
+                                  fontSize: 22.0,
+                                  fontWeight: FontWeight.w800,
                                 ),
                           ),
                         ),
