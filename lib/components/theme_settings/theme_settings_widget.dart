@@ -198,8 +198,8 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                                 .displaySmall
                                 .override(
                                   fontFamily: 'Poppins',
-                                  fontSize: 22.0,
-                                  fontWeight: FontWeight.w600,
+                                  fontSize: 21.0,
+                                  fontWeight: FontWeight.bold,
                                 ),
                           ),
                         ),
