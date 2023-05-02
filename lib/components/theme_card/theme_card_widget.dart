@@ -49,7 +49,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
       padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 1.0,
-        height: 80.0,
+        height: 70.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).primaryBackground,
         ),
@@ -64,7 +64,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
               child: Align(
-                alignment: AlignmentDirectional(0.0, -0.65),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: widget.componentIcon!,
               ),
             ),
@@ -74,12 +74,12 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).primaryBackground,
                 ),
-                alignment: AlignmentDirectional(-1.0, -0.6),
+                alignment: AlignmentDirectional(-1.0, 0.0),
                 child: Text(
                   widget.componentName,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Nunito',
-                        fontSize: 16.0,
+                        fontSize: 17.0,
                         fontWeight: FontWeight.w500,
                       ),
                 ),
@@ -92,7 +92,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
               child: Align(
-                alignment: AlignmentDirectional(0.0, -0.65),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Icon(
                   Icons.chevron_right_rounded,
                   color: FlutterFlowTheme.of(context).primaryText,

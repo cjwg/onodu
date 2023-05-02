@@ -110,6 +110,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                           child: ThemeCardWidget(
                             componentIcon: Icon(
                               Icons.palette_rounded,
+                              size: 28.0,
                             ),
                             componentName: 'Palette',
                           ),
@@ -121,6 +122,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                         child: ThemeCardWidget(
                           componentIcon: Icon(
                             FFIcons.kinterfaceTextFormattingSmallCaps,
+                            size: 28.0,
                           ),
                           componentName: 'Typography',
                         ),
@@ -131,6 +133,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                         child: ThemeCardWidget(
                           componentIcon: Icon(
                             FFIcons.kimagePictureOrientationSquare,
+                            size: 25.0,
                           ),
                           componentName: 'Images',
                         ),
@@ -141,6 +144,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                         child: ThemeCardWidget(
                           componentIcon: Icon(
                             FFIcons.kinterfaceTextFormattingTextSquare1,
+                            size: 25.0,
                           ),
                           componentName: 'Elements',
                         ),
@@ -151,7 +155,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                         child: ThemeCardWidget(
                           componentIcon: Icon(
                             FFIcons.kinterfaceEditAlignSelection1,
-                            size: 20.0,
+                            size: 25.0,
                           ),
                           componentName: 'Layout',
                         ),
