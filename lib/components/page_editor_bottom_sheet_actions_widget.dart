@@ -54,71 +54,60 @@ class _PageEditorBottomSheetActionsWidgetState
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            InkWell(
-              splashColor: Colors.transparent,
-              focusColor: Colors.transparent,
-              hoverColor: Colors.transparent,
-              highlightColor: Colors.transparent,
-              onTap: () async {
-                await showModalBottomSheet(
-                  isScrollControlled: true,
-                  backgroundColor: Colors.transparent,
-                  enableDrag: false,
-                  context: context,
-                  builder: (bottomSheetContext) {
-                    return Padding(
-                      padding: MediaQuery.of(bottomSheetContext).viewInsets,
-                      child: Container(
-                        height: 620.0,
-                        child: ThemeSettingsWidget(),
-                      ),
-                    );
-                  },
-                ).then((value) => setState(() {}));
-              },
-              child: wrapWithModel(
-                model: _model.actionButtonModel1,
-                updateCallback: () => setState(() {}),
-                child: ActionButtonWidget(
-                  icon: Icon(
-                    FFIcons.kinterfaceEditFlipLeftCircle,
-                    size: 27.0,
-                  ),
-                  title: 'Theme',
-                  action: () async {},
+            wrapWithModel(
+              model: _model.actionButtonModel1,
+              updateCallback: () => setState(() {}),
+              child: ActionButtonWidget(
+                icon: Icon(
+                  FFIcons.kinterfaceEditFlipLeftCircle,
+                  size: 27.0,
                 ),
+                title: 'Theme',
+                action: () async {
+                  await showModalBottomSheet(
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    enableDrag: false,
+                    context: context,
+                    builder: (bottomSheetContext) {
+                      return Padding(
+                        padding: MediaQuery.of(bottomSheetContext).viewInsets,
+                        child: Container(
+                          height: 620.0,
+                          child: ThemeSettingsWidget(),
+                        ),
+                      );
+                    },
+                  ).then((value) => setState(() {}));
+                },
               ),
             ),
-            InkWell(
-              splashColor: Colors.transparent,
-              focusColor: Colors.transparent,
-              hoverColor: Colors.transparent,
-              highlightColor: Colors.transparent,
-              onTap: () async {
-                await showModalBottomSheet(
-                  isScrollControlled: true,
-                  backgroundColor: Colors.transparent,
-                  enableDrag: false,
-                  context: context,
-                  builder: (bottomSheetContext) {
-                    return Padding(
-                      padding: MediaQuery.of(bottomSheetContext).viewInsets,
-                      child: ComponentAddWidget(),
-                    );
-                  },
-                ).then((value) => setState(() {}));
-              },
-              child: wrapWithModel(
-                model: _model.actionButtonModel2,
-                updateCallback: () => setState(() {}),
-                child: ActionButtonWidget(
-                  icon: Icon(
-                    FFIcons.kinterfaceAdd21,
-                    size: 25.0,
-                  ),
-                  title: 'Add',
-                  action: () async {},
+            wrapWithModel(
+              model: _model.actionButtonModel2,
+              updateCallback: () => setState(() {}),
+              child: ActionButtonWidget(
+                icon: Icon(
+                  FFIcons.kinterfaceAdd21,
+                  size: 25.0,
                 ),
+                title: 'Add',
+                action: () async {
+                  await showModalBottomSheet(
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    enableDrag: false,
+                    context: context,
+                    builder: (bottomSheetContext) {
+                      return Padding(
+                        padding: MediaQuery.of(bottomSheetContext).viewInsets,
+                        child: Container(
+                          height: 620.0,
+                          child: ComponentAddWidget(),
+                        ),
+                      );
+                    },
+                  ).then((value) => setState(() {}));
+                },
               ),
             ),
             wrapWithModel(
