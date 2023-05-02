@@ -86,7 +86,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, -0.35),
+                    alignment: AlignmentDirectional(0.0, -0.75),
                     child: ListView(
                       padding: EdgeInsets.zero,
                       shrinkWrap: true,
