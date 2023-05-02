@@ -246,38 +246,65 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                     ),
                   ),
                   Expanded(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              25.0, 0.0, 25.0, 0.0),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(0.0),
-                              bottomRight: Radius.circular(0.0),
-                              topLeft: Radius.circular(25.0),
-                              topRight: Radius.circular(25.0),
-                            ),
-                            child: Container(
-                              width: MediaQuery.of(context).size.width * 1.0,
-                              height: 80.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  25.0, 0.0, 25.0, 0.0),
+                              child: ClipRRect(
                                 borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(0.0),
                                   bottomRight: Radius.circular(0.0),
                                   topLeft: Radius.circular(25.0),
                                   topRight: Radius.circular(25.0),
                                 ),
+                                child: Container(
+                                  width:
+                                      MediaQuery.of(context).size.width * 1.0,
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(0.0),
+                                      bottomRight: Radius.circular(0.0),
+                                      topLeft: Radius.circular(25.0),
+                                      topRight: Radius.circular(25.0),
+                                    ),
+                                  ),
+                                  child: wrapWithModel(
+                                    model: _model.paletteItemModel1,
+                                    updateCallback: () => setState(() {}),
+                                    updateOnChange: true,
+                                    child: PaletteItemWidget(
+                                      backgroundColor: Color(0xFF022B3A),
+                                      colorPicker: () async {
+                                        await _model.pageViewController
+                                            ?.nextPage(
+                                          duration: Duration(milliseconds: 300),
+                                          curve: Curves.ease,
+                                        );
+                                      },
+                                    ),
+                                  ),
+                                ),
                               ),
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  25.0, 0.0, 25.0, 0.0),
                               child: wrapWithModel(
-                                model: _model.paletteItemModel1,
+                                model: _model.paletteItemModel2,
                                 updateCallback: () => setState(() {}),
-                                updateOnChange: true,
                                 child: PaletteItemWidget(
-                                  backgroundColor: Color(0xFF022B3A),
+                                  backgroundColor: Color(0xFFA3C4BC),
                                   colorPicker: () async {
                                     await _model.pageViewController?.nextPage(
                                       duration: Duration(milliseconds: 300),
@@ -288,83 +315,72 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
                               ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              25.0, 0.0, 25.0, 0.0),
-                          child: wrapWithModel(
-                            model: _model.paletteItemModel2,
-                            updateCallback: () => setState(() {}),
-                            child: PaletteItemWidget(
-                              backgroundColor: Color(0xFFA3C4BC),
-                              colorPicker: () async {
-                                await _model.pageViewController?.nextPage(
-                                  duration: Duration(milliseconds: 300),
-                                  curve: Curves.ease,
-                                );
-                              },
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  25.0, 0.0, 25.0, 0.0),
+                              child: wrapWithModel(
+                                model: _model.paletteItemModel3,
+                                updateCallback: () => setState(() {}),
+                                child: PaletteItemWidget(
+                                  backgroundColor: Color(0xFFBFD7B5),
+                                  colorPicker: () async {},
+                                ),
+                              ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              25.0, 0.0, 25.0, 0.0),
-                          child: wrapWithModel(
-                            model: _model.paletteItemModel3,
-                            updateCallback: () => setState(() {}),
-                            child: PaletteItemWidget(
-                              backgroundColor: Color(0xFFBFD7B5),
-                              colorPicker: () async {},
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  25.0, 0.0, 25.0, 0.0),
+                              child: wrapWithModel(
+                                model: _model.paletteItemModel4,
+                                updateCallback: () => setState(() {}),
+                                child: PaletteItemWidget(
+                                  backgroundColor: Color(0xFFE7EFC5),
+                                  colorPicker: () async {},
+                                ),
+                              ),
                             ),
                           ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              25.0, 0.0, 25.0, 0.0),
-                          child: wrapWithModel(
-                            model: _model.paletteItemModel4,
-                            updateCallback: () => setState(() {}),
-                            child: PaletteItemWidget(
-                              backgroundColor: Color(0xFFE7EFC5),
-                              colorPicker: () async {},
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              25.0, 0.0, 25.0, 0.0),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(25.0),
-                              bottomRight: Radius.circular(25.0),
-                              topLeft: Radius.circular(0.0),
-                              topRight: Radius.circular(0.0),
-                            ),
-                            child: Container(
-                              width: MediaQuery.of(context).size.width * 1.0,
-                              height: 80.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                          Expanded(
+                            child: Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  25.0, 0.0, 25.0, 0.0),
+                              child: ClipRRect(
                                 borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(25.0),
                                   bottomRight: Radius.circular(25.0),
                                   topLeft: Radius.circular(0.0),
                                   topRight: Radius.circular(0.0),
                                 ),
-                              ),
-                              child: wrapWithModel(
-                                model: _model.paletteItemModel5,
-                                updateCallback: () => setState(() {}),
-                                child: PaletteItemWidget(
-                                  backgroundColor: Color(0xFFF2DDA4),
-                                  colorPicker: () async {},
+                                child: Container(
+                                  width:
+                                      MediaQuery.of(context).size.width * 1.0,
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    borderRadius: BorderRadius.only(
+                                      bottomLeft: Radius.circular(25.0),
+                                      bottomRight: Radius.circular(25.0),
+                                      topLeft: Radius.circular(0.0),
+                                      topRight: Radius.circular(0.0),
+                                    ),
+                                  ),
+                                  child: wrapWithModel(
+                                    model: _model.paletteItemModel5,
+                                    updateCallback: () => setState(() {}),
+                                    child: PaletteItemWidget(
+                                      backgroundColor: Color(0xFFF2DDA4),
+                                      colorPicker: () async {},
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   wrapWithModel(
