@@ -64,7 +64,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
               ),
               alignment: AlignmentDirectional(-1.0, 0.0),
               child: Align(
-                alignment: AlignmentDirectional(-1.0, -0.7),
+                alignment: AlignmentDirectional(-1.0, -1.0),
                 child: Text(
                   widget.componentName,
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -82,7 +82,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
               color: FlutterFlowTheme.of(context).primaryBackground,
             ),
             child: Align(
-              alignment: AlignmentDirectional(-1.0, -0.7),
+              alignment: AlignmentDirectional(-1.0, -1.0),
               child: FlutterFlowDropDown<String>(
                 controller: _model.dropDownValueController ??=
                     FormFieldController<String>(
