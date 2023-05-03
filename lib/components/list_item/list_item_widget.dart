@@ -51,7 +51,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
       padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 1.0,
-        height: 66.0,
+        height: 65.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).primaryBackground,
         ),
