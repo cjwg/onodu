@@ -66,7 +66,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
               child: Align(
-                alignment: AlignmentDirectional(0.0, -0.5),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: widget.leftIcon!,
               ),
             ),
@@ -78,7 +78,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                 ),
                 alignment: AlignmentDirectional(-1.0, 0.0),
                 child: Align(
-                  alignment: AlignmentDirectional(-1.0, -0.5),
+                  alignment: AlignmentDirectional(-1.0, -1.0),
                   child: Text(
                     widget.title,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -97,7 +97,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                 shape: BoxShape.rectangle,
               ),
               child: Align(
-                alignment: AlignmentDirectional(0.0, -0.5),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: widget.rightIcon!,
               ),
             ),
