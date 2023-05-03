@@ -179,8 +179,8 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                               FFIcons.kinterfaceEditAlignSelection1,
                             ),
                             title: 'Layout',
-                            rightIcon: Icon(
-                              FFIcons.kinterfaceEditAlignSelection1,
+                            rightIcon: FaIcon(
+                              FontAwesomeIcons.angleRight,
                             ),
                           ),
                         ),
@@ -200,10 +200,14 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                       ],
                     ),
                   ),
-                  wrapWithModel(
-                    model: _model.editThemeActionsModel,
-                    updateCallback: () => setState(() {}),
-                    child: EditThemeActionsWidget(),
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                    child: wrapWithModel(
+                      model: _model.editThemeActionsModel,
+                      updateCallback: () => setState(() {}),
+                      child: EditThemeActionsWidget(),
+                    ),
                   ),
                 ],
               ),
