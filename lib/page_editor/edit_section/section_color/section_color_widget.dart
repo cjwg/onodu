@@ -3,11 +3,11 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'component_card_color_model.dart';
-export 'component_card_color_model.dart';
+import 'section_color_model.dart';
+export 'section_color_model.dart';
 
-class ComponentCardColorWidget extends StatefulWidget {
-  const ComponentCardColorWidget({
+class SectionColorWidget extends StatefulWidget {
+  const SectionColorWidget({
     Key? key,
     String? componentName,
   })  : this.componentName = componentName ?? 'Name',
@@ -16,12 +16,11 @@ class ComponentCardColorWidget extends StatefulWidget {
   final String componentName;
 
   @override
-  _ComponentCardColorWidgetState createState() =>
-      _ComponentCardColorWidgetState();
+  _SectionColorWidgetState createState() => _SectionColorWidgetState();
 }
 
-class _ComponentCardColorWidgetState extends State<ComponentCardColorWidget> {
-  late ComponentCardColorModel _model;
+class _SectionColorWidgetState extends State<SectionColorWidget> {
+  late SectionColorModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -32,7 +31,7 @@ class _ComponentCardColorWidgetState extends State<ComponentCardColorWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ComponentCardColorModel());
+    _model = createModel(context, () => SectionColorModel());
   }
 
   @override
@@ -64,8 +63,11 @@ class _ComponentCardColorWidgetState extends State<ComponentCardColorWidget> {
               alignment: AlignmentDirectional(-1.0, 0.0),
               child: Text(
                 widget.componentName,
-                textAlign: TextAlign.start,
-                style: FlutterFlowTheme.of(context).bodyMedium,
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Nunito',
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w500,
+                    ),
               ),
             ),
           ),

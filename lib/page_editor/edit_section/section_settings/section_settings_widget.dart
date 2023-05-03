@@ -1,10 +1,9 @@
 import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/page_editor/add_component/component_card_animation/component_card_animation_widget.dart';
-import '/page_editor/edit_section/component_card_color/component_card_color_widget.dart';
-import '/page_editor/edit_section/component_card_padding/component_card_padding_widget.dart';
-import '/page_editor/edit_section/component_card_vertical_alignment/component_card_vertical_alignment_widget.dart';
+import '/page_editor/edit_section/section_color/section_color_widget.dart';
+import '/page_editor/edit_section/section_dropdown/section_dropdown_widget.dart';
+import '/page_editor/edit_section/section_toggle/section_toggle_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -76,41 +75,27 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
                     child: wrapWithModel(
-                      model: _model.componentCardColorModel1,
+                      model: _model.sectionColorModel,
                       updateCallback: () => setState(() {}),
-                      child: ComponentCardColorWidget(
+                      child: SectionColorWidget(
                         componentName: 'Background',
                       ),
                     ),
                   ),
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 17.0, 0.0),
-                    child: SwitchListTile(
-                      value: _model.switchListTileValue1 ??= false,
-                      onChanged: (newValue) async {
-                        setState(() => _model.switchListTileValue1 = newValue!);
-                      },
-                      title: Text(
-                        'Use background image',
-                        style: FlutterFlowTheme.of(context).bodyMedium,
-                      ),
-                      tileColor:
-                          FlutterFlowTheme.of(context).secondaryBackground,
-                      activeColor: FlutterFlowTheme.of(context).primaryText,
-                      dense: true,
-                      controlAffinity: ListTileControlAffinity.trailing,
-                      contentPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+                  wrapWithModel(
+                    model: _model.sectionBackgroundImageModel,
+                    updateCallback: () => setState(() {}),
+                    child: SectionToggleWidget(
+                      title: 'Use background image',
                     ),
                   ),
                   Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
                     child: wrapWithModel(
-                      model: _model.componentCardColorModel2,
+                      model: _model.sectionForegroundModel,
                       updateCallback: () => setState(() {}),
-                      child: ComponentCardColorWidget(
+                      child: SectionColorWidget(
                         componentName: 'Foreground',
                       ),
                     ),
@@ -119,42 +104,28 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 15.0, 0.0),
                     child: wrapWithModel(
-                      model: _model.componentCardPaddingModel,
+                      model: _model.sectionPaddingModel,
                       updateCallback: () => setState(() {}),
-                      child: ComponentCardPaddingWidget(
+                      child: SectionDropdownWidget(
                         componentName: 'Padding',
                       ),
                     ),
                   ),
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 17.0, 0.0),
-                    child: SwitchListTile(
-                      value: _model.switchListTileValue2 ??= false,
-                      onChanged: (newValue) async {
-                        setState(() => _model.switchListTileValue2 = newValue!);
-                      },
-                      title: Text(
-                        'Full height',
-                        style: FlutterFlowTheme.of(context).bodyMedium,
-                      ),
-                      tileColor:
-                          FlutterFlowTheme.of(context).secondaryBackground,
-                      activeColor: FlutterFlowTheme.of(context).primaryText,
-                      dense: true,
-                      controlAffinity: ListTileControlAffinity.trailing,
-                      contentPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+                  wrapWithModel(
+                    model: _model.sectionFullHeightModel,
+                    updateCallback: () => setState(() {}),
+                    child: SectionToggleWidget(
+                      title: 'Full height',
                     ),
                   ),
                   Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 15.0, 0.0),
                     child: wrapWithModel(
-                      model: _model.componentCardVerticalAlignmentModel,
+                      model: _model.sectionAlignmentModel,
                       updateCallback: () => setState(() {}),
-                      child: ComponentCardVerticalAlignmentWidget(
-                        componentName: 'Vertical alignment',
+                      child: SectionDropdownWidget(
+                        componentName: 'Alignment',
                       ),
                     ),
                   ),
@@ -162,9 +133,9 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 15.0, 0.0),
                     child: wrapWithModel(
-                      model: _model.componentCardAnimationModel,
+                      model: _model.sectionAnimationModel,
                       updateCallback: () => setState(() {}),
-                      child: ComponentCardAnimationWidget(
+                      child: SectionDropdownWidget(
                         componentName: 'Animation',
                       ),
                     ),

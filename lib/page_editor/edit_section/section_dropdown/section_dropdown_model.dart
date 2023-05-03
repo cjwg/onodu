@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ComponentCardVerticalAlignmentModel extends FlutterFlowModel {
+class SectionDropdownModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for DropDown widget.

@@ -5,11 +5,11 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'component_card_vertical_alignment_model.dart';
-export 'component_card_vertical_alignment_model.dart';
+import 'section_dropdown_model.dart';
+export 'section_dropdown_model.dart';
 
-class ComponentCardVerticalAlignmentWidget extends StatefulWidget {
-  const ComponentCardVerticalAlignmentWidget({
+class SectionDropdownWidget extends StatefulWidget {
+  const SectionDropdownWidget({
     Key? key,
     String? componentName,
   })  : this.componentName = componentName ?? 'Name',
@@ -18,13 +18,11 @@ class ComponentCardVerticalAlignmentWidget extends StatefulWidget {
   final String componentName;
 
   @override
-  _ComponentCardVerticalAlignmentWidgetState createState() =>
-      _ComponentCardVerticalAlignmentWidgetState();
+  _SectionDropdownWidgetState createState() => _SectionDropdownWidgetState();
 }
 
-class _ComponentCardVerticalAlignmentWidgetState
-    extends State<ComponentCardVerticalAlignmentWidget> {
-  late ComponentCardVerticalAlignmentModel _model;
+class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
+  late SectionDropdownModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -35,7 +33,7 @@ class _ComponentCardVerticalAlignmentWidgetState
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ComponentCardVerticalAlignmentModel());
+    _model = createModel(context, () => SectionDropdownModel());
   }
 
   @override
@@ -67,23 +65,27 @@ class _ComponentCardVerticalAlignmentWidgetState
               alignment: AlignmentDirectional(-1.0, 0.0),
               child: Text(
                 widget.componentName,
-                textAlign: TextAlign.start,
-                style: FlutterFlowTheme.of(context).bodyMedium,
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Nunito',
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w500,
+                    ),
               ),
             ),
           ),
           Container(
-            width: 80.0,
+            width: 90.0,
             height: 100.0,
             decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primaryBackground,
+              color: FlutterFlowTheme.of(context).secondaryBackground,
             ),
             child: FlutterFlowDropDown<String>(
               controller: _model.dropDownValueController ??=
                   FormFieldController<String>(
-                _model.dropDownValue ??= 'Top',
+                _model.dropDownValue ??= '',
               ),
-              options: ['Top', 'Middle', 'Bottom'],
+              options: <String>[],
+              optionLabels: <String>[],
               onChanged: (val) => setState(() => _model.dropDownValue = val),
               width: 180.0,
               height: 50.0,
@@ -92,8 +94,11 @@ class _ComponentCardVerticalAlignmentWidgetState
                         fontFamily: 'Nunito',
                         color: FlutterFlowTheme.of(context).secondaryText,
                       ),
-              textStyle: FlutterFlowTheme.of(context).bodyMedium,
-              hintText: 'Please select...',
+              textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                    fontFamily: 'Nunito',
+                    fontWeight: FontWeight.w500,
+                  ),
+              hintText: 'None',
               searchHintText: 'Search for an item...',
               fillColor: FlutterFlowTheme.of(context).primaryBackground,
               elevation: 2.0,
