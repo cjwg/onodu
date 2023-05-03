@@ -89,119 +89,115 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                     ),
                   ),
                   Expanded(
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 25.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          wrapWithModel(
-                            model: _model.themeBrowserModel,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        wrapWithModel(
+                          model: _model.themeBrowserModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              Icons.grid_view,
+                            ),
+                            title: 'Browse themes',
+                            rightIcon: FaIcon(
+                              FontAwesomeIcons.angleRight,
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            await _model.pageViewController?.animateToPage(
+                              1,
+                              duration: Duration(milliseconds: 500),
+                              curve: Curves.ease,
+                            );
+                          },
+                          child: wrapWithModel(
+                            model: _model.paletteModel,
                             updateCallback: () => setState(() {}),
                             child: ListItemWidget(
                               leftIcon: Icon(
-                                Icons.grid_view,
+                                FFIcons.kinterfaceEditPaint,
                               ),
-                              title: 'Browse themes',
+                              title: 'Palette',
                               rightIcon: FaIcon(
                                 FontAwesomeIcons.angleRight,
                               ),
                             ),
                           ),
-                          InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              await _model.pageViewController?.animateToPage(
-                                1,
-                                duration: Duration(milliseconds: 500),
-                                curve: Curves.ease,
-                              );
-                            },
-                            child: wrapWithModel(
-                              model: _model.paletteModel,
-                              updateCallback: () => setState(() {}),
-                              child: ListItemWidget(
-                                leftIcon: Icon(
-                                  FFIcons.kinterfaceEditPaint,
-                                ),
-                                title: 'Palette',
-                                rightIcon: FaIcon(
-                                  FontAwesomeIcons.angleRight,
-                                ),
-                              ),
+                        ),
+                        wrapWithModel(
+                          model: _model.typographyModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              FFIcons.kinterfaceTextFormattingSmallCaps,
+                            ),
+                            title: 'Typography',
+                            rightIcon: FaIcon(
+                              FontAwesomeIcons.angleRight,
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.typographyModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingSmallCaps,
-                              ),
-                              title: 'Typography',
-                              rightIcon: FaIcon(
-                                FontAwesomeIcons.angleRight,
-                              ),
+                        ),
+                        wrapWithModel(
+                          model: _model.imagesModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              FFIcons.kimagePictureOrientationSquare,
+                            ),
+                            title: 'Media',
+                            rightIcon: FaIcon(
+                              FontAwesomeIcons.angleRight,
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.imagesModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                FFIcons.kimagePictureOrientationSquare,
-                              ),
-                              title: 'Media',
-                              rightIcon: FaIcon(
-                                FontAwesomeIcons.angleRight,
-                              ),
+                        ),
+                        wrapWithModel(
+                          model: _model.buttonsModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              FFIcons.kinterfaceTextFormattingTextSquare1,
+                            ),
+                            title: 'Elements',
+                            rightIcon: FaIcon(
+                              FontAwesomeIcons.angleRight,
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.buttonsModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingTextSquare1,
-                              ),
-                              title: 'Elements',
-                              rightIcon: FaIcon(
-                                FontAwesomeIcons.angleRight,
-                              ),
+                        ),
+                        wrapWithModel(
+                          model: _model.layoutModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              FFIcons.kinterfaceEditAlignSelection1,
+                            ),
+                            title: 'Layout',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceEditAlignSelection1,
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.layoutModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                FFIcons.kinterfaceEditAlignSelection1,
-                              ),
-                              title: 'Layout',
-                              rightIcon: Icon(
-                                FFIcons.kinterfaceEditAlignSelection1,
-                              ),
+                        ),
+                        wrapWithModel(
+                          model: _model.animationModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              Icons.animation,
+                            ),
+                            title: 'Animation',
+                            rightIcon: FaIcon(
+                              FontAwesomeIcons.angleRight,
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.animationModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                Icons.animation,
-                              ),
-                              title: 'Animation',
-                              rightIcon: FaIcon(
-                                FontAwesomeIcons.angleRight,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                   wrapWithModel(

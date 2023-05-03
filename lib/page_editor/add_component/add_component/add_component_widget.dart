@@ -78,195 +78,191 @@ class _AddComponentWidgetState extends State<AddComponentWidget> {
                   ),
                 ),
                 Expanded(
-                  child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              Navigator.pop(context);
-                            },
-                            child: wrapWithModel(
-                              model: _model.headingModel,
-                              updateCallback: () => setState(() {}),
-                              child: ListItemWidget(
-                                leftIcon: Icon(
-                                  FFIcons.kinterfaceTextFormattingTextStyle,
-                                ),
-                                title: 'Heading',
-                                rightIcon: Icon(
-                                  FFIcons.kinterfaceAdd2,
-                                ),
-                              ),
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.subHeadingModel,
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            Navigator.pop(context);
+                          },
+                          child: wrapWithModel(
+                            model: _model.headingModel,
                             updateCallback: () => setState(() {}),
                             child: ListItemWidget(
                               leftIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingSmallCaps,
+                                FFIcons.kinterfaceTextFormattingTextStyle,
                               ),
-                              title: 'Sub heading',
-                              rightIcon: Icon(
-                                FFIcons.kinterfaceAdd21,
-                              ),
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.textModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingLeftAlign,
-                              ),
-                              title: 'Text',
-                              rightIcon: Icon(
-                                FFIcons.kinterfaceAdd21,
-                              ),
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.listItemModel1,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingTextSquare,
-                              ),
-                              title: 'Button',
-                              rightIcon: Icon(
-                                FFIcons.kinterfaceAdd21,
-                              ),
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.listItemModel2,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                FFIcons.kimagePictureOrientationSquare,
-                              ),
-                              title: 'Image',
-                              rightIcon: Icon(
-                                FFIcons.kinterfaceAdd21,
-                              ),
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.carouselModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                Icons.view_carousel,
-                              ),
-                              title: 'Carousel',
+                              title: 'Heading',
                               rightIcon: Icon(
                                 FFIcons.kinterfaceAdd2,
                               ),
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.listModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                Icons.format_list_bulleted_rounded,
-                              ),
-                              title: 'List',
-                              rightIcon: Icon(
-                                FFIcons.kinterfaceAdd21,
-                              ),
+                        ),
+                        wrapWithModel(
+                          model: _model.subHeadingModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              FFIcons.kinterfaceTextFormattingSmallCaps,
+                            ),
+                            title: 'Sub heading',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd21,
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.tabsModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                Icons.tab,
-                              ),
-                              title: 'Tabs',
-                              rightIcon: Icon(
-                                FFIcons.kinterfaceAdd21,
-                              ),
+                        ),
+                        wrapWithModel(
+                          model: _model.textModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              FFIcons.kinterfaceTextFormattingLeftAlign,
+                            ),
+                            title: 'Text',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd21,
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.sectioModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                FFIcons.kinterfaceEditCarouselVertical1,
-                              ),
-                              title: 'Section',
-                              rightIcon: Icon(
-                                FFIcons.kinterfaceAdd21,
-                              ),
+                        ),
+                        wrapWithModel(
+                          model: _model.listItemModel1,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              FFIcons.kinterfaceTextFormattingTextSquare,
+                            ),
+                            title: 'Button',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd21,
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.contactCardModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                FFIcons.kentertainmentNewsPaper,
-                              ),
-                              title: 'Contact card',
-                              rightIcon: Icon(
-                                FFIcons.kinterfaceAdd2,
-                              ),
+                        ),
+                        wrapWithModel(
+                          model: _model.listItemModel2,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              FFIcons.kimagePictureOrientationSquare,
+                            ),
+                            title: 'Image',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd21,
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.signUpFormModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                Icons.person,
-                              ),
-                              title: 'Sign up form',
-                              rightIcon: Icon(
-                                FFIcons.kinterfaceAdd2,
-                              ),
+                        ),
+                        wrapWithModel(
+                          model: _model.carouselModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              Icons.view_carousel,
+                            ),
+                            title: 'Carousel',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd2,
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.bookingFormModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                Icons.calendar_today_rounded,
-                              ),
-                              title: 'Booking form',
-                              rightIcon: Icon(
-                                FFIcons.kinterfaceAdd21,
-                              ),
+                        ),
+                        wrapWithModel(
+                          model: _model.listModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              Icons.format_list_bulleted_rounded,
+                            ),
+                            title: 'List',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd21,
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.paymentModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                Icons.payment_rounded,
-                              ),
-                              title: 'Payment',
-                              rightIcon: Icon(
-                                FFIcons.kinterfaceAdd21,
-                              ),
+                        ),
+                        wrapWithModel(
+                          model: _model.tabsModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              Icons.tab,
+                            ),
+                            title: 'Tabs',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd21,
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                        wrapWithModel(
+                          model: _model.sectioModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              FFIcons.kinterfaceEditCarouselVertical1,
+                            ),
+                            title: 'Section',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd21,
+                            ),
+                          ),
+                        ),
+                        wrapWithModel(
+                          model: _model.contactCardModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              FFIcons.kentertainmentNewsPaper,
+                            ),
+                            title: 'Contact card',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd2,
+                            ),
+                          ),
+                        ),
+                        wrapWithModel(
+                          model: _model.signUpFormModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              Icons.person,
+                            ),
+                            title: 'Sign up form',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd2,
+                            ),
+                          ),
+                        ),
+                        wrapWithModel(
+                          model: _model.bookingFormModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              Icons.calendar_today_rounded,
+                            ),
+                            title: 'Booking form',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd21,
+                            ),
+                          ),
+                        ),
+                        wrapWithModel(
+                          model: _model.paymentModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              Icons.payment_rounded,
+                            ),
+                            title: 'Payment',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd21,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
