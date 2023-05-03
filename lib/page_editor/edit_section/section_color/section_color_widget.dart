@@ -75,19 +75,8 @@ class _SectionColorWidgetState extends State<SectionColorWidget> {
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
             child: Container(
-              width: 25.0,
-              height: 25.0,
-              decoration: BoxDecoration(
-                color: FlutterFlowTheme.of(context).error,
-                shape: BoxShape.circle,
-              ),
-            ),
-          ),
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
-            child: Container(
-              width: 25.0,
-              height: 25.0,
+              width: 30.0,
+              height: 30.0,
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).error,
                 shape: BoxShape.circle,
@@ -100,15 +89,27 @@ class _SectionColorWidgetState extends State<SectionColorWidget> {
               width: 30.0,
               height: 30.0,
               decoration: BoxDecoration(
+                color: FlutterFlowTheme.of(context).error,
+                shape: BoxShape.circle,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+            child: Container(
+              width: 35.0,
+              height: 35.0,
+              decoration: BoxDecoration(
+                color: FlutterFlowTheme.of(context).secondaryText,
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: FlutterFlowTheme.of(context).primaryText,
-                  width: 1.0,
+                  color: FlutterFlowTheme.of(context).accent2,
+                  width: 2.0,
                 ),
               ),
               child: Container(
-                width: 110.0,
-                height: 110.0,
+                width: 32.0,
+                height: 32.0,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).error,
                   shape: BoxShape.circle,
@@ -123,8 +124,8 @@ class _SectionColorWidgetState extends State<SectionColorWidget> {
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
             child: Container(
-              width: 25.0,
-              height: 25.0,
+              width: 30.0,
+              height: 30.0,
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).error,
                 shape: BoxShape.circle,
@@ -132,8 +133,8 @@ class _SectionColorWidgetState extends State<SectionColorWidget> {
             ),
           ),
           Container(
-            width: 25.0,
-            height: 25.0,
+            width: 30.0,
+            height: 30.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).error,
               shape: BoxShape.circle,
