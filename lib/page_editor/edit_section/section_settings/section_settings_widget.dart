@@ -64,104 +64,101 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
             ),
           ),
           Expanded(
-            child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Expanded(
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
-                      child: wrapWithModel(
-                        model: _model.sectionColorModel,
-                        updateCallback: () => setState(() {}),
-                        child: SectionColorWidget(
-                          componentName: 'Background',
-                        ),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
+                    child: wrapWithModel(
+                      model: _model.sectionColorModel,
+                      updateCallback: () => setState(() {}),
+                      child: SectionColorWidget(
+                        componentName: 'Background',
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Align(
-                      alignment: AlignmentDirectional(0.0, -3.0),
-                      child: wrapWithModel(
-                        model: _model.sectionBackgroundImageModel,
-                        updateCallback: () => setState(() {}),
-                        child: SectionToggleWidget(
-                          title: 'Use background image',
-                        ),
+                ),
+                Expanded(
+                  child: Align(
+                    alignment: AlignmentDirectional(0.0, -3.0),
+                    child: wrapWithModel(
+                      model: _model.sectionBackgroundImageModel,
+                      updateCallback: () => setState(() {}),
+                      child: SectionToggleWidget(
+                        title: 'Use background image',
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
-                      child: wrapWithModel(
-                        model: _model.sectionForegroundModel,
-                        updateCallback: () => setState(() {}),
-                        child: SectionColorWidget(
-                          componentName: 'Foreground',
-                        ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
+                    child: wrapWithModel(
+                      model: _model.sectionForegroundModel,
+                      updateCallback: () => setState(() {}),
+                      child: SectionColorWidget(
+                        componentName: 'Foreground',
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 15.0, 0.0),
-                      child: wrapWithModel(
-                        model: _model.sectionPaddingModel,
-                        updateCallback: () => setState(() {}),
-                        child: SectionDropdownWidget(
-                          componentName: 'Padding',
-                        ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 15.0, 0.0),
+                    child: wrapWithModel(
+                      model: _model.sectionPaddingModel,
+                      updateCallback: () => setState(() {}),
+                      child: SectionDropdownWidget(
+                        componentName: 'Padding',
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Align(
-                      alignment: AlignmentDirectional(0.0, -3.0),
-                      child: wrapWithModel(
-                        model: _model.sectionFullHeightModel,
-                        updateCallback: () => setState(() {}),
-                        child: SectionToggleWidget(
-                          title: 'Full height',
-                        ),
+                ),
+                Expanded(
+                  child: Align(
+                    alignment: AlignmentDirectional(0.0, -3.0),
+                    child: wrapWithModel(
+                      model: _model.sectionFullHeightModel,
+                      updateCallback: () => setState(() {}),
+                      child: SectionToggleWidget(
+                        title: 'Full height',
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 15.0, 0.0),
-                      child: wrapWithModel(
-                        model: _model.sectionAlignmentModel,
-                        updateCallback: () => setState(() {}),
-                        child: SectionDropdownWidget(
-                          componentName: 'Alignment',
-                        ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 15.0, 0.0),
+                    child: wrapWithModel(
+                      model: _model.sectionAlignmentModel,
+                      updateCallback: () => setState(() {}),
+                      child: SectionDropdownWidget(
+                        componentName: 'Alignment',
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 15.0, 0.0),
-                      child: wrapWithModel(
-                        model: _model.sectionAnimationModel,
-                        updateCallback: () => setState(() {}),
-                        child: SectionDropdownWidget(
-                          componentName: 'Animation',
-                        ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 15.0, 0.0),
+                    child: wrapWithModel(
+                      model: _model.sectionAnimationModel,
+                      updateCallback: () => setState(() {}),
+                      child: SectionDropdownWidget(
+                        componentName: 'Animation',
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ],

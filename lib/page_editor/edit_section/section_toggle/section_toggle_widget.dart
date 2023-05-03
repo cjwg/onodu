@@ -49,7 +49,7 @@ class _SectionToggleWidgetState extends State<SectionToggleWidget> {
         color: FlutterFlowTheme.of(context).primaryBackground,
       ),
       child: Align(
-        alignment: AlignmentDirectional(0.0, -1.0),
+        alignment: AlignmentDirectional(0.0, -0.7),
         child: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 17.0, 0.0),
           child: SwitchListTile.adaptive(
@@ -69,7 +69,7 @@ class _SectionToggleWidgetState extends State<SectionToggleWidget> {
             activeColor: FlutterFlowTheme.of(context).primaryText,
             dense: true,
             controlAffinity: ListTileControlAffinity.trailing,
-            contentPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+            contentPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
           ),
         ),
       ),
