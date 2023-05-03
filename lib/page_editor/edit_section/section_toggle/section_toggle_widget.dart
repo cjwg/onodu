@@ -52,7 +52,7 @@ class _SectionToggleWidgetState extends State<SectionToggleWidget> {
         alignment: AlignmentDirectional(0.0, -1.0),
         child: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 17.0, 0.0),
-          child: SwitchListTile(
+          child: SwitchListTile.adaptive(
             value: _model.switchListTileValue ??= false,
             onChanged: (newValue) async {
               setState(() => _model.switchListTileValue = newValue!);
