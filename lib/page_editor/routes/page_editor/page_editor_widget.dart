@@ -105,12 +105,10 @@ class _PageEditorWidgetState extends State<PageEditorWidget> {
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Expanded(
-                child: wrapWithModel(
-                  model: _model.sectionModel,
-                  updateCallback: () => setState(() {}),
-                  child: SectionWidget(),
-                ),
+              wrapWithModel(
+                model: _model.sectionModel,
+                updateCallback: () => setState(() {}),
+                child: SectionWidget(),
               ),
               Expanded(
                 child: Container(

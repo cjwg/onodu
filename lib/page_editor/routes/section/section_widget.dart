@@ -41,7 +41,6 @@ class _SectionWidgetState extends State<SectionWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 1.0,
-      height: 250.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).primaryBackground,
       ),
