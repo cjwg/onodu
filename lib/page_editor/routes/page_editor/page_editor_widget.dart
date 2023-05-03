@@ -103,6 +103,7 @@ class _PageEditorWidgetState extends State<PageEditorWidget> {
         body: SafeArea(
           child: Column(
             mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               wrapWithModel(

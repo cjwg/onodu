@@ -202,7 +202,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                     child: wrapWithModel(
                       model: _model.editThemeActionsModel,
                       updateCallback: () => setState(() {}),
