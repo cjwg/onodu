@@ -109,9 +109,7 @@ class _PageEditorWidgetState extends State<PageEditorWidget> {
                 child: wrapWithModel(
                   model: _model.sectionModel,
                   updateCallback: () => setState(() {}),
-                  child: SectionWidget(
-                    showHeading: () async {},
-                  ),
+                  child: SectionWidget(),
                 ),
               ),
               Expanded(
