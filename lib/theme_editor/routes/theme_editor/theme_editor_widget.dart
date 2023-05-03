@@ -91,10 +91,10 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                   Expanded(
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 25.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 25.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           wrapWithModel(
                             model: _model.themeBrowserModel,
