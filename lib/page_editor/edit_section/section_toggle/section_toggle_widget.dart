@@ -42,26 +42,33 @@ class _SectionToggleWidgetState extends State<SectionToggleWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 17.0, 0.0),
-      child: SwitchListTile(
-        value: _model.switchListTileValue ??= false,
-        onChanged: (newValue) async {
-          setState(() => _model.switchListTileValue = newValue!);
-        },
-        title: Text(
-          widget.title!,
-          style: FlutterFlowTheme.of(context).bodyMedium.override(
-                fontFamily: 'Nunito',
-                fontSize: 16.0,
-                fontWeight: FontWeight.w500,
-              ),
+    return Container(
+      width: MediaQuery.of(context).size.width * 1.0,
+      height: 63.0,
+      decoration: BoxDecoration(
+        color: FlutterFlowTheme.of(context).primaryBackground,
+      ),
+      child: Padding(
+        padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 17.0, 0.0),
+        child: SwitchListTile(
+          value: _model.switchListTileValue ??= false,
+          onChanged: (newValue) async {
+            setState(() => _model.switchListTileValue = newValue!);
+          },
+          title: Text(
+            widget.title!,
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  fontFamily: 'Nunito',
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w500,
+                ),
+          ),
+          tileColor: FlutterFlowTheme.of(context).secondaryBackground,
+          activeColor: FlutterFlowTheme.of(context).primaryText,
+          dense: true,
+          controlAffinity: ListTileControlAffinity.trailing,
+          contentPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
         ),
-        tileColor: FlutterFlowTheme.of(context).secondaryBackground,
-        activeColor: FlutterFlowTheme.of(context).primaryText,
-        dense: true,
-        controlAffinity: ListTileControlAffinity.trailing,
-        contentPadding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
       ),
     );
   }

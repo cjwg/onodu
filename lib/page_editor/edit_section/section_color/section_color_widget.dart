@@ -45,7 +45,7 @@ class _SectionColorWidgetState extends State<SectionColorWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 1.0,
-      height: 60.0,
+      height: 63.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).primaryBackground,
       ),
@@ -62,7 +62,7 @@ class _SectionColorWidgetState extends State<SectionColorWidget> {
               ),
               alignment: AlignmentDirectional(-1.0, 0.0),
               child: Align(
-                alignment: AlignmentDirectional(-1.0, -0.75),
+                alignment: AlignmentDirectional(-1.0, -0.7),
                 child: Text(
                   widget.componentName,
                   textAlign: TextAlign.start,
@@ -76,7 +76,7 @@ class _SectionColorWidgetState extends State<SectionColorWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.0, -0.75),
+            alignment: AlignmentDirectional(0.0, -0.7),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
               child: Container(
@@ -90,7 +90,7 @@ class _SectionColorWidgetState extends State<SectionColorWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.0, -0.75),
+            alignment: AlignmentDirectional(0.0, -0.7),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
               child: Container(
@@ -117,15 +117,18 @@ class _SectionColorWidgetState extends State<SectionColorWidget> {
                     width: 1.0,
                   ),
                 ),
-                child: Container(
-                  width: 110.0,
-                  height: 110.0,
-                  decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).error,
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                      width: 2.0,
+                child: Align(
+                  alignment: AlignmentDirectional(0.0, -0.7),
+                  child: Container(
+                    width: 110.0,
+                    height: 110.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).error,
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        width: 2.0,
+                      ),
                     ),
                   ),
                 ),
@@ -133,7 +136,7 @@ class _SectionColorWidgetState extends State<SectionColorWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.0, -0.75),
+            alignment: AlignmentDirectional(0.0, -0.7),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
               child: Container(
@@ -147,7 +150,7 @@ class _SectionColorWidgetState extends State<SectionColorWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.0, -0.75),
+            alignment: AlignmentDirectional(0.0, -0.7),
             child: Container(
               width: 25.0,
               height: 25.0,

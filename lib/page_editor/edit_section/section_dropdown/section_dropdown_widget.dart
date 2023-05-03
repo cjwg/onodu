@@ -47,7 +47,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 1.0,
-      height: 60.0,
+      height: 63.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).primaryBackground,
       ),
@@ -63,51 +63,57 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
               alignment: AlignmentDirectional(-1.0, 0.0),
-              child: Text(
-                widget.componentName,
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Nunito',
-                      fontSize: 17.0,
-                      fontWeight: FontWeight.w500,
-                    ),
+              child: Align(
+                alignment: AlignmentDirectional(-1.0, -0.7),
+                child: Text(
+                  widget.componentName,
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Nunito',
+                        fontSize: 17.0,
+                        fontWeight: FontWeight.w500,
+                      ),
+                ),
               ),
             ),
           ),
           Container(
             width: 90.0,
-            height: 100.0,
             decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).secondaryBackground,
+              color: FlutterFlowTheme.of(context).primaryBackground,
             ),
-            child: FlutterFlowDropDown<String>(
-              controller: _model.dropDownValueController ??=
-                  FormFieldController<String>(
-                _model.dropDownValue ??= '',
+            child: Align(
+              alignment: AlignmentDirectional(-1.0, -0.7),
+              child: FlutterFlowDropDown<String>(
+                controller: _model.dropDownValueController ??=
+                    FormFieldController<String>(
+                  _model.dropDownValue ??= '',
+                ),
+                options: <String>[],
+                optionLabels: <String>[],
+                onChanged: (val) => setState(() => _model.dropDownValue = val),
+                width: 180.0,
+                height: 30.0,
+                searchHintTextStyle:
+                    FlutterFlowTheme.of(context).bodyLarge.override(
+                          fontFamily: 'Nunito',
+                          color: FlutterFlowTheme.of(context).secondaryText,
+                        ),
+                textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'Nunito',
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+                hintText: 'None',
+                searchHintText: 'Search for an item...',
+                fillColor: FlutterFlowTheme.of(context).primaryBackground,
+                elevation: 2.0,
+                borderColor: Colors.transparent,
+                borderWidth: 0.0,
+                borderRadius: 0.0,
+                margin: EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 4.0),
+                hidesUnderline: true,
+                isSearchable: false,
               ),
-              options: <String>[],
-              optionLabels: <String>[],
-              onChanged: (val) => setState(() => _model.dropDownValue = val),
-              width: 180.0,
-              height: 50.0,
-              searchHintTextStyle:
-                  FlutterFlowTheme.of(context).bodyLarge.override(
-                        fontFamily: 'Nunito',
-                        color: FlutterFlowTheme.of(context).secondaryText,
-                      ),
-              textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Nunito',
-                    fontWeight: FontWeight.w500,
-                  ),
-              hintText: 'None',
-              searchHintText: 'Search for an item...',
-              fillColor: FlutterFlowTheme.of(context).primaryBackground,
-              elevation: 2.0,
-              borderColor: Colors.transparent,
-              borderWidth: 0.0,
-              borderRadius: 0.0,
-              margin: EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 4.0),
-              hidesUnderline: true,
-              isSearchable: false,
             ),
           ),
         ],
