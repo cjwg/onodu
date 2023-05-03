@@ -67,7 +67,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                 widget.componentName,
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Nunito',
-                      fontSize: 16.0,
+                      fontSize: 17.0,
                       fontWeight: FontWeight.w500,
                     ),
               ),

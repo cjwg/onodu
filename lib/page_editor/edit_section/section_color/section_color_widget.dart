@@ -65,7 +65,7 @@ class _SectionColorWidgetState extends State<SectionColorWidget> {
                 widget.componentName,
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Nunito',
-                      fontSize: 16.0,
+                      fontSize: 17.0,
                       fontWeight: FontWeight.w500,
                     ),
               ),
