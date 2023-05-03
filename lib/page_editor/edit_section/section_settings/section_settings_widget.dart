@@ -86,7 +86,7 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                   ),
                   Expanded(
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, -0.7),
+                      alignment: AlignmentDirectional(0.0, -3.0),
                       child: wrapWithModel(
                         model: _model.sectionBackgroundImageModel,
                         updateCallback: () => setState(() {}),
@@ -124,7 +124,7 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                   ),
                   Expanded(
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, -0.7),
+                      alignment: AlignmentDirectional(0.0, -3.0),
                       child: wrapWithModel(
                         model: _model.sectionFullHeightModel,
                         updateCallback: () => setState(() {}),
