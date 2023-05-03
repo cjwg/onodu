@@ -162,7 +162,7 @@ class _SectionWidgetState extends State<SectionWidget> {
                             padding:
                                 MediaQuery.of(bottomSheetContext).viewInsets,
                             child: Container(
-                              height: 500.0,
+                              height: 550.0,
                               child: SectionSettingsWidget(),
                             ),
                           );
