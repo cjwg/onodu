@@ -1,13 +1,13 @@
 import '/components/action_button_widget.dart';
-import '/components/component_add/component_add_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/themes/components/theme_settings/theme_settings_widget.dart';
+import '/page_editor/add_component/add_component/add_component_widget.dart';
+import '/theme_editor/routes/theme_editor/theme_editor_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class PageEditorBottomSheetActionsModel extends FlutterFlowModel {
+class PageEditorActionsModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this component.
 
   // Model for ActionButton component.

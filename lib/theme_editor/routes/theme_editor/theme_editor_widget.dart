@@ -1,27 +1,27 @@
-import '/components/bottom_sheet_title_widget.dart';
+import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/components/edit_theme_actions_widget.dart';
 import '/components/edit_theme_palette_actions_widget.dart';
 import '/components/palette_item_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/themes/components/theme_card/theme_card_widget.dart';
+import '/theme_editor/components/theme_card/theme_card_widget.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'theme_settings_model.dart';
-export 'theme_settings_model.dart';
+import 'theme_editor_model.dart';
+export 'theme_editor_model.dart';
 
-class ThemeSettingsWidget extends StatefulWidget {
-  const ThemeSettingsWidget({Key? key}) : super(key: key);
+class ThemeEditorWidget extends StatefulWidget {
+  const ThemeEditorWidget({Key? key}) : super(key: key);
 
   @override
-  _ThemeSettingsWidgetState createState() => _ThemeSettingsWidgetState();
+  _ThemeEditorWidgetState createState() => _ThemeEditorWidgetState();
 }
 
-class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
-  late ThemeSettingsModel _model;
+class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
+  late ThemeEditorModel _model;
 
   int get pageViewCurrentIndex => _model.pageViewController != null &&
           _model.pageViewController!.hasClients &&
@@ -38,7 +38,7 @@ class _ThemeSettingsWidgetState extends State<ThemeSettingsWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ThemeSettingsModel());
+    _model = createModel(context, () => ThemeEditorModel());
   }
 
   @override

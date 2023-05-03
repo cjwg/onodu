@@ -1,23 +1,23 @@
-import '/components/bottom_sheet_title_widget.dart';
-import '/components/component_card/component_card_widget.dart';
+import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/page_editor/add_component/component_card/component_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'component_add_model.dart';
-export 'component_add_model.dart';
+import 'add_component_model.dart';
+export 'add_component_model.dart';
 
-class ComponentAddWidget extends StatefulWidget {
-  const ComponentAddWidget({Key? key}) : super(key: key);
+class AddComponentWidget extends StatefulWidget {
+  const AddComponentWidget({Key? key}) : super(key: key);
 
   @override
-  _ComponentAddWidgetState createState() => _ComponentAddWidgetState();
+  _AddComponentWidgetState createState() => _AddComponentWidgetState();
 }
 
-class _ComponentAddWidgetState extends State<ComponentAddWidget> {
-  late ComponentAddModel _model;
+class _AddComponentWidgetState extends State<AddComponentWidget> {
+  late AddComponentModel _model;
 
   int get bottomSheetPageViewCurrentIndex =>
       _model.bottomSheetPageViewController != null &&
@@ -35,7 +35,7 @@ class _ComponentAddWidgetState extends State<ComponentAddWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ComponentAddModel());
+    _model = createModel(context, () => AddComponentModel());
   }
 
   @override
@@ -93,27 +93,6 @@ class _ComponentAddWidgetState extends State<ComponentAddWidget> {
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               Navigator.pop(context);
-
-                              context.goNamed(
-                                'PageEditor',
-                                queryParams: {
-                                  'backgroundColor': serializeParam(
-                                    Color(0xFF3A6888),
-                                    ParamType.Color,
-                                  ),
-                                  'showHeading': serializeParam(
-                                    true,
-                                    ParamType.bool,
-                                  ),
-                                }.withoutNulls,
-                                extra: <String, dynamic>{
-                                  kTransitionInfoKey: TransitionInfo(
-                                    hasTransition: true,
-                                    transitionType: PageTransitionType.fade,
-                                    duration: Duration(milliseconds: 0),
-                                  ),
-                                },
-                              );
                             },
                             child: wrapWithModel(
                               model: _model.headingModel,

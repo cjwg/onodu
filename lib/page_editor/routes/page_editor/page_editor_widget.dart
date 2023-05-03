@@ -1,8 +1,8 @@
-import '/components/page_editor_bottom_sheet_actions_widget.dart';
-import '/components/section_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/page_editor/routes/page_editor_actions/page_editor_actions_widget.dart';
+import '/page_editor/routes/section/section_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -109,7 +109,9 @@ class _PageEditorWidgetState extends State<PageEditorWidget> {
                 child: wrapWithModel(
                   model: _model.sectionModel,
                   updateCallback: () => setState(() {}),
-                  child: SectionWidget(),
+                  child: SectionWidget(
+                    showHeading: () async {},
+                  ),
                 ),
               ),
               Expanded(
@@ -122,9 +124,9 @@ class _PageEditorWidgetState extends State<PageEditorWidget> {
                 ),
               ),
               wrapWithModel(
-                model: _model.pageEditorBottomSheetActionsModel,
+                model: _model.pageEditorActionsModel,
                 updateCallback: () => setState(() {}),
-                child: PageEditorBottomSheetActionsWidget(),
+                child: PageEditorActionsWidget(),
               ),
             ],
           ),

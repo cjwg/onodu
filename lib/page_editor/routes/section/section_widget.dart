@@ -1,15 +1,21 @@
-import '/components/section_settings/section_settings_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/page_editor/edit_section/section_settings/section_settings_widget.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'section_model.dart';
 export 'section_model.dart';
 
 class SectionWidget extends StatefulWidget {
-  const SectionWidget({Key? key}) : super(key: key);
+  const SectionWidget({
+    Key? key,
+    this.showHeading,
+  }) : super(key: key);
+
+  final Future<dynamic> Function()? showHeading;
 
   @override
   _SectionWidgetState createState() => _SectionWidgetState();
@@ -28,6 +34,13 @@ class _SectionWidgetState extends State<SectionWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => SectionModel());
+
+    // On component load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      setState(() {
+        _model.showHeading = true;
+      });
+    });
   }
 
   @override
@@ -64,85 +77,79 @@ class _SectionWidgetState extends State<SectionWidget> {
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    if (_model.showHeading)
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            25.0, 25.0, 25.0, 0.0),
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                text: 'Heading',
-                                style: GoogleFonts.getFont(
-                                  'Montserrat',
-                                  fontWeight: FontWeight.w900,
-                                ),
-                              )
-                            ],
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Poppins',
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                  fontSize: 30.0,
-                                  letterSpacing: 1.0,
-                                  fontWeight: FontWeight.w900,
-                                ),
-                          ),
-                          textAlign: TextAlign.start,
-                          maxLines: 10,
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 0.0),
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'Heading',
+                              style: GoogleFonts.getFont(
+                                'Montserrat',
+                                fontWeight: FontWeight.w900,
+                              ),
+                            )
+                          ],
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Poppins',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
+                                    fontSize: 30.0,
+                                    letterSpacing: 1.0,
+                                    fontWeight: FontWeight.w900,
+                                  ),
+                        ),
+                        textAlign: TextAlign.start,
+                        maxLines: 10,
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 20.0),
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: 'Sub heading',
+                              style: TextStyle(),
+                            )
+                          ],
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Poppins',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                         ),
                       ),
-                    if (_model.showSubHeading)
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            25.0, 0.0, 25.0, 20.0),
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                text: 'Sub heading',
-                                style: TextStyle(),
-                              )
-                            ],
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Poppins',
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                          ),
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 25.0),
+                      child: RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text:
+                                  'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
+                              style: TextStyle(),
+                            )
+                          ],
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Nunito',
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                         ),
                       ),
-                    if (_model.showText)
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            25.0, 0.0, 25.0, 25.0),
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                text:
-                                    'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
-                                style: TextStyle(),
-                              )
-                            ],
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Nunito',
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                          ),
-                        ),
-                      ),
+                    ),
                   ],
                 ),
               ),

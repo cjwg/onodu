@@ -1,25 +1,24 @@
 import '/components/action_button_widget.dart';
-import '/components/component_add/component_add_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/themes/components/theme_settings/theme_settings_widget.dart';
+import '/page_editor/add_component/add_component/add_component_widget.dart';
+import '/theme_editor/routes/theme_editor/theme_editor_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'page_editor_bottom_sheet_actions_model.dart';
-export 'page_editor_bottom_sheet_actions_model.dart';
+import 'page_editor_actions_model.dart';
+export 'page_editor_actions_model.dart';
 
-class PageEditorBottomSheetActionsWidget extends StatefulWidget {
-  const PageEditorBottomSheetActionsWidget({Key? key}) : super(key: key);
+class PageEditorActionsWidget extends StatefulWidget {
+  const PageEditorActionsWidget({Key? key}) : super(key: key);
 
   @override
-  _PageEditorBottomSheetActionsWidgetState createState() =>
-      _PageEditorBottomSheetActionsWidgetState();
+  _PageEditorActionsWidgetState createState() =>
+      _PageEditorActionsWidgetState();
 }
 
-class _PageEditorBottomSheetActionsWidgetState
-    extends State<PageEditorBottomSheetActionsWidget> {
-  late PageEditorBottomSheetActionsModel _model;
+class _PageEditorActionsWidgetState extends State<PageEditorActionsWidget> {
+  late PageEditorActionsModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -30,7 +29,7 @@ class _PageEditorBottomSheetActionsWidgetState
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => PageEditorBottomSheetActionsModel());
+    _model = createModel(context, () => PageEditorActionsModel());
   }
 
   @override
@@ -43,7 +42,7 @@ class _PageEditorBottomSheetActionsWidgetState
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 35.0),
+      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 1.0,
         height: 80.0,
@@ -74,7 +73,7 @@ class _PageEditorBottomSheetActionsWidgetState
                         padding: MediaQuery.of(bottomSheetContext).viewInsets,
                         child: Container(
                           height: 620.0,
-                          child: ThemeSettingsWidget(),
+                          child: ThemeEditorWidget(),
                         ),
                       );
                     },
@@ -102,7 +101,7 @@ class _PageEditorBottomSheetActionsWidgetState
                         padding: MediaQuery.of(bottomSheetContext).viewInsets,
                         child: Container(
                           height: 620.0,
-                          child: ComponentAddWidget(),
+                          child: AddComponentWidget(),
                         ),
                       );
                     },

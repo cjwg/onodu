@@ -10,6 +10,8 @@ export '/pages/template_wizard/template_wizard_widget.dart'
     show TemplateWizardWidget;
 export '/pages/theme_wizard/theme_wizard_widget.dart' show ThemeWizardWidget;
 export '/pages/page_tab/page_tab_widget.dart' show PageTabWidget;
-export '/themes/screens/theme_tab/theme_tab_widget.dart' show ThemeTabWidget;
+export '/theme_editor/routes/theme_tab/theme_tab_widget.dart'
+    show ThemeTabWidget;
 export '/pages/analytics_tab/analytics_tab_widget.dart' show AnalyticsTabWidget;
-export '/pages/page_editor/page_editor_widget.dart' show PageEditorWidget;
+export '/page_editor/routes/page_editor/page_editor_widget.dart'
+    show PageEditorWidget;

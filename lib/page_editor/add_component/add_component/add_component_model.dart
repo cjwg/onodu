@@ -1,13 +1,13 @@
-import '/components/bottom_sheet_title_widget.dart';
-import '/components/component_card/component_card_widget.dart';
+import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/page_editor/add_component/component_card/component_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ComponentAddModel extends FlutterFlowModel {
+class AddComponentModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this component.
 
   // State field(s) for BottomSheetPageView widget.

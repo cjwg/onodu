@@ -1,8 +1,8 @@
-import '/components/component_add/component_add_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/themes/components/theme_settings/theme_settings_widget.dart';
+import '/page_editor/add_component/add_component/add_component_widget.dart';
+import '/theme_editor/routes/theme_editor/theme_editor_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -72,7 +72,7 @@ class _PaletteEditorBottomNavWidgetState
                       padding: MediaQuery.of(bottomSheetContext).viewInsets,
                       child: Container(
                         height: 500.0,
-                        child: ThemeSettingsWidget(),
+                        child: ThemeEditorWidget(),
                       ),
                     );
                   },
@@ -113,7 +113,7 @@ class _PaletteEditorBottomNavWidgetState
                       padding: MediaQuery.of(bottomSheetContext).viewInsets,
                       child: Container(
                         height: 500.0,
-                        child: ComponentAddWidget(),
+                        child: AddComponentWidget(),
                       ),
                     );
                   },

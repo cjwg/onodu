@@ -1,17 +1,17 @@
-import '/components/bottom_sheet_title_widget.dart';
+import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/components/edit_theme_actions_widget.dart';
 import '/components/edit_theme_palette_actions_widget.dart';
 import '/components/palette_item_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/themes/components/theme_card/theme_card_widget.dart';
+import '/theme_editor/components/theme_card/theme_card_widget.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ThemeSettingsModel extends FlutterFlowModel {
+class ThemeEditorModel extends FlutterFlowModel {
   ///  Local state fields for this component.
 
   int? pageViewIndex = 0;

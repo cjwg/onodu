@@ -1,10 +1,10 @@
-import '/components/bottom_sheet_title_widget.dart';
-import '/components/component_card_animation/component_card_animation_widget.dart';
-import '/components/component_card_color/component_card_color_widget.dart';
-import '/components/component_card_padding/component_card_padding_widget.dart';
-import '/components/component_card_vertical_alignment/component_card_vertical_alignment_widget.dart';
+import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/page_editor/add_component/component_card_animation/component_card_animation_widget.dart';
+import '/page_editor/edit_section/component_card_color/component_card_color_widget.dart';
+import '/page_editor/edit_section/component_card_padding/component_card_padding_widget.dart';
+import '/page_editor/edit_section/component_card_vertical_alignment/component_card_vertical_alignment_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
