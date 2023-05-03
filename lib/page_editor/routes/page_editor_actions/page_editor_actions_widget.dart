@@ -41,88 +41,85 @@ class _PageEditorActionsWidgetState extends State<PageEditorActionsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
-      child: Container(
-        width: MediaQuery.of(context).size.width * 1.0,
-        height: 80.0,
-        decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).primaryBackground,
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            wrapWithModel(
-              model: _model.actionButtonModel1,
-              updateCallback: () => setState(() {}),
-              child: ActionButtonWidget(
-                icon: Icon(
-                  FFIcons.kinterfaceEditFlipLeftCircle,
-                  size: 27.0,
-                ),
-                title: 'Theme',
-                action: () async {
-                  await showModalBottomSheet(
-                    isScrollControlled: true,
-                    backgroundColor: Colors.transparent,
-                    enableDrag: false,
-                    context: context,
-                    builder: (bottomSheetContext) {
-                      return Padding(
-                        padding: MediaQuery.of(bottomSheetContext).viewInsets,
-                        child: Container(
-                          height: 620.0,
-                          child: ThemeEditorWidget(),
-                        ),
-                      );
-                    },
-                  ).then((value) => setState(() {}));
-                },
+    return Container(
+      width: MediaQuery.of(context).size.width * 1.0,
+      height: 80.0,
+      decoration: BoxDecoration(
+        color: FlutterFlowTheme.of(context).primaryBackground,
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          wrapWithModel(
+            model: _model.actionButtonModel1,
+            updateCallback: () => setState(() {}),
+            child: ActionButtonWidget(
+              icon: Icon(
+                FFIcons.kinterfaceEditFlipLeftCircle,
+                size: 27.0,
               ),
+              title: 'Theme',
+              action: () async {
+                await showModalBottomSheet(
+                  isScrollControlled: true,
+                  backgroundColor: Colors.transparent,
+                  enableDrag: false,
+                  context: context,
+                  builder: (bottomSheetContext) {
+                    return Padding(
+                      padding: MediaQuery.of(bottomSheetContext).viewInsets,
+                      child: Container(
+                        height: 620.0,
+                        child: ThemeEditorWidget(),
+                      ),
+                    );
+                  },
+                ).then((value) => setState(() {}));
+              },
             ),
-            wrapWithModel(
-              model: _model.actionButtonModel2,
-              updateCallback: () => setState(() {}),
-              child: ActionButtonWidget(
-                icon: Icon(
-                  FFIcons.kinterfaceAdd21,
-                  size: 25.0,
-                ),
-                title: 'Add',
-                action: () async {
-                  await showModalBottomSheet(
-                    isScrollControlled: true,
-                    backgroundColor: Colors.transparent,
-                    enableDrag: false,
-                    context: context,
-                    builder: (bottomSheetContext) {
-                      return Padding(
-                        padding: MediaQuery.of(bottomSheetContext).viewInsets,
-                        child: Container(
-                          height: 620.0,
-                          child: AddComponentWidget(),
-                        ),
-                      );
-                    },
-                  ).then((value) => setState(() {}));
-                },
+          ),
+          wrapWithModel(
+            model: _model.actionButtonModel2,
+            updateCallback: () => setState(() {}),
+            child: ActionButtonWidget(
+              icon: Icon(
+                FFIcons.kinterfaceAdd21,
+                size: 25.0,
               ),
+              title: 'Add',
+              action: () async {
+                await showModalBottomSheet(
+                  isScrollControlled: true,
+                  backgroundColor: Colors.transparent,
+                  enableDrag: false,
+                  context: context,
+                  builder: (bottomSheetContext) {
+                    return Padding(
+                      padding: MediaQuery.of(bottomSheetContext).viewInsets,
+                      child: Container(
+                        height: 620.0,
+                        child: AddComponentWidget(),
+                      ),
+                    );
+                  },
+                ).then((value) => setState(() {}));
+              },
             ),
-            wrapWithModel(
-              model: _model.actionButtonModel3,
-              updateCallback: () => setState(() {}),
-              child: ActionButtonWidget(
-                icon: Icon(
-                  Icons.public,
-                  size: 30.0,
-                ),
-                title: 'Publish',
-                action: () async {},
+          ),
+          wrapWithModel(
+            model: _model.actionButtonModel3,
+            updateCallback: () => setState(() {}),
+            child: ActionButtonWidget(
+              icon: Icon(
+                Icons.public,
+                size: 30.0,
               ),
+              title: 'Publish',
+              action: () async {},
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
