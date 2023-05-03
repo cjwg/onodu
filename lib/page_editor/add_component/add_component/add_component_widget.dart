@@ -1,9 +1,8 @@
 import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
+import '/components/list_item/list_item_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/page_editor/add_component/component_card/component_card_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'add_component_model.dart';
@@ -49,7 +48,7 @@ class _AddComponentWidgetState extends State<AddComponentWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 1.0,
-      height: 400.0,
+      height: 620.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).primaryBackground,
         borderRadius: BorderRadius.only(
@@ -69,7 +68,7 @@ class _AddComponentWidgetState extends State<AddComponentWidget> {
           scrollDirection: Axis.horizontal,
           children: [
             Column(
-              mainAxisSize: MainAxisSize.max,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 wrapWithModel(
                   model: _model.bottomSheetTitleModel,
@@ -79,164 +78,190 @@ class _AddComponentWidgetState extends State<AddComponentWidget> {
                   ),
                 ),
                 Expanded(
-                  child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              Navigator.pop(context);
-                            },
-                            child: wrapWithModel(
-                              model: _model.headingModel,
-                              updateCallback: () => setState(() {}),
-                              child: ComponentCardWidget(
-                                componentIcon: Icon(
-                                  FFIcons.kinterfaceTextFormattingTextStyle,
-                                  size: 18.0,
-                                ),
-                                componentName: 'Heading',
-                              ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          Navigator.pop(context);
+                        },
+                        child: wrapWithModel(
+                          model: _model.headingModel,
+                          updateCallback: () => setState(() {}),
+                          child: ListItemWidget(
+                            leftIcon: Icon(
+                              FFIcons.kinterfaceTextFormattingTextStyle,
+                            ),
+                            title: 'Heading',
+                            rightIcon: Icon(
+                              FFIcons.kinterfaceAdd2,
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.subheadingModel,
-                            updateCallback: () => setState(() {}),
-                            child: ComponentCardWidget(
-                              componentIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingSmallCaps,
-                              ),
-                              componentName: 'Subheading',
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.textModel,
-                            updateCallback: () => setState(() {}),
-                            child: ComponentCardWidget(
-                              componentIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingLeftAlign,
-                                size: 20.0,
-                              ),
-                              componentName: 'Text',
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.buttonModel,
-                            updateCallback: () => setState(() {}),
-                            child: ComponentCardWidget(
-                              componentIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingTextSquare1,
-                                size: 19.0,
-                              ),
-                              componentName: 'Button',
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.imageModel,
-                            updateCallback: () => setState(() {}),
-                            child: ComponentCardWidget(
-                              componentIcon: Icon(
-                                FFIcons.kimagePictureOrientationSquare,
-                                size: 22.0,
-                              ),
-                              componentName: 'Image',
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.carouselModel,
-                            updateCallback: () => setState(() {}),
-                            child: ComponentCardWidget(
-                              componentIcon: Icon(
-                                Icons.view_carousel_rounded,
-                              ),
-                              componentName: 'Carousel',
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.listModel,
-                            updateCallback: () => setState(() {}),
-                            child: ComponentCardWidget(
-                              componentIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingListBullets,
-                                size: 15.0,
-                              ),
-                              componentName: 'List',
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.tabsModel,
-                            updateCallback: () => setState(() {}),
-                            child: ComponentCardWidget(
-                              componentIcon: Icon(
-                                Icons.tab,
-                                size: 20.0,
-                              ),
-                              componentName: 'Tabs',
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.sectionModel1,
-                            updateCallback: () => setState(() {}),
-                            child: ComponentCardWidget(
-                              componentIcon: Icon(
-                                FFIcons.kinterfaceEditCarouselVertical,
-                                size: 20.0,
-                              ),
-                              componentName: 'Section',
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.sectionModel2,
-                            updateCallback: () => setState(() {}),
-                            child: ComponentCardWidget(
-                              componentIcon: Icon(
-                                FFIcons.kphoneContactPhonebook,
-                                size: 19.0,
-                              ),
-                              componentName: 'Contact card',
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.signUpFormModel,
-                            updateCallback: () => setState(() {}),
-                            child: ComponentCardWidget(
-                              componentIcon: Icon(
-                                Icons.account_circle,
-                              ),
-                              componentName: 'Sign up form',
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.bookingFormModel,
-                            updateCallback: () => setState(() {}),
-                            child: ComponentCardWidget(
-                              componentIcon: FaIcon(
-                                FontAwesomeIcons.calendar,
-                                size: 20.0,
-                              ),
-                              componentName: 'Booking form',
-                            ),
-                          ),
-                          wrapWithModel(
-                            model: _model.paymentModel,
-                            updateCallback: () => setState(() {}),
-                            child: ComponentCardWidget(
-                              componentIcon: Icon(
-                                Icons.payment,
-                              ),
-                              componentName: 'Take a payment',
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
-                    ),
+                      wrapWithModel(
+                        model: _model.subHeadingModel,
+                        updateCallback: () => setState(() {}),
+                        child: ListItemWidget(
+                          leftIcon: Icon(
+                            FFIcons.kinterfaceTextFormattingSmallCaps,
+                          ),
+                          title: 'Sub heading',
+                          rightIcon: Icon(
+                            FFIcons.kinterfaceAdd21,
+                          ),
+                        ),
+                      ),
+                      wrapWithModel(
+                        model: _model.textModel,
+                        updateCallback: () => setState(() {}),
+                        child: ListItemWidget(
+                          leftIcon: Icon(
+                            FFIcons.kinterfaceTextFormattingLeftAlign,
+                          ),
+                          title: 'Text',
+                          rightIcon: Icon(
+                            FFIcons.kinterfaceAdd21,
+                          ),
+                        ),
+                      ),
+                      wrapWithModel(
+                        model: _model.listItemModel1,
+                        updateCallback: () => setState(() {}),
+                        child: ListItemWidget(
+                          leftIcon: Icon(
+                            FFIcons.kinterfaceTextFormattingTextSquare,
+                          ),
+                          title: 'Button',
+                          rightIcon: Icon(
+                            FFIcons.kinterfaceAdd21,
+                          ),
+                        ),
+                      ),
+                      wrapWithModel(
+                        model: _model.listItemModel2,
+                        updateCallback: () => setState(() {}),
+                        child: ListItemWidget(
+                          leftIcon: Icon(
+                            FFIcons.kimagePictureOrientationSquare,
+                          ),
+                          title: 'Image',
+                          rightIcon: Icon(
+                            FFIcons.kinterfaceAdd21,
+                          ),
+                        ),
+                      ),
+                      wrapWithModel(
+                        model: _model.carouselModel,
+                        updateCallback: () => setState(() {}),
+                        child: ListItemWidget(
+                          leftIcon: Icon(
+                            Icons.view_carousel,
+                          ),
+                          title: 'Carousel',
+                          rightIcon: Icon(
+                            FFIcons.kinterfaceAdd2,
+                          ),
+                        ),
+                      ),
+                      wrapWithModel(
+                        model: _model.listModel,
+                        updateCallback: () => setState(() {}),
+                        child: ListItemWidget(
+                          leftIcon: Icon(
+                            Icons.format_list_bulleted_rounded,
+                          ),
+                          title: 'List',
+                          rightIcon: Icon(
+                            FFIcons.kinterfaceAdd21,
+                          ),
+                        ),
+                      ),
+                      wrapWithModel(
+                        model: _model.tabsModel,
+                        updateCallback: () => setState(() {}),
+                        child: ListItemWidget(
+                          leftIcon: Icon(
+                            Icons.tab,
+                          ),
+                          title: 'Tabs',
+                          rightIcon: Icon(
+                            FFIcons.kinterfaceAdd21,
+                          ),
+                        ),
+                      ),
+                      wrapWithModel(
+                        model: _model.sectioModel,
+                        updateCallback: () => setState(() {}),
+                        child: ListItemWidget(
+                          leftIcon: Icon(
+                            FFIcons.kinterfaceEditCarouselVertical1,
+                          ),
+                          title: 'Section',
+                          rightIcon: Icon(
+                            FFIcons.kinterfaceAdd21,
+                          ),
+                        ),
+                      ),
+                      wrapWithModel(
+                        model: _model.contactCardModel,
+                        updateCallback: () => setState(() {}),
+                        child: ListItemWidget(
+                          leftIcon: Icon(
+                            FFIcons.kentertainmentNewsPaper,
+                          ),
+                          title: 'Contact card',
+                          rightIcon: Icon(
+                            FFIcons.kinterfaceAdd2,
+                          ),
+                        ),
+                      ),
+                      wrapWithModel(
+                        model: _model.signUpFormModel,
+                        updateCallback: () => setState(() {}),
+                        child: ListItemWidget(
+                          leftIcon: Icon(
+                            Icons.person,
+                          ),
+                          title: 'Sign up form',
+                          rightIcon: Icon(
+                            FFIcons.kinterfaceAdd2,
+                          ),
+                        ),
+                      ),
+                      wrapWithModel(
+                        model: _model.bookingFormModel,
+                        updateCallback: () => setState(() {}),
+                        child: ListItemWidget(
+                          leftIcon: Icon(
+                            Icons.calendar_today_rounded,
+                          ),
+                          title: 'Booking form',
+                          rightIcon: Icon(
+                            FFIcons.kinterfaceAdd21,
+                          ),
+                        ),
+                      ),
+                      wrapWithModel(
+                        model: _model.paymentModel,
+                        updateCallback: () => setState(() {}),
+                        child: ListItemWidget(
+                          leftIcon: Icon(
+                            Icons.payment_rounded,
+                          ),
+                          title: 'Payment',
+                          rightIcon: Icon(
+                            FFIcons.kinterfaceAdd21,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],

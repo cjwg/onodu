@@ -1,11 +1,11 @@
 import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
-import '/components/edit_theme_actions_widget.dart';
-import '/components/edit_theme_palette_actions_widget.dart';
+import '/components/list_item/list_item_widget.dart';
 import '/components/palette_item_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/theme_editor/components/theme_card/theme_card_widget.dart';
+import '/theme_editor/edit_theme_actions/edit_theme_actions_widget.dart';
+import '/theme_editor/edit_theme_palette_actions/edit_theme_palette_actions_widget.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -23,19 +23,19 @@ class ThemeEditorModel extends FlutterFlowModel {
   // Model for BottomSheetTitle component.
   late BottomSheetTitleModel bottomSheetTitleModel;
   // Model for ThemeBrowser.
-  late ThemeCardModel themeBrowserModel;
+  late ListItemModel themeBrowserModel;
   // Model for Palette.
-  late ThemeCardModel paletteModel;
+  late ListItemModel paletteModel;
   // Model for Typography.
-  late ThemeCardModel typographyModel;
+  late ListItemModel typographyModel;
   // Model for Images.
-  late ThemeCardModel imagesModel;
+  late ListItemModel imagesModel;
   // Model for Buttons.
-  late ThemeCardModel buttonsModel;
+  late ListItemModel buttonsModel;
   // Model for Layout.
-  late ThemeCardModel layoutModel;
+  late ListItemModel layoutModel;
   // Model for Animation.
-  late ThemeCardModel animationModel;
+  late ListItemModel animationModel;
   // Model for EditThemeActions component.
   late EditThemeActionsModel editThemeActionsModel;
   // Model for PaletteItem component.
@@ -55,13 +55,13 @@ class ThemeEditorModel extends FlutterFlowModel {
 
   void initState(BuildContext context) {
     bottomSheetTitleModel = createModel(context, () => BottomSheetTitleModel());
-    themeBrowserModel = createModel(context, () => ThemeCardModel());
-    paletteModel = createModel(context, () => ThemeCardModel());
-    typographyModel = createModel(context, () => ThemeCardModel());
-    imagesModel = createModel(context, () => ThemeCardModel());
-    buttonsModel = createModel(context, () => ThemeCardModel());
-    layoutModel = createModel(context, () => ThemeCardModel());
-    animationModel = createModel(context, () => ThemeCardModel());
+    themeBrowserModel = createModel(context, () => ListItemModel());
+    paletteModel = createModel(context, () => ListItemModel());
+    typographyModel = createModel(context, () => ListItemModel());
+    imagesModel = createModel(context, () => ListItemModel());
+    buttonsModel = createModel(context, () => ListItemModel());
+    layoutModel = createModel(context, () => ListItemModel());
+    animationModel = createModel(context, () => ListItemModel());
     editThemeActionsModel = createModel(context, () => EditThemeActionsModel());
     paletteItemModel1 = createModel(context, () => PaletteItemModel());
     paletteItemModel2 = createModel(context, () => PaletteItemModel());

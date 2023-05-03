@@ -1,11 +1,11 @@
 import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
-import '/components/edit_theme_actions_widget.dart';
-import '/components/edit_theme_palette_actions_widget.dart';
+import '/components/list_item/list_item_widget.dart';
 import '/components/palette_item_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/theme_editor/components/theme_card/theme_card_widget.dart';
+import '/theme_editor/edit_theme_actions/edit_theme_actions_widget.dart';
+import '/theme_editor/edit_theme_palette_actions/edit_theme_palette_actions_widget.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -98,12 +98,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                           wrapWithModel(
                             model: _model.themeBrowserModel,
                             updateCallback: () => setState(() {}),
-                            child: ThemeCardWidget(
-                              componentIcon: Icon(
-                                Icons.apps,
-                              ),
-                              componentName: 'Browse themes',
-                            ),
+                            child: ListItemWidget(),
                           ),
                           InkWell(
                             splashColor: Colors.transparent,
@@ -120,68 +115,33 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                             child: wrapWithModel(
                               model: _model.paletteModel,
                               updateCallback: () => setState(() {}),
-                              child: ThemeCardWidget(
-                                componentIcon: Icon(
-                                  Icons.palette_rounded,
-                                  size: 28.0,
-                                ),
-                                componentName: 'Palette',
-                              ),
+                              child: ListItemWidget(),
                             ),
                           ),
                           wrapWithModel(
                             model: _model.typographyModel,
                             updateCallback: () => setState(() {}),
-                            child: ThemeCardWidget(
-                              componentIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingSmallCaps,
-                                size: 28.0,
-                              ),
-                              componentName: 'Typography',
-                            ),
+                            child: ListItemWidget(),
                           ),
                           wrapWithModel(
                             model: _model.imagesModel,
                             updateCallback: () => setState(() {}),
-                            child: ThemeCardWidget(
-                              componentIcon: Icon(
-                                FFIcons.kimagePictureOrientationSquare,
-                                size: 25.0,
-                              ),
-                              componentName: 'Images',
-                            ),
+                            child: ListItemWidget(),
                           ),
                           wrapWithModel(
                             model: _model.buttonsModel,
                             updateCallback: () => setState(() {}),
-                            child: ThemeCardWidget(
-                              componentIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingTextSquare1,
-                                size: 25.0,
-                              ),
-                              componentName: 'Elements',
-                            ),
+                            child: ListItemWidget(),
                           ),
                           wrapWithModel(
                             model: _model.layoutModel,
                             updateCallback: () => setState(() {}),
-                            child: ThemeCardWidget(
-                              componentIcon: Icon(
-                                FFIcons.kinterfaceEditAlignSelection1,
-                                size: 25.0,
-                              ),
-                              componentName: 'Layout',
-                            ),
+                            child: ListItemWidget(),
                           ),
                           wrapWithModel(
                             model: _model.animationModel,
                             updateCallback: () => setState(() {}),
-                            child: ThemeCardWidget(
-                              componentIcon: Icon(
-                                Icons.animation,
-                              ),
-                              componentName: 'Animation',
-                            ),
+                            child: ListItemWidget(),
                           ),
                         ],
                       ),

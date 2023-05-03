@@ -1,4 +1,4 @@
-import '/components/action_button_widget.dart';
+import '/components/action_button/action_button_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/page_editor/add_component/add_component/add_component_widget.dart';

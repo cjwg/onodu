@@ -1,24 +1,22 @@
-import '/components/action_button_widget.dart';
+import '/components/action_button/action_button_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'edit_theme_palette_actions_model.dart';
-export 'edit_theme_palette_actions_model.dart';
+import 'edit_theme_actions_model.dart';
+export 'edit_theme_actions_model.dart';
 
-class EditThemePaletteActionsWidget extends StatefulWidget {
-  const EditThemePaletteActionsWidget({Key? key}) : super(key: key);
+class EditThemeActionsWidget extends StatefulWidget {
+  const EditThemeActionsWidget({Key? key}) : super(key: key);
 
   @override
-  _EditThemePaletteActionsWidgetState createState() =>
-      _EditThemePaletteActionsWidgetState();
+  _EditThemeActionsWidgetState createState() => _EditThemeActionsWidgetState();
 }
 
-class _EditThemePaletteActionsWidgetState
-    extends State<EditThemePaletteActionsWidget> {
-  late EditThemePaletteActionsModel _model;
+class _EditThemeActionsWidgetState extends State<EditThemeActionsWidget> {
+  late EditThemeActionsModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -29,7 +27,7 @@ class _EditThemePaletteActionsWidgetState
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => EditThemePaletteActionsModel());
+    _model = createModel(context, () => EditThemeActionsModel());
   }
 
   @override
@@ -42,7 +40,7 @@ class _EditThemePaletteActionsWidgetState
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 35.0),
+      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 15.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 1.0,
         height: 80.0,
@@ -70,10 +68,10 @@ class _EditThemePaletteActionsWidgetState
               updateCallback: () => setState(() {}),
               child: ActionButtonWidget(
                 icon: Icon(
-                  Icons.auto_awesome,
-                  size: 25.0,
+                  Icons.save_alt,
+                  size: 30.0,
                 ),
-                title: 'Generate',
+                title: 'Save',
                 action: () async {},
               ),
             ),

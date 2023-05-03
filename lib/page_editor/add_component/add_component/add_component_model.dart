@@ -1,9 +1,8 @@
 import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
+import '/components/list_item/list_item_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/page_editor/add_component/component_card/component_card_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -15,63 +14,63 @@ class AddComponentModel extends FlutterFlowModel {
   // Model for BottomSheetTitle component.
   late BottomSheetTitleModel bottomSheetTitleModel;
   // Model for Heading.
-  late ComponentCardModel headingModel;
-  // Model for Subheading.
-  late ComponentCardModel subheadingModel;
+  late ListItemModel headingModel;
+  // Model for SubHeading.
+  late ListItemModel subHeadingModel;
   // Model for Text.
-  late ComponentCardModel textModel;
-  // Model for Button.
-  late ComponentCardModel buttonModel;
-  // Model for Image.
-  late ComponentCardModel imageModel;
+  late ListItemModel textModel;
+  // Model for ListItem component.
+  late ListItemModel listItemModel1;
+  // Model for ListItem component.
+  late ListItemModel listItemModel2;
   // Model for Carousel.
-  late ComponentCardModel carouselModel;
+  late ListItemModel carouselModel;
   // Model for List.
-  late ComponentCardModel listModel;
+  late ListItemModel listModel;
   // Model for Tabs.
-  late ComponentCardModel tabsModel;
-  // Model for Section.
-  late ComponentCardModel sectionModel1;
-  // Model for Section.
-  late ComponentCardModel sectionModel2;
+  late ListItemModel tabsModel;
+  // Model for Sectio.
+  late ListItemModel sectioModel;
+  // Model for ContactCard.
+  late ListItemModel contactCardModel;
   // Model for SignUpForm.
-  late ComponentCardModel signUpFormModel;
+  late ListItemModel signUpFormModel;
   // Model for BookingForm.
-  late ComponentCardModel bookingFormModel;
+  late ListItemModel bookingFormModel;
   // Model for Payment.
-  late ComponentCardModel paymentModel;
+  late ListItemModel paymentModel;
 
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {
     bottomSheetTitleModel = createModel(context, () => BottomSheetTitleModel());
-    headingModel = createModel(context, () => ComponentCardModel());
-    subheadingModel = createModel(context, () => ComponentCardModel());
-    textModel = createModel(context, () => ComponentCardModel());
-    buttonModel = createModel(context, () => ComponentCardModel());
-    imageModel = createModel(context, () => ComponentCardModel());
-    carouselModel = createModel(context, () => ComponentCardModel());
-    listModel = createModel(context, () => ComponentCardModel());
-    tabsModel = createModel(context, () => ComponentCardModel());
-    sectionModel1 = createModel(context, () => ComponentCardModel());
-    sectionModel2 = createModel(context, () => ComponentCardModel());
-    signUpFormModel = createModel(context, () => ComponentCardModel());
-    bookingFormModel = createModel(context, () => ComponentCardModel());
-    paymentModel = createModel(context, () => ComponentCardModel());
+    headingModel = createModel(context, () => ListItemModel());
+    subHeadingModel = createModel(context, () => ListItemModel());
+    textModel = createModel(context, () => ListItemModel());
+    listItemModel1 = createModel(context, () => ListItemModel());
+    listItemModel2 = createModel(context, () => ListItemModel());
+    carouselModel = createModel(context, () => ListItemModel());
+    listModel = createModel(context, () => ListItemModel());
+    tabsModel = createModel(context, () => ListItemModel());
+    sectioModel = createModel(context, () => ListItemModel());
+    contactCardModel = createModel(context, () => ListItemModel());
+    signUpFormModel = createModel(context, () => ListItemModel());
+    bookingFormModel = createModel(context, () => ListItemModel());
+    paymentModel = createModel(context, () => ListItemModel());
   }
 
   void dispose() {
     bottomSheetTitleModel.dispose();
     headingModel.dispose();
-    subheadingModel.dispose();
+    subHeadingModel.dispose();
     textModel.dispose();
-    buttonModel.dispose();
-    imageModel.dispose();
+    listItemModel1.dispose();
+    listItemModel2.dispose();
     carouselModel.dispose();
     listModel.dispose();
     tabsModel.dispose();
-    sectionModel1.dispose();
-    sectionModel2.dispose();
+    sectioModel.dispose();
+    contactCardModel.dispose();
     signUpFormModel.dispose();
     bookingFormModel.dispose();
     paymentModel.dispose();

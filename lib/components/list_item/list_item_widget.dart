@@ -3,26 +3,28 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'theme_card_model.dart';
-export 'theme_card_model.dart';
+import 'list_item_model.dart';
+export 'list_item_model.dart';
 
-class ThemeCardWidget extends StatefulWidget {
-  const ThemeCardWidget({
+class ListItemWidget extends StatefulWidget {
+  const ListItemWidget({
     Key? key,
-    this.componentIcon,
-    String? componentName,
-  })  : this.componentName = componentName ?? 'Name',
+    this.leftIcon,
+    String? title,
+    this.rightIcon,
+  })  : this.title = title ?? 'Name',
         super(key: key);
 
-  final Widget? componentIcon;
-  final String componentName;
+  final Widget? leftIcon;
+  final String title;
+  final Widget? rightIcon;
 
   @override
-  _ThemeCardWidgetState createState() => _ThemeCardWidgetState();
+  _ListItemWidgetState createState() => _ListItemWidgetState();
 }
 
-class _ThemeCardWidgetState extends State<ThemeCardWidget> {
-  late ThemeCardModel _model;
+class _ListItemWidgetState extends State<ListItemWidget> {
+  late ListItemModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -33,7 +35,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ThemeCardModel());
+    _model = createModel(context, () => ListItemModel());
   }
 
   @override
@@ -64,7 +66,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
               ),
               child: Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
-                child: widget.componentIcon!,
+                child: widget.leftIcon!,
               ),
             ),
             Expanded(
@@ -77,7 +79,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
                 child: Align(
                   alignment: AlignmentDirectional(-1.0, 0.0),
                   child: Text(
-                    widget.componentName,
+                    widget.title,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Nunito',
                           fontSize: 17.0,
@@ -95,11 +97,7 @@ class _ThemeCardWidgetState extends State<ThemeCardWidget> {
               ),
               child: Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
-                child: Icon(
-                  Icons.chevron_right_rounded,
-                  color: FlutterFlowTheme.of(context).primaryText,
-                  size: 30.0,
-                ),
+                child: widget.rightIcon!,
               ),
             ),
           ],
