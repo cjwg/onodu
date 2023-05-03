@@ -82,11 +82,13 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                       ),
                     ),
                   ),
-                  wrapWithModel(
-                    model: _model.sectionBackgroundImageModel,
-                    updateCallback: () => setState(() {}),
-                    child: SectionToggleWidget(
-                      title: 'Use background image',
+                  Expanded(
+                    child: wrapWithModel(
+                      model: _model.sectionBackgroundImageModel,
+                      updateCallback: () => setState(() {}),
+                      child: SectionToggleWidget(
+                        title: 'Use background image',
+                      ),
                     ),
                   ),
                   Padding(
@@ -111,11 +113,13 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                       ),
                     ),
                   ),
-                  wrapWithModel(
-                    model: _model.sectionFullHeightModel,
-                    updateCallback: () => setState(() {}),
-                    child: SectionToggleWidget(
-                      title: 'Full height',
+                  Expanded(
+                    child: wrapWithModel(
+                      model: _model.sectionFullHeightModel,
+                      updateCallback: () => setState(() {}),
+                      child: SectionToggleWidget(
+                        title: 'Full height',
+                      ),
                     ),
                   ),
                   Padding(
