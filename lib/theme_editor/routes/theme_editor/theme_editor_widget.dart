@@ -8,6 +8,7 @@ import '/theme_editor/edit_theme_actions/edit_theme_actions_widget.dart';
 import '/theme_editor/edit_theme_palette_actions/edit_theme_palette_actions_widget.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'theme_editor_model.dart';
@@ -98,7 +99,15 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                           wrapWithModel(
                             model: _model.themeBrowserModel,
                             updateCallback: () => setState(() {}),
-                            child: ListItemWidget(),
+                            child: ListItemWidget(
+                              leftIcon: Icon(
+                                Icons.grid_view,
+                              ),
+                              title: 'Browse themes',
+                              rightIcon: FaIcon(
+                                FontAwesomeIcons.angleRight,
+                              ),
+                            ),
                           ),
                           InkWell(
                             splashColor: Colors.transparent,
@@ -115,33 +124,81 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                             child: wrapWithModel(
                               model: _model.paletteModel,
                               updateCallback: () => setState(() {}),
-                              child: ListItemWidget(),
+                              child: ListItemWidget(
+                                leftIcon: Icon(
+                                  FFIcons.kinterfaceEditPaint,
+                                ),
+                                title: 'Palette',
+                                rightIcon: FaIcon(
+                                  FontAwesomeIcons.angleRight,
+                                ),
+                              ),
                             ),
                           ),
                           wrapWithModel(
                             model: _model.typographyModel,
                             updateCallback: () => setState(() {}),
-                            child: ListItemWidget(),
+                            child: ListItemWidget(
+                              leftIcon: Icon(
+                                FFIcons.kinterfaceTextFormattingSmallCaps,
+                              ),
+                              title: 'Typography',
+                              rightIcon: FaIcon(
+                                FontAwesomeIcons.angleRight,
+                              ),
+                            ),
                           ),
                           wrapWithModel(
                             model: _model.imagesModel,
                             updateCallback: () => setState(() {}),
-                            child: ListItemWidget(),
+                            child: ListItemWidget(
+                              leftIcon: Icon(
+                                FFIcons.kimagePictureOrientationSquare,
+                              ),
+                              title: 'Media',
+                              rightIcon: FaIcon(
+                                FontAwesomeIcons.angleRight,
+                              ),
+                            ),
                           ),
                           wrapWithModel(
                             model: _model.buttonsModel,
                             updateCallback: () => setState(() {}),
-                            child: ListItemWidget(),
+                            child: ListItemWidget(
+                              leftIcon: Icon(
+                                FFIcons.kinterfaceTextFormattingTextSquare1,
+                              ),
+                              title: 'Elements',
+                              rightIcon: FaIcon(
+                                FontAwesomeIcons.angleRight,
+                              ),
+                            ),
                           ),
                           wrapWithModel(
                             model: _model.layoutModel,
                             updateCallback: () => setState(() {}),
-                            child: ListItemWidget(),
+                            child: ListItemWidget(
+                              leftIcon: Icon(
+                                FFIcons.kinterfaceEditAlignSelection1,
+                              ),
+                              title: 'Layout',
+                              rightIcon: Icon(
+                                FFIcons.kinterfaceEditAlignSelection1,
+                              ),
+                            ),
                           ),
                           wrapWithModel(
                             model: _model.animationModel,
                             updateCallback: () => setState(() {}),
-                            child: ListItemWidget(),
+                            child: ListItemWidget(
+                              leftIcon: Icon(
+                                Icons.animation,
+                              ),
+                              title: 'Animation',
+                              rightIcon: FaIcon(
+                                FontAwesomeIcons.angleRight,
+                              ),
+                            ),
                           ),
                         ],
                       ),

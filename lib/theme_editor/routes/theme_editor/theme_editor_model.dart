@@ -8,6 +8,7 @@ import '/theme_editor/edit_theme_actions/edit_theme_actions_widget.dart';
 import '/theme_editor/edit_theme_palette_actions/edit_theme_palette_actions_widget.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
