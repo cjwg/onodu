@@ -67,7 +67,7 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
             child: Align(
               alignment: AlignmentDirectional(0.0, -0.7),
               child: Column(
-                mainAxisSize: MainAxisSize.max,
+                mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
