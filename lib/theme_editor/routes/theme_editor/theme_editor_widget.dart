@@ -94,16 +94,31 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          wrapWithModel(
-                            model: _model.themeBrowserModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                Icons.grid_view,
-                              ),
-                              title: 'Browse themes',
-                              rightIcon: FaIcon(
-                                FontAwesomeIcons.angleRight,
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              setState(() {
+                                _model.currentThemeProperties = 'themeGallery';
+                              });
+                              await _model.pageViewController?.nextPage(
+                                duration: Duration(milliseconds: 300),
+                                curve: Curves.ease,
+                              );
+                            },
+                            child: wrapWithModel(
+                              model: _model.themeBrowserModel,
+                              updateCallback: () => setState(() {}),
+                              child: ListItemWidget(
+                                leftIcon: Icon(
+                                  Icons.grid_view,
+                                ),
+                                title: 'Browse themes',
+                                rightIcon: FaIcon(
+                                  FontAwesomeIcons.angleRight,
+                                ),
                               ),
                             ),
                           ),
@@ -176,42 +191,87 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                               ),
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.buttonsModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingTextSquare1,
-                              ),
-                              title: 'Elements',
-                              rightIcon: FaIcon(
-                                FontAwesomeIcons.angleRight,
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              setState(() {
+                                _model.currentThemeProperties = 'elements';
+                              });
+                              await _model.pageViewController?.nextPage(
+                                duration: Duration(milliseconds: 300),
+                                curve: Curves.ease,
+                              );
+                            },
+                            child: wrapWithModel(
+                              model: _model.elementsModel,
+                              updateCallback: () => setState(() {}),
+                              child: ListItemWidget(
+                                leftIcon: Icon(
+                                  FFIcons.kinterfaceTextFormattingTextSquare1,
+                                ),
+                                title: 'Elements',
+                                rightIcon: FaIcon(
+                                  FontAwesomeIcons.angleRight,
+                                ),
                               ),
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.layoutModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                FFIcons.kinterfaceEditAlignSelection1,
-                              ),
-                              title: 'Layout',
-                              rightIcon: FaIcon(
-                                FontAwesomeIcons.angleRight,
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              setState(() {
+                                _model.currentThemeProperties = 'layout';
+                              });
+                              await _model.pageViewController?.nextPage(
+                                duration: Duration(milliseconds: 300),
+                                curve: Curves.ease,
+                              );
+                            },
+                            child: wrapWithModel(
+                              model: _model.layoutModel,
+                              updateCallback: () => setState(() {}),
+                              child: ListItemWidget(
+                                leftIcon: Icon(
+                                  FFIcons.kinterfaceEditAlignSelection1,
+                                ),
+                                title: 'Layout',
+                                rightIcon: FaIcon(
+                                  FontAwesomeIcons.angleRight,
+                                ),
                               ),
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.animationModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                Icons.animation,
-                              ),
-                              title: 'Animation',
-                              rightIcon: FaIcon(
-                                FontAwesomeIcons.angleRight,
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              setState(() {
+                                _model.currentThemeProperties = 'animation';
+                              });
+                              await _model.pageViewController?.nextPage(
+                                duration: Duration(milliseconds: 300),
+                                curve: Curves.ease,
+                              );
+                            },
+                            child: wrapWithModel(
+                              model: _model.animationModel,
+                              updateCallback: () => setState(() {}),
+                              child: ListItemWidget(
+                                leftIcon: Icon(
+                                  Icons.animation,
+                                ),
+                                title: 'Animation',
+                                rightIcon: FaIcon(
+                                  FontAwesomeIcons.angleRight,
+                                ),
                               ),
                             ),
                           ),
@@ -239,7 +299,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         wrapWithModel(
-                          model: _model.bottomSheetNavModel,
+                          model: _model.bottomSheetNavModel1,
                           updateCallback: () => setState(() {}),
                           child: BottomSheetNavWidget(
                             text: 'Palette',
@@ -416,6 +476,82 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                               await _model.pageViewController?.animateToPage(
                                 0,
                                 duration: Duration(milliseconds: 500),
+                                curve: Curves.ease,
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  if (_model.currentThemeProperties == 'layout')
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        wrapWithModel(
+                          model: _model.bottomSheetNavModel2,
+                          updateCallback: () => setState(() {}),
+                          child: BottomSheetNavWidget(
+                            text: 'Layout',
+                            navigateBack: () async {
+                              await _model.pageViewController?.previousPage(
+                                duration: Duration(milliseconds: 300),
+                                curve: Curves.ease,
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  if (_model.currentThemeProperties == 'elements')
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        wrapWithModel(
+                          model: _model.bottomSheetNavModel3,
+                          updateCallback: () => setState(() {}),
+                          child: BottomSheetNavWidget(
+                            text: 'Elements',
+                            navigateBack: () async {
+                              await _model.pageViewController?.previousPage(
+                                duration: Duration(milliseconds: 300),
+                                curve: Curves.ease,
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  if (_model.currentThemeProperties == 'animation')
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        wrapWithModel(
+                          model: _model.bottomSheetNavModel4,
+                          updateCallback: () => setState(() {}),
+                          child: BottomSheetNavWidget(
+                            text: 'Animation',
+                            navigateBack: () async {
+                              await _model.pageViewController?.previousPage(
+                                duration: Duration(milliseconds: 300),
+                                curve: Curves.ease,
+                              );
+                            },
+                          ),
+                        ),
+                      ],
+                    ),
+                  if (_model.currentThemeProperties == 'themeGallery')
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        wrapWithModel(
+                          model: _model.bottomSheetNavModel5,
+                          updateCallback: () => setState(() {}),
+                          child: BottomSheetNavWidget(
+                            text: 'Theme gallery',
+                            navigateBack: () async {
+                              await _model.pageViewController?.previousPage(
+                                duration: Duration(milliseconds: 300),
                                 curve: Curves.ease,
                               );
                             },

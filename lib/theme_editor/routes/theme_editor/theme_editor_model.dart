@@ -34,8 +34,8 @@ class ThemeEditorModel extends FlutterFlowModel {
   late ListItemModel typographyModel;
   // Model for Images.
   late ListItemModel imagesModel;
-  // Model for Buttons.
-  late ListItemModel buttonsModel;
+  // Model for Elements.
+  late ListItemModel elementsModel;
   // Model for Layout.
   late ListItemModel layoutModel;
   // Model for Animation.
@@ -43,7 +43,7 @@ class ThemeEditorModel extends FlutterFlowModel {
   // Model for EditThemeActions component.
   late EditThemeActionsModel editThemeActionsModel;
   // Model for BottomSheetNav component.
-  late BottomSheetNavModel bottomSheetNavModel;
+  late BottomSheetNavModel bottomSheetNavModel1;
   // Model for PaletteItem component.
   late PaletteItemModel paletteItemModel1;
   // Model for PaletteItem component.
@@ -58,6 +58,14 @@ class ThemeEditorModel extends FlutterFlowModel {
   late EditThemePaletteActionsModel editThemePaletteActionsModel;
   // Model for Nav.
   late BottomSheetNavModel navModel;
+  // Model for BottomSheetNav component.
+  late BottomSheetNavModel bottomSheetNavModel2;
+  // Model for BottomSheetNav component.
+  late BottomSheetNavModel bottomSheetNavModel3;
+  // Model for BottomSheetNav component.
+  late BottomSheetNavModel bottomSheetNavModel4;
+  // Model for BottomSheetNav component.
+  late BottomSheetNavModel bottomSheetNavModel5;
 
   /// Initialization and disposal methods.
 
@@ -67,11 +75,11 @@ class ThemeEditorModel extends FlutterFlowModel {
     paletteModel = createModel(context, () => ListItemModel());
     typographyModel = createModel(context, () => ListItemModel());
     imagesModel = createModel(context, () => ListItemModel());
-    buttonsModel = createModel(context, () => ListItemModel());
+    elementsModel = createModel(context, () => ListItemModel());
     layoutModel = createModel(context, () => ListItemModel());
     animationModel = createModel(context, () => ListItemModel());
     editThemeActionsModel = createModel(context, () => EditThemeActionsModel());
-    bottomSheetNavModel = createModel(context, () => BottomSheetNavModel());
+    bottomSheetNavModel1 = createModel(context, () => BottomSheetNavModel());
     paletteItemModel1 = createModel(context, () => PaletteItemModel());
     paletteItemModel2 = createModel(context, () => PaletteItemModel());
     paletteItemModel3 = createModel(context, () => PaletteItemModel());
@@ -80,6 +88,10 @@ class ThemeEditorModel extends FlutterFlowModel {
     editThemePaletteActionsModel =
         createModel(context, () => EditThemePaletteActionsModel());
     navModel = createModel(context, () => BottomSheetNavModel());
+    bottomSheetNavModel2 = createModel(context, () => BottomSheetNavModel());
+    bottomSheetNavModel3 = createModel(context, () => BottomSheetNavModel());
+    bottomSheetNavModel4 = createModel(context, () => BottomSheetNavModel());
+    bottomSheetNavModel5 = createModel(context, () => BottomSheetNavModel());
   }
 
   void dispose() {
@@ -88,11 +100,11 @@ class ThemeEditorModel extends FlutterFlowModel {
     paletteModel.dispose();
     typographyModel.dispose();
     imagesModel.dispose();
-    buttonsModel.dispose();
+    elementsModel.dispose();
     layoutModel.dispose();
     animationModel.dispose();
     editThemeActionsModel.dispose();
-    bottomSheetNavModel.dispose();
+    bottomSheetNavModel1.dispose();
     paletteItemModel1.dispose();
     paletteItemModel2.dispose();
     paletteItemModel3.dispose();
@@ -100,6 +112,10 @@ class ThemeEditorModel extends FlutterFlowModel {
     paletteItemModel5.dispose();
     editThemePaletteActionsModel.dispose();
     navModel.dispose();
+    bottomSheetNavModel2.dispose();
+    bottomSheetNavModel3.dispose();
+    bottomSheetNavModel4.dispose();
+    bottomSheetNavModel5.dispose();
   }
 
   /// Additional helper methods are added here.
