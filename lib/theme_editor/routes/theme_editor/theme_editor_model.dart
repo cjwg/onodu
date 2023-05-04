@@ -42,6 +42,8 @@ class ThemeEditorModel extends FlutterFlowModel {
   late ListItemModel animationModel;
   // Model for EditThemeActions component.
   late EditThemeActionsModel editThemeActionsModel;
+  // Model for BottomSheetNav component.
+  late BottomSheetNavModel bottomSheetNavModel;
   // Model for PaletteItem component.
   late PaletteItemModel paletteItemModel1;
   // Model for PaletteItem component.
@@ -69,6 +71,7 @@ class ThemeEditorModel extends FlutterFlowModel {
     layoutModel = createModel(context, () => ListItemModel());
     animationModel = createModel(context, () => ListItemModel());
     editThemeActionsModel = createModel(context, () => EditThemeActionsModel());
+    bottomSheetNavModel = createModel(context, () => BottomSheetNavModel());
     paletteItemModel1 = createModel(context, () => PaletteItemModel());
     paletteItemModel2 = createModel(context, () => PaletteItemModel());
     paletteItemModel3 = createModel(context, () => PaletteItemModel());
@@ -89,6 +92,7 @@ class ThemeEditorModel extends FlutterFlowModel {
     layoutModel.dispose();
     animationModel.dispose();
     editThemeActionsModel.dispose();
+    bottomSheetNavModel.dispose();
     paletteItemModel1.dispose();
     paletteItemModel2.dispose();
     paletteItemModel3.dispose();

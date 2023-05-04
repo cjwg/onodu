@@ -114,7 +114,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               await _model.pageViewController?.animateToPage(
-                                1,
+                                _model.pageViewIndex!,
                                 duration: Duration(milliseconds: 500),
                                 curve: Curves.ease,
                               );
@@ -236,51 +236,12 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              15.0, 0.0, 15.0, 0.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              FlutterFlowIconButton(
-                                borderColor: Colors.transparent,
-                                borderRadius: 30.0,
-                                borderWidth: 1.0,
-                                buttonSize: 40.0,
-                                icon: Icon(
-                                  FFIcons.kinterfaceArrowsButtonLeft,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
-                                  size: 20.0,
-                                ),
-                                onPressed: () async {
-                                  await _model.pageViewController?.previousPage(
-                                    duration: Duration(milliseconds: 300),
-                                    curve: Curves.ease,
-                                  );
-                                },
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 25.0, 0.0, 25.0),
-                                child: Text(
-                                  'Palette',
-                                  style: FlutterFlowTheme.of(context)
-                                      .displaySmall
-                                      .override(
-                                        fontFamily: 'Nunito',
-                                        fontSize: 22.0,
-                                        fontWeight: FontWeight.w800,
-                                      ),
-                                ),
-                              ),
-                              Container(
-                                width: 40.0,
-                                height: 40.0,
-                                decoration: BoxDecoration(),
-                              ),
-                            ],
+                        wrapWithModel(
+                          model: _model.bottomSheetNavModel,
+                          updateCallback: () => setState(() {}),
+                          child: BottomSheetNavWidget(
+                            text: 'Palette',
+                            navigateBack: () async {},
                           ),
                         ),
                         Expanded(
@@ -441,7 +402,16 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                         wrapWithModel(
                           model: _model.navModel,
                           updateCallback: () => setState(() {}),
-                          child: BottomSheetNavWidget(),
+                          child: BottomSheetNavWidget(
+                            text: 'Typography',
+                            navigateBack: () async {
+                              await _model.pageViewController?.animateToPage(
+                                0,
+                                duration: Duration(milliseconds: 500),
+                                curve: Curves.ease,
+                              );
+                            },
+                          ),
                         ),
                       ],
                     ),

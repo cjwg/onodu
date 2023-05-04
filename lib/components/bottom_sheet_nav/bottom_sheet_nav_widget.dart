@@ -11,10 +11,12 @@ class BottomSheetNavWidget extends StatefulWidget {
   const BottomSheetNavWidget({
     Key? key,
     String? text,
+    required this.navigateBack,
   })  : this.text = text ?? 'Title',
         super(key: key);
 
   final String text;
+  final Future<dynamic> Function()? navigateBack;
 
   @override
   _BottomSheetNavWidgetState createState() => _BottomSheetNavWidgetState();
@@ -62,8 +64,8 @@ class _BottomSheetNavWidgetState extends State<BottomSheetNavWidget> {
                 color: FlutterFlowTheme.of(context).primaryText,
                 size: 20.0,
               ),
-              onPressed: () {
-                print('IconButton pressed ...');
+              onPressed: () async {
+                await widget.navigateBack?.call();
               },
             ),
           ),
