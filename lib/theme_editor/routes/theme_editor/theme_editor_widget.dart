@@ -113,6 +113,9 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
+                              setState(() {
+                                _model.currentThemeProperties = 'typography';
+                              });
                               await _model.pageViewController?.animateToPage(
                                 _model.pageViewIndex!,
                                 duration: Duration(milliseconds: 500),
