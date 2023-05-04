@@ -91,7 +91,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                   Expanded(
                     child: SingleChildScrollView(
                       child: Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           InkWell(
