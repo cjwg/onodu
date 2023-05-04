@@ -1,6 +1,5 @@
 import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/components/list_item/list_item_widget.dart';
-import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -9,8 +8,6 @@ import '/theme_editor/palette_item/palette_item_widget.dart';
 import '/theme_editor/routes/edit_theme_actions/edit_theme_actions_widget.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -24,8 +21,7 @@ class ThemeEditorWidget extends StatefulWidget {
   _ThemeEditorWidgetState createState() => _ThemeEditorWidgetState();
 }
 
-class _ThemeEditorWidgetState extends State<ThemeEditorWidget>
-    with TickerProviderStateMixin {
+class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
   late ThemeEditorModel _model;
 
   int get pageViewCurrentIndex => _model.pageViewController != null &&
@@ -33,22 +29,6 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget>
           _model.pageViewController!.page != null
       ? _model.pageViewController!.page!.round()
       : 0;
-
-  final animationsMap = {
-    'containerOnActionTriggerAnimation': AnimationInfo(
-      trigger: AnimationTrigger.onActionTrigger,
-      applyInitialState: true,
-      effects: [
-        ScaleEffect(
-          curve: Curves.easeInOut,
-          delay: 0.ms,
-          duration: 600.ms,
-          begin: Offset(1.0, 1.0),
-          end: Offset(1.0, -2.0),
-        ),
-      ],
-    ),
-  };
 
   @override
   void setState(VoidCallback callback) {
@@ -60,13 +40,6 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => ThemeEditorModel());
-
-    setupAnimations(
-      animationsMap.values.where((anim) =>
-          anim.trigger == AnimationTrigger.onActionTrigger ||
-          !anim.applyInitialState),
-      this,
-    );
   }
 
   @override
@@ -145,14 +118,6 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget>
                                 duration: Duration(milliseconds: 500),
                                 curve: Curves.ease,
                               );
-                              if (animationsMap[
-                                      'containerOnActionTriggerAnimation'] !=
-                                  null) {
-                                animationsMap[
-                                        'containerOnActionTriggerAnimation']!
-                                    .controller
-                                    .forward();
-                              }
                             },
                             child: wrapWithModel(
                               model: _model.paletteModel,
@@ -531,8 +496,6 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget>
           ),
         ),
       ),
-    ).animateOnActionTrigger(
-      animationsMap['containerOnActionTriggerAnimation']!,
     );
   }
 }

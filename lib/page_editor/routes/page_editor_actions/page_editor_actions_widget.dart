@@ -64,15 +64,11 @@ class _PageEditorActionsWidgetState extends State<PageEditorActionsWidget> {
                 await showModalBottomSheet(
                   isScrollControlled: true,
                   backgroundColor: Colors.transparent,
-                  enableDrag: false,
                   context: context,
                   builder: (bottomSheetContext) {
                     return Padding(
                       padding: MediaQuery.of(bottomSheetContext).viewInsets,
-                      child: Container(
-                        height: 620.0,
-                        child: ThemeEditorWidget(),
-                      ),
+                      child: ThemeEditorWidget(),
                     );
                   },
                 ).then((value) => setState(() {}));
