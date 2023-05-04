@@ -1,3 +1,4 @@
+import '/components/bottom_sheet_nav/bottom_sheet_nav_widget.dart';
 import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/components/list_item/list_item_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -15,13 +16,7 @@ import 'theme_editor_model.dart';
 export 'theme_editor_model.dart';
 
 class ThemeEditorWidget extends StatefulWidget {
-  const ThemeEditorWidget({
-    Key? key,
-    int? height,
-  })  : this.height = height ?? 620,
-        super(key: key);
-
-  final int height;
+  const ThemeEditorWidget({Key? key}) : super(key: key);
 
   @override
   _ThemeEditorWidgetState createState() => _ThemeEditorWidgetState();
@@ -220,201 +215,219 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
               ),
               Stack(
                 children: [
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            15.0, 0.0, 15.0, 0.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            FlutterFlowIconButton(
-                              borderColor: Colors.transparent,
-                              borderRadius: 30.0,
-                              borderWidth: 1.0,
-                              buttonSize: 40.0,
-                              icon: Icon(
-                                FFIcons.kinterfaceArrowsButtonLeft,
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                size: 20.0,
-                              ),
-                              onPressed: () async {
-                                await _model.pageViewController?.previousPage(
-                                  duration: Duration(milliseconds: 300),
-                                  curve: Curves.ease,
-                                );
-                              },
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 25.0, 0.0, 25.0),
-                              child: Text(
-                                'Palette',
-                                style: FlutterFlowTheme.of(context)
-                                    .displaySmall
-                                    .override(
-                                      fontFamily: 'Nunito',
-                                      fontSize: 22.0,
-                                      fontWeight: FontWeight.w800,
-                                    ),
-                              ),
-                            ),
-                            Container(
-                              width: 40.0,
-                              height: 40.0,
-                              decoration: BoxDecoration(),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Expanded(
-                        child: Padding(
+                  if (_model.currentThemeProperties == 'palette')
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 20.0),
-                          child: Column(
+                              15.0, 0.0, 15.0, 0.0),
+                          child: Row(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      25.0, 0.0, 25.0, 0.0),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(0.0),
-                                      bottomRight: Radius.circular(0.0),
-                                      topLeft: Radius.circular(25.0),
-                                      topRight: Radius.circular(25.0),
-                                    ),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width *
-                                          1.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                        borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(0.0),
-                                          bottomRight: Radius.circular(0.0),
-                                          topLeft: Radius.circular(25.0),
-                                          topRight: Radius.circular(25.0),
-                                        ),
+                              FlutterFlowIconButton(
+                                borderColor: Colors.transparent,
+                                borderRadius: 30.0,
+                                borderWidth: 1.0,
+                                buttonSize: 40.0,
+                                icon: Icon(
+                                  FFIcons.kinterfaceArrowsButtonLeft,
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                  size: 20.0,
+                                ),
+                                onPressed: () async {
+                                  await _model.pageViewController?.previousPage(
+                                    duration: Duration(milliseconds: 300),
+                                    curve: Curves.ease,
+                                  );
+                                },
+                              ),
+                              Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 25.0, 0.0, 25.0),
+                                child: Text(
+                                  'Palette',
+                                  style: FlutterFlowTheme.of(context)
+                                      .displaySmall
+                                      .override(
+                                        fontFamily: 'Nunito',
+                                        fontSize: 22.0,
+                                        fontWeight: FontWeight.w800,
                                       ),
-                                      child: wrapWithModel(
-                                        model: _model.paletteItemModel1,
-                                        updateCallback: () => setState(() {}),
-                                        updateOnChange: true,
-                                        child: PaletteItemWidget(
-                                          backgroundColor: Color(0xFF022B3A),
-                                          colorPicker: () async {
-                                            await _model.pageViewController
-                                                ?.nextPage(
-                                              duration:
-                                                  Duration(milliseconds: 300),
-                                              curve: Curves.ease,
-                                            );
-                                          },
-                                        ),
-                                      ),
-                                    ),
-                                  ),
                                 ),
                               ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      25.0, 0.0, 25.0, 0.0),
-                                  child: wrapWithModel(
-                                    model: _model.paletteItemModel2,
-                                    updateCallback: () => setState(() {}),
-                                    child: PaletteItemWidget(
-                                      backgroundColor: Color(0xFFA3C4BC),
-                                      colorPicker: () async {
-                                        await _model.pageViewController
-                                            ?.nextPage(
-                                          duration: Duration(milliseconds: 300),
-                                          curve: Curves.ease,
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      25.0, 0.0, 25.0, 0.0),
-                                  child: wrapWithModel(
-                                    model: _model.paletteItemModel3,
-                                    updateCallback: () => setState(() {}),
-                                    child: PaletteItemWidget(
-                                      backgroundColor: Color(0xFFBFD7B5),
-                                      colorPicker: () async {},
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      25.0, 0.0, 25.0, 0.0),
-                                  child: wrapWithModel(
-                                    model: _model.paletteItemModel4,
-                                    updateCallback: () => setState(() {}),
-                                    child: PaletteItemWidget(
-                                      backgroundColor: Color(0xFFE7EFC5),
-                                      colorPicker: () async {},
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Expanded(
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      25.0, 0.0, 25.0, 0.0),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(25.0),
-                                      bottomRight: Radius.circular(25.0),
-                                      topLeft: Radius.circular(0.0),
-                                      topRight: Radius.circular(0.0),
-                                    ),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width *
-                                          1.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryBackground,
-                                        borderRadius: BorderRadius.only(
-                                          bottomLeft: Radius.circular(25.0),
-                                          bottomRight: Radius.circular(25.0),
-                                          topLeft: Radius.circular(0.0),
-                                          topRight: Radius.circular(0.0),
-                                        ),
-                                      ),
-                                      child: wrapWithModel(
-                                        model: _model.paletteItemModel5,
-                                        updateCallback: () => setState(() {}),
-                                        child: PaletteItemWidget(
-                                          backgroundColor: Color(0xFFF2DDA4),
-                                          colorPicker: () async {},
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                              Container(
+                                width: 40.0,
+                                height: 40.0,
+                                decoration: BoxDecoration(),
                               ),
                             ],
                           ),
                         ),
-                      ),
-                      wrapWithModel(
-                        model: _model.editThemePaletteActionsModel,
-                        updateCallback: () => setState(() {}),
-                        child: EditThemePaletteActionsWidget(),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 20.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        25.0, 0.0, 25.0, 0.0),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.only(
+                                        bottomLeft: Radius.circular(0.0),
+                                        bottomRight: Radius.circular(0.0),
+                                        topLeft: Radius.circular(25.0),
+                                        topRight: Radius.circular(25.0),
+                                      ),
+                                      child: Container(
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                1.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(0.0),
+                                            bottomRight: Radius.circular(0.0),
+                                            topLeft: Radius.circular(25.0),
+                                            topRight: Radius.circular(25.0),
+                                          ),
+                                        ),
+                                        child: wrapWithModel(
+                                          model: _model.paletteItemModel1,
+                                          updateCallback: () => setState(() {}),
+                                          updateOnChange: true,
+                                          child: PaletteItemWidget(
+                                            backgroundColor: Color(0xFF022B3A),
+                                            colorPicker: () async {
+                                              await _model.pageViewController
+                                                  ?.nextPage(
+                                                duration:
+                                                    Duration(milliseconds: 300),
+                                                curve: Curves.ease,
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        25.0, 0.0, 25.0, 0.0),
+                                    child: wrapWithModel(
+                                      model: _model.paletteItemModel2,
+                                      updateCallback: () => setState(() {}),
+                                      child: PaletteItemWidget(
+                                        backgroundColor: Color(0xFFA3C4BC),
+                                        colorPicker: () async {
+                                          await _model.pageViewController
+                                              ?.nextPage(
+                                            duration:
+                                                Duration(milliseconds: 300),
+                                            curve: Curves.ease,
+                                          );
+                                        },
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        25.0, 0.0, 25.0, 0.0),
+                                    child: wrapWithModel(
+                                      model: _model.paletteItemModel3,
+                                      updateCallback: () => setState(() {}),
+                                      child: PaletteItemWidget(
+                                        backgroundColor: Color(0xFFBFD7B5),
+                                        colorPicker: () async {},
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        25.0, 0.0, 25.0, 0.0),
+                                    child: wrapWithModel(
+                                      model: _model.paletteItemModel4,
+                                      updateCallback: () => setState(() {}),
+                                      child: PaletteItemWidget(
+                                        backgroundColor: Color(0xFFE7EFC5),
+                                        colorPicker: () async {},
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        25.0, 0.0, 25.0, 0.0),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.only(
+                                        bottomLeft: Radius.circular(25.0),
+                                        bottomRight: Radius.circular(25.0),
+                                        topLeft: Radius.circular(0.0),
+                                        topRight: Radius.circular(0.0),
+                                      ),
+                                      child: Container(
+                                        width:
+                                            MediaQuery.of(context).size.width *
+                                                1.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryBackground,
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(25.0),
+                                            bottomRight: Radius.circular(25.0),
+                                            topLeft: Radius.circular(0.0),
+                                            topRight: Radius.circular(0.0),
+                                          ),
+                                        ),
+                                        child: wrapWithModel(
+                                          model: _model.paletteItemModel5,
+                                          updateCallback: () => setState(() {}),
+                                          child: PaletteItemWidget(
+                                            backgroundColor: Color(0xFFF2DDA4),
+                                            colorPicker: () async {},
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        wrapWithModel(
+                          model: _model.editThemePaletteActionsModel,
+                          updateCallback: () => setState(() {}),
+                          child: EditThemePaletteActionsWidget(),
+                        ),
+                      ],
+                    ),
+                  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Expanded(
+                        child: wrapWithModel(
+                          model: _model.bottomSheetNavModel,
+                          updateCallback: () => setState(() {}),
+                          child: BottomSheetNavWidget(),
+                        ),
                       ),
                     ],
                   ),

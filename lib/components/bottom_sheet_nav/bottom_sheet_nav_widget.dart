@@ -72,9 +72,9 @@ class _BottomSheetNavWidgetState extends State<BottomSheetNavWidget> {
             child: Text(
               widget.text,
               style: FlutterFlowTheme.of(context).titleMedium.override(
-                    fontFamily: 'Poppins',
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.w600,
+                    fontFamily: 'Nunito',
+                    fontSize: 22.0,
+                    fontWeight: FontWeight.w800,
                   ),
             ),
           ),

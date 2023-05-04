@@ -1,3 +1,4 @@
+import '/components/bottom_sheet_nav/bottom_sheet_nav_widget.dart';
 import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/components/list_item/list_item_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -16,6 +17,8 @@ class ThemeEditorModel extends FlutterFlowModel {
   ///  Local state fields for this component.
 
   int? pageViewIndex = 0;
+
+  String? currentThemeProperties = 'palette';
 
   ///  State fields for stateful widgets in this component.
 
@@ -51,6 +54,8 @@ class ThemeEditorModel extends FlutterFlowModel {
   late PaletteItemModel paletteItemModel5;
   // Model for EditThemePaletteActions component.
   late EditThemePaletteActionsModel editThemePaletteActionsModel;
+  // Model for BottomSheetNav component.
+  late BottomSheetNavModel bottomSheetNavModel;
 
   /// Initialization and disposal methods.
 
@@ -71,6 +76,7 @@ class ThemeEditorModel extends FlutterFlowModel {
     paletteItemModel5 = createModel(context, () => PaletteItemModel());
     editThemePaletteActionsModel =
         createModel(context, () => EditThemePaletteActionsModel());
+    bottomSheetNavModel = createModel(context, () => BottomSheetNavModel());
   }
 
   void dispose() {
@@ -89,6 +95,7 @@ class ThemeEditorModel extends FlutterFlowModel {
     paletteItemModel4.dispose();
     paletteItemModel5.dispose();
     editThemePaletteActionsModel.dispose();
+    bottomSheetNavModel.dispose();
   }
 
   /// Additional helper methods are added here.
