@@ -68,10 +68,7 @@ class _PageEditorActionsWidgetState extends State<PageEditorActionsWidget> {
                   builder: (bottomSheetContext) {
                     return Padding(
                       padding: MediaQuery.of(bottomSheetContext).viewInsets,
-                      child: Container(
-                        height: 620.0,
-                        child: ThemeEditorWidget(),
-                      ),
+                      child: ThemeEditorWidget(),
                     );
                   },
                 ).then((value) => setState(() {}));
