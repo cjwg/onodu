@@ -139,13 +139,13 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                             hoverColor: Colors.transparent,
                             highlightColor: Colors.transparent,
                             onTap: () async {
+                              setState(() {
+                                _model.currentThemeProperties = 'typography';
+                              });
                               await _model.pageViewController?.nextPage(
                                 duration: Duration(milliseconds: 300),
                                 curve: Curves.ease,
                               );
-                              setState(() {
-                                _model.currentThemeProperties = 'typography';
-                              });
                             },
                             child: wrapWithModel(
                               model: _model.typographyModel,
