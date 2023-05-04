@@ -133,16 +133,31 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                               ),
                             ),
                           ),
-                          wrapWithModel(
-                            model: _model.typographyModel,
-                            updateCallback: () => setState(() {}),
-                            child: ListItemWidget(
-                              leftIcon: Icon(
-                                FFIcons.kinterfaceTextFormattingSmallCaps,
-                              ),
-                              title: 'Typography',
-                              rightIcon: FaIcon(
-                                FontAwesomeIcons.angleRight,
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              await _model.pageViewController?.nextPage(
+                                duration: Duration(milliseconds: 300),
+                                curve: Curves.ease,
+                              );
+                              setState(() {
+                                _model.currentThemeProperties = 'typography';
+                              });
+                            },
+                            child: wrapWithModel(
+                              model: _model.typographyModel,
+                              updateCallback: () => setState(() {}),
+                              child: ListItemWidget(
+                                leftIcon: Icon(
+                                  FFIcons.kinterfaceTextFormattingSmallCaps,
+                                ),
+                                title: 'Typography',
+                                rightIcon: FaIcon(
+                                  FontAwesomeIcons.angleRight,
+                                ),
                               ),
                             ),
                           ),
@@ -423,12 +438,10 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Expanded(
-                          child: wrapWithModel(
-                            model: _model.navModel,
-                            updateCallback: () => setState(() {}),
-                            child: BottomSheetNavWidget(),
-                          ),
+                        wrapWithModel(
+                          model: _model.navModel,
+                          updateCallback: () => setState(() {}),
+                          child: BottomSheetNavWidget(),
                         ),
                       ],
                     ),
