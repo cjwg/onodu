@@ -15,7 +15,13 @@ import 'theme_editor_model.dart';
 export 'theme_editor_model.dart';
 
 class ThemeEditorWidget extends StatefulWidget {
-  const ThemeEditorWidget({Key? key}) : super(key: key);
+  const ThemeEditorWidget({
+    Key? key,
+    int? height,
+  })  : this.height = height ?? 620,
+        super(key: key);
+
+  final int height;
 
   @override
   _ThemeEditorWidgetState createState() => _ThemeEditorWidgetState();
