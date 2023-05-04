@@ -66,7 +66,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                 color: FlutterFlowTheme.of(context).primaryBackground,
               ),
               child: Align(
-                alignment: AlignmentDirectional(0.0, -0.7),
+                alignment: AlignmentDirectional(0.35, -0.7),
                 child: widget.leftIcon!,
               ),
             ),

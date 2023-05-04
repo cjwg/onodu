@@ -49,10 +49,10 @@ class _BottomSheetTitleWidgetState extends State<BottomSheetTitleWidget> {
       children: [
         Expanded(
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 25.0),
+            padding: EdgeInsetsDirectional.fromSTEB(30.0, 25.0, 0.0, 25.0),
             child: Text(
               widget.text,
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.start,
               style: FlutterFlowTheme.of(context).displaySmall.override(
                     fontFamily: 'Nunito',
                     fontSize: 22.0,
