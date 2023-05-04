@@ -114,11 +114,10 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                             highlightColor: Colors.transparent,
                             onTap: () async {
                               setState(() {
-                                _model.currentThemeProperties = 'typography';
+                                _model.currentThemeProperties = 'palette';
                               });
-                              await _model.pageViewController?.animateToPage(
-                                _model.pageViewIndex!,
-                                duration: Duration(milliseconds: 500),
+                              await _model.pageViewController?.nextPage(
+                                duration: Duration(milliseconds: 300),
                                 curve: Curves.ease,
                               );
                             },
