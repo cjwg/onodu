@@ -18,7 +18,7 @@ class ThemeEditorModel extends FlutterFlowModel {
 
   int? pageViewIndex = 0;
 
-  String? currentThemeProperties = 'palette';
+  String currentThemeProperties = 'palette';
 
   ///  State fields for stateful widgets in this component.
 
@@ -54,8 +54,8 @@ class ThemeEditorModel extends FlutterFlowModel {
   late PaletteItemModel paletteItemModel5;
   // Model for EditThemePaletteActions component.
   late EditThemePaletteActionsModel editThemePaletteActionsModel;
-  // Model for BottomSheetNav component.
-  late BottomSheetNavModel bottomSheetNavModel;
+  // Model for Nav.
+  late BottomSheetNavModel navModel;
 
   /// Initialization and disposal methods.
 
@@ -76,7 +76,7 @@ class ThemeEditorModel extends FlutterFlowModel {
     paletteItemModel5 = createModel(context, () => PaletteItemModel());
     editThemePaletteActionsModel =
         createModel(context, () => EditThemePaletteActionsModel());
-    bottomSheetNavModel = createModel(context, () => BottomSheetNavModel());
+    navModel = createModel(context, () => BottomSheetNavModel());
   }
 
   void dispose() {
@@ -95,7 +95,7 @@ class ThemeEditorModel extends FlutterFlowModel {
     paletteItemModel4.dispose();
     paletteItemModel5.dispose();
     editThemePaletteActionsModel.dispose();
-    bottomSheetNavModel.dispose();
+    navModel.dispose();
   }
 
   /// Additional helper methods are added here.

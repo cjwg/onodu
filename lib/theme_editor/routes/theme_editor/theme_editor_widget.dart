@@ -418,19 +418,20 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                         ),
                       ],
                     ),
-                  Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Expanded(
-                        child: wrapWithModel(
-                          model: _model.bottomSheetNavModel,
-                          updateCallback: () => setState(() {}),
-                          child: BottomSheetNavWidget(),
+                  if (_model.currentThemeProperties == 'typography')
+                    Column(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Expanded(
+                          child: wrapWithModel(
+                            model: _model.navModel,
+                            updateCallback: () => setState(() {}),
+                            child: BottomSheetNavWidget(),
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
+                      ],
+                    ),
                 ],
               ),
               Container(
