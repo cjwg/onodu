@@ -17,11 +17,6 @@ export 'serialization_util.dart';
 const kTransitionInfoKey = '__transition_info__';
 
 class AppStateNotifier extends ChangeNotifier {
-  AppStateNotifier._();
-
-  static AppStateNotifier? _instance;
-  static AppStateNotifier get instance => _instance ??= AppStateNotifier._();
-
   bool showSplashImage = true;
 
   void stopShowingSplashImage() {
@@ -104,6 +99,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      urlPathStrategy: UrlPathStrategy.path,
     );
 
 extension NavParamExtensions on Map<String, String?> {
@@ -118,10 +114,10 @@ extension NavigationExtensions on BuildContext {
   void safePop() {
     // If there is only one route on the stack, navigate to the initial
     // page instead of popping.
-    if (canPop()) {
-      pop();
-    } else {
+    if (GoRouter.of(this).routerDelegate.matches.length <= 1) {
       go('/');
+    } else {
+      pop();
     }
   }
 }
@@ -130,8 +126,8 @@ extension _GoRouterStateExtensions on GoRouterState {
   Map<String, dynamic> get extraMap =>
       extra != null ? extra as Map<String, dynamic> : {};
   Map<String, dynamic> get allParams => <String, dynamic>{}
-    ..addAll(pathParameters)
-    ..addAll(queryParameters)
+    ..addAll(params)
+    ..addAll(queryParams)
     ..addAll(extraMap);
   TransitionInfo get transitionInfo => extraMap.containsKey(kTransitionInfoKey)
       ? extraMap[kTransitionInfoKey] as TransitionInfo

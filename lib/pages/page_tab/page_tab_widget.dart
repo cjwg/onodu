@@ -109,7 +109,7 @@ class _PageTabWidgetState extends State<PageTabWidget> {
                                   onTap: () async {
                                     context.pushNamed(
                                       'PageEditor',
-                                      queryParameters: {
+                                      queryParams: {
                                         'backgroundColor': serializeParam(
                                           FlutterFlowTheme.of(context)
                                               .primaryBackground,
@@ -162,7 +162,7 @@ class _PageTabWidgetState extends State<PageTabWidget> {
                                   onTap: () async {
                                     context.pushNamed(
                                       'PageEditor',
-                                      queryParameters: {
+                                      queryParams: {
                                         'backgroundColor': serializeParam(
                                           FlutterFlowTheme.of(context)
                                               .primaryBackground,
