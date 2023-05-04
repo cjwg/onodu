@@ -241,7 +241,13 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                           updateCallback: () => setState(() {}),
                           child: BottomSheetNavWidget(
                             text: 'Palette',
-                            navigateBack: () async {},
+                            navigateBack: () async {
+                              await _model.pageViewController?.animateToPage(
+                                0,
+                                duration: Duration(milliseconds: 500),
+                                curve: Curves.ease,
+                              );
+                            },
                           ),
                         ),
                         Expanded(
