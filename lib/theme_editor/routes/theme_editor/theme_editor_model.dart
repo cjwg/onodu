@@ -26,8 +26,6 @@ class ThemeEditorModel extends FlutterFlowModel {
   PageController? pageViewController;
   // Model for BottomSheetTitle component.
   late BottomSheetTitleModel bottomSheetTitleModel;
-  // Model for ThemeBrowser.
-  late ListItemModel themeBrowserModel;
   // Model for Palette.
   late ListItemModel paletteModel;
   // Model for Typography.
@@ -38,6 +36,8 @@ class ThemeEditorModel extends FlutterFlowModel {
   late ListItemModel elementsModel;
   // Model for Animation.
   late ListItemModel animationModel;
+  // Model for ThemeBrowser.
+  late ListItemModel themeBrowserModel;
   // Model for EditThemeActions component.
   late EditThemeActionsModel editThemeActionsModel;
   // Model for BottomSheetNav component.
@@ -69,12 +69,12 @@ class ThemeEditorModel extends FlutterFlowModel {
 
   void initState(BuildContext context) {
     bottomSheetTitleModel = createModel(context, () => BottomSheetTitleModel());
-    themeBrowserModel = createModel(context, () => ListItemModel());
     paletteModel = createModel(context, () => ListItemModel());
     typographyModel = createModel(context, () => ListItemModel());
     layoutModel = createModel(context, () => ListItemModel());
     elementsModel = createModel(context, () => ListItemModel());
     animationModel = createModel(context, () => ListItemModel());
+    themeBrowserModel = createModel(context, () => ListItemModel());
     editThemeActionsModel = createModel(context, () => EditThemeActionsModel());
     bottomSheetNavModel1 = createModel(context, () => BottomSheetNavModel());
     paletteItemModel1 = createModel(context, () => PaletteItemModel());
@@ -93,12 +93,12 @@ class ThemeEditorModel extends FlutterFlowModel {
 
   void dispose() {
     bottomSheetTitleModel.dispose();
-    themeBrowserModel.dispose();
     paletteModel.dispose();
     typographyModel.dispose();
     layoutModel.dispose();
     elementsModel.dispose();
     animationModel.dispose();
+    themeBrowserModel.dispose();
     editThemeActionsModel.dispose();
     bottomSheetNavModel1.dispose();
     paletteItemModel1.dispose();

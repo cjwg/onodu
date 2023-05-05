@@ -92,50 +92,16 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(25.0),
+                      borderRadius: BorderRadius.circular(0.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25.0),
+                          borderRadius: BorderRadius.circular(0.0),
                         ),
                         child: ListView(
                           padding: EdgeInsets.zero,
                           shrinkWrap: true,
                           scrollDirection: Axis.vertical,
                           children: [
-                            InkWell(
-                              splashColor: Colors.transparent,
-                              focusColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
-                              onTap: () async {
-                                setState(() {
-                                  _model.currentThemeProperties =
-                                      'themeGallery';
-                                });
-                                await _model.pageViewController?.nextPage(
-                                  duration: Duration(milliseconds: 300),
-                                  curve: Curves.ease,
-                                );
-                              },
-                              child: wrapWithModel(
-                                model: _model.themeBrowserModel,
-                                updateCallback: () => setState(() {}),
-                                child: ListItemWidget(
-                                  leftIcon: Icon(
-                                    Icons.grid_view,
-                                  ),
-                                  title: 'Browse themes',
-                                  rightIcon: FaIcon(
-                                    FontAwesomeIcons.angleRight,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                    size: 20.0,
-                                  ),
-                                  bottomRadius: false,
-                                  topRadius: true,
-                                ),
-                              ),
-                            ),
                             InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -164,6 +130,8 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                         .secondaryText,
                                     size: 20.0,
                                   ),
+                                  bottomRadius: false,
+                                  topRadius: false,
                                 ),
                               ),
                             ),
@@ -195,6 +163,8 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                         .secondaryText,
                                     size: 20.0,
                                   ),
+                                  bottomRadius: false,
+                                  topRadius: false,
                                 ),
                               ),
                             ),
@@ -290,6 +260,40 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                   ),
                                   bottomRadius: true,
                                   topRadius: false,
+                                ),
+                              ),
+                            ),
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                setState(() {
+                                  _model.currentThemeProperties =
+                                      'themeGallery';
+                                });
+                                await _model.pageViewController?.nextPage(
+                                  duration: Duration(milliseconds: 300),
+                                  curve: Curves.ease,
+                                );
+                              },
+                              child: wrapWithModel(
+                                model: _model.themeBrowserModel,
+                                updateCallback: () => setState(() {}),
+                                child: ListItemWidget(
+                                  leftIcon: Icon(
+                                    Icons.grid_view,
+                                  ),
+                                  title: 'Browse themes',
+                                  rightIcon: FaIcon(
+                                    FontAwesomeIcons.angleRight,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    size: 20.0,
+                                  ),
+                                  bottomRadius: false,
+                                  topRadius: true,
                                 ),
                               ),
                             ),

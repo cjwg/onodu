@@ -63,7 +63,6 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                 width: MediaQuery.of(context).size.width * 1.0,
                 height: 60.0,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(0.0),
                     bottomRight: Radius.circular(0.0),
@@ -77,7 +76,6 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                 width: MediaQuery.of(context).size.width * 1.0,
                 height: 60.0,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(25.0),
                     bottomRight: Radius.circular(25.0),
@@ -90,9 +88,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
               Container(
                 width: MediaQuery.of(context).size.width * 1.0,
                 height: 60.0,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                ),
+                decoration: BoxDecoration(),
               ),
             Container(
               width: MediaQuery.of(context).size.width * 1.0,
@@ -109,7 +105,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                       children: [
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              17.0, 0.0, 0.0, 0.0),
+                              10.0, 0.0, 0.0, 0.0),
                           child: Container(
                             decoration: BoxDecoration(),
                             child: Align(
@@ -164,9 +160,9 @@ class _ListItemWidgetState extends State<ListItemWidget> {
           ],
         ),
         Divider(
-          height: 4.0,
-          thickness: 4.0,
-          color: FlutterFlowTheme.of(context).primaryBackground,
+          height: 1.0,
+          thickness: 1.0,
+          color: FlutterFlowTheme.of(context).secondaryText,
         ),
       ],
     );
