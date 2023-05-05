@@ -103,7 +103,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                         ),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 10.0, 0.0, 10.0),
+                              10.0, 10.0, 10.0, 10.0),
                           child: ListView(
                             padding: EdgeInsets.zero,
                             shrinkWrap: true,

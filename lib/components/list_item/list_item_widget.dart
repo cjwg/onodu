@@ -49,7 +49,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 1.0,
-      height: 66.0,
+      height: 61.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
@@ -76,7 +76,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                     decoration: BoxDecoration(),
                     alignment: AlignmentDirectional(-1.0, 0.0),
                     child: Align(
-                      alignment: AlignmentDirectional(-1.1, 0.0),
+                      alignment: AlignmentDirectional(-1.13, 0.0),
                       child: Text(
                         widget.title,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
