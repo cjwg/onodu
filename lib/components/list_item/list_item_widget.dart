@@ -53,110 +53,120 @@ class _ListItemWidgetState extends State<ListItemWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Column(
+      mainAxisSize: MainAxisSize.max,
       children: [
-        if (widget.topRadius)
-          Container(
-            width: MediaQuery.of(context).size.width * 1.0,
-            height: 60.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).secondaryBackground,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(0.0),
-                bottomRight: Radius.circular(0.0),
-                topLeft: Radius.circular(25.0),
-                topRight: Radius.circular(25.0),
+        Stack(
+          children: [
+            if (widget.topRadius)
+              Container(
+                width: MediaQuery.of(context).size.width * 1.0,
+                height: 60.0,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(0.0),
+                    bottomRight: Radius.circular(0.0),
+                    topLeft: Radius.circular(25.0),
+                    topRight: Radius.circular(25.0),
+                  ),
+                ),
               ),
-            ),
-          ),
-        if (widget.bottomRadius)
-          Container(
-            width: MediaQuery.of(context).size.width * 1.0,
-            height: 60.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).secondaryBackground,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(25.0),
-                bottomRight: Radius.circular(25.0),
-                topLeft: Radius.circular(0.0),
-                topRight: Radius.circular(0.0),
+            if (widget.bottomRadius)
+              Container(
+                width: MediaQuery.of(context).size.width * 1.0,
+                height: 60.0,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(25.0),
+                    bottomRight: Radius.circular(25.0),
+                    topLeft: Radius.circular(0.0),
+                    topRight: Radius.circular(0.0),
+                  ),
+                ),
               ),
-            ),
-          ),
-        if (!widget.bottomRadius && !widget.topRadius)
-          Container(
-            width: MediaQuery.of(context).size.width * 1.0,
-            height: 60.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).secondaryBackground,
-            ),
-          ),
-        Container(
-          width: MediaQuery.of(context).size.width * 1.0,
-          height: 60.0,
-          decoration: BoxDecoration(),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Expanded(
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(17.0, 0.0, 0.0, 0.0),
-                      child: Container(
-                        decoration: BoxDecoration(),
-                        child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: widget.leftIcon!,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        width: 100.0,
-                        decoration: BoxDecoration(),
-                        alignment: AlignmentDirectional(-1.0, 0.0),
-                        child: Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                8.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              widget.title,
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Nunito',
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+            if (!widget.bottomRadius && !widget.topRadius)
+              Container(
+                width: MediaQuery.of(context).size.width * 1.0,
+                height: 60.0,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                ),
+              ),
+            Container(
+              width: MediaQuery.of(context).size.width * 1.0,
+              height: 60.0,
+              decoration: BoxDecoration(),
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Expanded(
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              17.0, 0.0, 0.0, 0.0),
+                          child: Container(
+                            decoration: BoxDecoration(),
+                            child: Align(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: widget.leftIcon!,
                             ),
                           ),
                         ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 17.0, 0.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
+                        Expanded(
+                          child: Container(
+                            width: 100.0,
+                            decoration: BoxDecoration(),
+                            alignment: AlignmentDirectional(-1.0, 0.0),
+                            child: Align(
+                              alignment: AlignmentDirectional(-1.0, 0.0),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    8.0, 0.0, 0.0, 0.0),
+                                child: Text(
+                                  widget.title,
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Nunito',
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
-                        child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: widget.rightIcon!,
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 17.0, 0.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.rectangle,
+                            ),
+                            child: Align(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: widget.rightIcon!,
+                            ),
+                          ),
                         ),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
+        ),
+        Divider(
+          height: 4.0,
+          thickness: 4.0,
+          color: FlutterFlowTheme.of(context).primaryBackground,
         ),
       ],
     );
