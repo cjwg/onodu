@@ -53,46 +53,58 @@ class _ListItemWidgetState extends State<ListItemWidget> {
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
-      child: Row(
+      child: Column(
         mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: 60.0,
-            decoration: BoxDecoration(),
-            child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
-              child: widget.leftIcon!,
-            ),
-          ),
           Expanded(
-            child: Container(
-              width: 100.0,
-              decoration: BoxDecoration(),
-              alignment: AlignmentDirectional(-1.0, 0.0),
-              child: Align(
-                alignment: AlignmentDirectional(-1.1, 0.0),
-                child: Text(
-                  widget.title,
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Nunito',
-                        fontSize: 17.0,
-                        fontWeight: FontWeight.w500,
-                      ),
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  width: 60.0,
+                  decoration: BoxDecoration(),
+                  child: Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: widget.leftIcon!,
+                  ),
                 ),
-              ),
+                Expanded(
+                  child: Container(
+                    width: 100.0,
+                    decoration: BoxDecoration(),
+                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    child: Align(
+                      alignment: AlignmentDirectional(-1.1, 0.0),
+                      child: Text(
+                        widget.title,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Nunito',
+                              fontSize: 17.0,
+                              fontWeight: FontWeight.w500,
+                            ),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 60.0,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                  ),
+                  child: Align(
+                    alignment: AlignmentDirectional(0.0, 0.0),
+                    child: widget.rightIcon!,
+                  ),
+                ),
+              ],
             ),
           ),
-          Container(
-            width: 60.0,
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-            ),
-            child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
-              child: widget.rightIcon!,
-            ),
+          Divider(
+            height: 1.0,
+            thickness: 1.0,
+            color: FlutterFlowTheme.of(context).accent3,
           ),
         ],
       ),
