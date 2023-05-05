@@ -101,187 +101,181 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                               FlutterFlowTheme.of(context).secondaryBackground,
                           borderRadius: BorderRadius.circular(25.0),
                         ),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              10.0, 10.0, 10.0, 10.0),
-                          child: ListView(
-                            padding: EdgeInsets.zero,
-                            shrinkWrap: true,
-                            scrollDirection: Axis.vertical,
-                            children: [
-                              InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  setState(() {
-                                    _model.currentThemeProperties =
-                                        'themeGallery';
-                                  });
-                                  await _model.pageViewController?.nextPage(
-                                    duration: Duration(milliseconds: 300),
-                                    curve: Curves.ease,
-                                  );
-                                },
-                                child: wrapWithModel(
-                                  model: _model.themeBrowserModel,
-                                  updateCallback: () => setState(() {}),
-                                  child: ListItemWidget(
-                                    leftIcon: Icon(
-                                      Icons.grid_view,
-                                    ),
-                                    title: 'Browse themes',
-                                    rightIcon: FaIcon(
-                                      FontAwesomeIcons.angleRight,
-                                    ),
+                        child: ListView(
+                          padding: EdgeInsets.zero,
+                          shrinkWrap: true,
+                          scrollDirection: Axis.vertical,
+                          children: [
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                setState(() {
+                                  _model.currentThemeProperties =
+                                      'themeGallery';
+                                });
+                                await _model.pageViewController?.nextPage(
+                                  duration: Duration(milliseconds: 300),
+                                  curve: Curves.ease,
+                                );
+                              },
+                              child: wrapWithModel(
+                                model: _model.themeBrowserModel,
+                                updateCallback: () => setState(() {}),
+                                child: ListItemWidget(
+                                  leftIcon: Icon(
+                                    Icons.grid_view,
+                                  ),
+                                  title: 'Browse themes',
+                                  rightIcon: FaIcon(
+                                    FontAwesomeIcons.angleRight,
                                   ),
                                 ),
                               ),
-                              InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  setState(() {
-                                    _model.currentThemeProperties = 'palette';
-                                  });
-                                  await _model.pageViewController?.nextPage(
-                                    duration: Duration(milliseconds: 300),
-                                    curve: Curves.ease,
-                                  );
-                                },
-                                child: wrapWithModel(
-                                  model: _model.paletteModel,
-                                  updateCallback: () => setState(() {}),
-                                  child: ListItemWidget(
-                                    leftIcon: Icon(
-                                      FFIcons.kinterfaceEditPaint,
-                                    ),
-                                    title: 'Palette',
-                                    rightIcon: FaIcon(
-                                      FontAwesomeIcons.angleRight,
-                                    ),
+                            ),
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                setState(() {
+                                  _model.currentThemeProperties = 'palette';
+                                });
+                                await _model.pageViewController?.nextPage(
+                                  duration: Duration(milliseconds: 300),
+                                  curve: Curves.ease,
+                                );
+                              },
+                              child: wrapWithModel(
+                                model: _model.paletteModel,
+                                updateCallback: () => setState(() {}),
+                                child: ListItemWidget(
+                                  leftIcon: Icon(
+                                    FFIcons.kinterfaceEditPaint,
+                                  ),
+                                  title: 'Palette',
+                                  rightIcon: FaIcon(
+                                    FontAwesomeIcons.angleRight,
                                   ),
                                 ),
                               ),
-                              InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  setState(() {
-                                    _model.currentThemeProperties =
-                                        'typography';
-                                  });
-                                  await _model.pageViewController?.nextPage(
-                                    duration: Duration(milliseconds: 300),
-                                    curve: Curves.ease,
-                                  );
-                                },
-                                child: wrapWithModel(
-                                  model: _model.typographyModel,
-                                  updateCallback: () => setState(() {}),
-                                  child: ListItemWidget(
-                                    leftIcon: Icon(
-                                      FFIcons.kinterfaceTextFormattingSmallCaps,
-                                    ),
-                                    title: 'Typography',
-                                    rightIcon: FaIcon(
-                                      FontAwesomeIcons.angleRight,
-                                    ),
+                            ),
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                setState(() {
+                                  _model.currentThemeProperties = 'typography';
+                                });
+                                await _model.pageViewController?.nextPage(
+                                  duration: Duration(milliseconds: 300),
+                                  curve: Curves.ease,
+                                );
+                              },
+                              child: wrapWithModel(
+                                model: _model.typographyModel,
+                                updateCallback: () => setState(() {}),
+                                child: ListItemWidget(
+                                  leftIcon: Icon(
+                                    FFIcons.kinterfaceTextFormattingSmallCaps,
+                                  ),
+                                  title: 'Typography',
+                                  rightIcon: FaIcon(
+                                    FontAwesomeIcons.angleRight,
                                   ),
                                 ),
                               ),
-                              InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  setState(() {
-                                    _model.currentThemeProperties = 'layout';
-                                  });
-                                  await _model.pageViewController?.nextPage(
-                                    duration: Duration(milliseconds: 300),
-                                    curve: Curves.ease,
-                                  );
-                                },
-                                child: wrapWithModel(
-                                  model: _model.layoutModel,
-                                  updateCallback: () => setState(() {}),
-                                  child: ListItemWidget(
-                                    leftIcon: Icon(
-                                      FFIcons.kinterfaceEditAlignSelection1,
-                                    ),
-                                    title: 'Layout',
-                                    rightIcon: FaIcon(
-                                      FontAwesomeIcons.angleRight,
-                                    ),
+                            ),
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                setState(() {
+                                  _model.currentThemeProperties = 'layout';
+                                });
+                                await _model.pageViewController?.nextPage(
+                                  duration: Duration(milliseconds: 300),
+                                  curve: Curves.ease,
+                                );
+                              },
+                              child: wrapWithModel(
+                                model: _model.layoutModel,
+                                updateCallback: () => setState(() {}),
+                                child: ListItemWidget(
+                                  leftIcon: Icon(
+                                    FFIcons.kinterfaceEditAlignSelection1,
+                                  ),
+                                  title: 'Layout',
+                                  rightIcon: FaIcon(
+                                    FontAwesomeIcons.angleRight,
                                   ),
                                 ),
                               ),
-                              InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  setState(() {
-                                    _model.currentThemeProperties = 'elements';
-                                  });
-                                  await _model.pageViewController?.nextPage(
-                                    duration: Duration(milliseconds: 300),
-                                    curve: Curves.ease,
-                                  );
-                                },
-                                child: wrapWithModel(
-                                  model: _model.elementsModel,
-                                  updateCallback: () => setState(() {}),
-                                  child: ListItemWidget(
-                                    leftIcon: Icon(
-                                      FFIcons
-                                          .kinterfaceTextFormattingTextSquare1,
-                                    ),
-                                    title: 'Elements',
-                                    rightIcon: FaIcon(
-                                      FontAwesomeIcons.angleRight,
-                                    ),
+                            ),
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                setState(() {
+                                  _model.currentThemeProperties = 'elements';
+                                });
+                                await _model.pageViewController?.nextPage(
+                                  duration: Duration(milliseconds: 300),
+                                  curve: Curves.ease,
+                                );
+                              },
+                              child: wrapWithModel(
+                                model: _model.elementsModel,
+                                updateCallback: () => setState(() {}),
+                                child: ListItemWidget(
+                                  leftIcon: Icon(
+                                    FFIcons.kinterfaceTextFormattingTextSquare1,
+                                  ),
+                                  title: 'Elements',
+                                  rightIcon: FaIcon(
+                                    FontAwesomeIcons.angleRight,
                                   ),
                                 ),
                               ),
-                              InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  setState(() {
-                                    _model.currentThemeProperties = 'animation';
-                                  });
-                                  await _model.pageViewController?.nextPage(
-                                    duration: Duration(milliseconds: 300),
-                                    curve: Curves.ease,
-                                  );
-                                },
-                                child: wrapWithModel(
-                                  model: _model.animationModel,
-                                  updateCallback: () => setState(() {}),
-                                  child: ListItemWidget(
-                                    leftIcon: Icon(
-                                      Icons.animation,
-                                    ),
-                                    title: 'Animation',
-                                    rightIcon: FaIcon(
-                                      FontAwesomeIcons.angleRight,
-                                    ),
+                            ),
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                setState(() {
+                                  _model.currentThemeProperties = 'animation';
+                                });
+                                await _model.pageViewController?.nextPage(
+                                  duration: Duration(milliseconds: 300),
+                                  curve: Curves.ease,
+                                );
+                              },
+                              child: wrapWithModel(
+                                model: _model.animationModel,
+                                updateCallback: () => setState(() {}),
+                                child: ListItemWidget(
+                                  leftIcon: Icon(
+                                    Icons.animation,
+                                  ),
+                                  title: 'Animation',
+                                  rightIcon: FaIcon(
+                                    FontAwesomeIcons.angleRight,
                                   ),
                                 ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                     ),

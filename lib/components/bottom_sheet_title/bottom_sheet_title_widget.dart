@@ -44,12 +44,12 @@ class _BottomSheetTitleWidgetState extends State<BottomSheetTitleWidget> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisSize: MainAxisSize.max,
+      mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Expanded(
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(25.0, 30.0, 0.0, 25.0),
+            padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 0.0, 25.0),
             child: Text(
               widget.text,
               textAlign: TextAlign.start,

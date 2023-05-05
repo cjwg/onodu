@@ -47,61 +47,63 @@ class _ListItemWidgetState extends State<ListItemWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width * 1.0,
-      height: 61.0,
-      decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).secondaryBackground,
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          Expanded(
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  width: 60.0,
-                  decoration: BoxDecoration(),
-                  child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
-                    child: widget.leftIcon!,
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    width: 100.0,
+    return Padding(
+      padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+      child: Container(
+        width: MediaQuery.of(context).size.width * 1.0,
+        height: 61.0,
+        decoration: BoxDecoration(
+          color: FlutterFlowTheme.of(context).secondaryBackground,
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            Expanded(
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
                     decoration: BoxDecoration(),
-                    alignment: AlignmentDirectional(-1.0, 0.0),
                     child: Align(
-                      alignment: AlignmentDirectional(-1.13, 0.0),
-                      child: Text(
-                        widget.title,
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Nunito',
-                              fontSize: 17.0,
-                              fontWeight: FontWeight.w500,
-                            ),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      child: widget.leftIcon!,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                      width: 100.0,
+                      decoration: BoxDecoration(),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      child: Align(
+                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        child: Text(
+                          widget.title,
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Nunito',
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                        ),
                       ),
                     ),
                   ),
-                ),
-                Container(
-                  width: 60.0,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.rectangle,
+                  Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                    ),
+                    child: Align(
+                      alignment: AlignmentDirectional(1.0, 0.0),
+                      child: widget.rightIcon!,
+                    ),
                   ),
-                  child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
-                    child: widget.rightIcon!,
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

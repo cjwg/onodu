@@ -47,7 +47,7 @@ class _BottomSheetNavWidgetState extends State<BottomSheetNavWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 7.0),
+      padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 10.0),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
