@@ -48,10 +48,10 @@ class _ListItemWidgetState extends State<ListItemWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+      padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 1.0,
-        height: 61.0,
+        height: 20.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
         ),
@@ -66,10 +66,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                 children: [
                   Container(
                     decoration: BoxDecoration(),
-                    child: Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
-                      child: widget.leftIcon!,
-                    ),
+                    child: widget.leftIcon!,
                   ),
                   Expanded(
                     child: Container(
@@ -78,14 +75,19 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                       alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Align(
                         alignment: AlignmentDirectional(-1.0, 0.0),
-                        child: Text(
-                          widget.title,
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Nunito',
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              8.0, 0.0, 0.0, 0.0),
+                          child: Text(
+                            widget.title,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Nunito',
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                          ),
                         ),
                       ),
                     ),
@@ -94,10 +96,7 @@ class _ListItemWidgetState extends State<ListItemWidget> {
                     decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
                     ),
-                    child: Align(
-                      alignment: AlignmentDirectional(1.0, 0.0),
-                      child: widget.rightIcon!,
-                    ),
+                    child: widget.rightIcon!,
                   ),
                 ],
               ),
