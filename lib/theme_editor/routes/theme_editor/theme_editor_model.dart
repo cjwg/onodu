@@ -1,6 +1,7 @@
 import '/components/bottom_sheet_nav/bottom_sheet_nav_widget.dart';
 import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/components/list_item/list_item_widget.dart';
+import '/components/theme_font_editor_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -56,6 +57,8 @@ class ThemeEditorModel extends FlutterFlowModel {
   late EditThemePaletteActionsModel editThemePaletteActionsModel;
   // Model for Nav.
   late BottomSheetNavModel navModel;
+  // Model for ThemeFontEditor component.
+  late ThemeFontEditorModel themeFontEditorModel;
   // Model for BottomSheetNav component.
   late BottomSheetNavModel bottomSheetNavModel2;
   // Model for BottomSheetNav component.
@@ -85,6 +88,7 @@ class ThemeEditorModel extends FlutterFlowModel {
     editThemePaletteActionsModel =
         createModel(context, () => EditThemePaletteActionsModel());
     navModel = createModel(context, () => BottomSheetNavModel());
+    themeFontEditorModel = createModel(context, () => ThemeFontEditorModel());
     bottomSheetNavModel2 = createModel(context, () => BottomSheetNavModel());
     bottomSheetNavModel3 = createModel(context, () => BottomSheetNavModel());
     bottomSheetNavModel4 = createModel(context, () => BottomSheetNavModel());
@@ -108,6 +112,7 @@ class ThemeEditorModel extends FlutterFlowModel {
     paletteItemModel5.dispose();
     editThemePaletteActionsModel.dispose();
     navModel.dispose();
+    themeFontEditorModel.dispose();
     bottomSheetNavModel2.dispose();
     bottomSheetNavModel3.dispose();
     bottomSheetNavModel4.dispose();
