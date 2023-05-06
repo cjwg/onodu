@@ -41,15 +41,12 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 46.0, 0.0, 0.0),
-          child: Container(
-            width: MediaQuery.of(context).size.width * 1.0,
-            height: 2.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).accent3,
-              borderRadius: BorderRadius.circular(15.0),
-            ),
+        Container(
+          width: MediaQuery.of(context).size.width * 1.0,
+          height: 47.0,
+          decoration: BoxDecoration(
+            color: FlutterFlowTheme.of(context).accent3,
+            borderRadius: BorderRadius.circular(15.0),
           ),
         ),
         DefaultTabController(
@@ -64,13 +61,13 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                   labelStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Nunito',
                         fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
                       ),
                   unselectedLabelStyle:
                       FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Nunito',
                             fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w600,
                           ),
                   labelColor: FlutterFlowTheme.of(context).primaryText,
                   unselectedLabelColor:
@@ -81,7 +78,7 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                       FlutterFlowTheme.of(context).accent3,
                   borderColor: FlutterFlowTheme.of(context).accent2,
                   borderWidth: 4.0,
-                  borderRadius: 20.0,
+                  borderRadius: 15.0,
                   elevation: 0.0,
                   buttonMargin:
                       EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 0.0),
