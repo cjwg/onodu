@@ -80,7 +80,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                 ),
               ),
               Container(
-                width: 90.0,
+                width: 70.0,
                 decoration: BoxDecoration(),
                 child: FlutterFlowDropDown<String>(
                   controller: _model.dropDownValueController ??=
@@ -91,6 +91,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                   optionLabels: <String>[],
                   onChanged: (val) =>
                       setState(() => _model.dropDownValue = val),
+                  width: 60.0,
                   height: 30.0,
                   searchHintTextStyle:
                       FlutterFlowTheme.of(context).bodyLarge.override(
@@ -118,8 +119,8 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
         ),
         Divider(
           height: 4.0,
-          thickness: 3.0,
-          color: FlutterFlowTheme.of(context).accent4,
+          thickness: 2.0,
+          color: FlutterFlowTheme.of(context).accent3,
         ),
       ],
     );

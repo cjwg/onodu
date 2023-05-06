@@ -197,6 +197,8 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                         .secondaryText,
                                     size: 20.0,
                                   ),
+                                  bottomRadius: false,
+                                  topRadius: false,
                                 ),
                               ),
                             ),

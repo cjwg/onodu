@@ -75,8 +75,8 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                   backgroundColor:
                       FlutterFlowTheme.of(context).primaryBackground,
                   unselectedBackgroundColor:
-                      FlutterFlowTheme.of(context).accent4,
-                  borderColor: FlutterFlowTheme.of(context).accent4,
+                      FlutterFlowTheme.of(context).accent3,
+                  borderColor: FlutterFlowTheme.of(context).accent3,
                   borderWidth: 4.0,
                   borderRadius: 15.0,
                   elevation: 0.0,
