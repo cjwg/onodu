@@ -116,7 +116,12 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                 ),
               ),
               Container(
-                child: custom_widgets.NativeDropdown(),
+                width: 50.0,
+                height: 50.0,
+                child: custom_widgets.NativeDropdown(
+                  width: 50.0,
+                  height: 50.0,
+                ),
               ),
             ],
           ),
