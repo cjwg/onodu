@@ -72,7 +72,7 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                   labelColor: FlutterFlowTheme.of(context).primaryBackground,
                   unselectedLabelColor:
                       FlutterFlowTheme.of(context).primaryText,
-                  backgroundColor: FlutterFlowTheme.of(context).primaryText,
+                  backgroundColor: FlutterFlowTheme.of(context).secondaryText,
                   unselectedBackgroundColor:
                       FlutterFlowTheme.of(context).accent3,
                   borderColor: FlutterFlowTheme.of(context).accent3,
