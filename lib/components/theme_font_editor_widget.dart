@@ -69,14 +69,13 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                             fontSize: 16.0,
                             fontWeight: FontWeight.w600,
                           ),
-                  labelColor: FlutterFlowTheme.of(context).primaryText,
+                  labelColor: FlutterFlowTheme.of(context).primaryBackground,
                   unselectedLabelColor:
                       FlutterFlowTheme.of(context).primaryText,
-                  backgroundColor:
-                      FlutterFlowTheme.of(context).primaryBackground,
+                  backgroundColor: FlutterFlowTheme.of(context).primaryText,
                   unselectedBackgroundColor:
-                      FlutterFlowTheme.of(context).accent2,
-                  borderColor: FlutterFlowTheme.of(context).accent2,
+                      FlutterFlowTheme.of(context).accent3,
+                  borderColor: FlutterFlowTheme.of(context).accent3,
                   borderWidth: 4.0,
                   borderRadius: 15.0,
                   elevation: 0.0,
