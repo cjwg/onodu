@@ -526,7 +526,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Poppins',
+                                          fontFamily: 'Montserrat',
                                           fontSize: 30.0,
                                           fontWeight: FontWeight.w900,
                                         ),
@@ -539,7 +539,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Poppins',
+                                          fontFamily: 'Montserrat',
                                           fontSize: 16.0,
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -549,16 +549,15 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                   alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 10.0, 0.0, 0.0),
+                                        0.0, 15.0, 0.0, 0.0),
                                     child: Text(
                                       'Body copy is typically written in paragraphs, with sentences that are easy to read and understand. It can vary in length depending on the medium and purpose, but its main function is to engage and inform the reader or audience. ',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Nunito',
-                                            fontSize: 16.0,
-                                            fontWeight: FontWeight.w500,
-                                          ),
+                                      style: TextStyle(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 16.0,
+                                      ),
                                     ),
                                   ),
                                 ),

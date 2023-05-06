@@ -76,7 +76,7 @@ class _SectionWidgetState extends State<SectionWidget> {
                           )
                         ],
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Montserrat',
                               color: FlutterFlowTheme.of(context)
                                   .primaryBackground,
                               fontSize: 30.0,

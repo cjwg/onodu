@@ -64,13 +64,17 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                   alignment: AlignmentDirectional(-1.0, 0.0),
                   child: Align(
                     alignment: AlignmentDirectional(-1.0, 0.0),
-                    child: Text(
-                      widget.componentName,
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Nunito',
-                            fontSize: 17.0,
-                            fontWeight: FontWeight.w500,
-                          ),
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                      child: Text(
+                        widget.componentName,
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Nunito',
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.w500,
+                            ),
+                      ),
                     ),
                   ),
                 ),
@@ -107,8 +111,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                     borderColor: Colors.transparent,
                     borderWidth: 0.0,
                     borderRadius: 0.0,
-                    margin:
-                        EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 4.0),
+                    margin: EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 0.0, 4.0),
                     hidesUnderline: true,
                     isSearchable: false,
                   ),
@@ -119,8 +122,8 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
         ),
         Divider(
           height: 4.0,
-          thickness: 4.0,
-          color: FlutterFlowTheme.of(context).secondaryBackground,
+          thickness: 3.0,
+          color: FlutterFlowTheme.of(context).accent4,
         ),
       ],
     );
