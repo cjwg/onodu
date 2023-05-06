@@ -40,6 +40,16 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
+        Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(0.0, 46.0, 0.0, 0.0),
+          child: Container(
+            width: MediaQuery.of(context).size.width * 1.0,
+            height: 2.0,
+            decoration: BoxDecoration(
+              color: FlutterFlowTheme.of(context).accent2,
+            ),
+          ),
+        ),
         DefaultTabController(
           length: 3,
           initialIndex: 0,
@@ -69,50 +79,46 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
               Expanded(
                 child: TabBarView(
                   children: [
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(0.0),
-                        child: Container(
-                          width: 100.0,
-                          height: 100.0,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(0.0),
-                          ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              wrapWithModel(
-                                model: _model.fontFamilyModel1,
-                                updateCallback: () => setState(() {}),
-                                child: SectionDropdownWidget(
-                                  componentName: 'Font family',
-                                ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(0.0),
+                      child: Container(
+                        width: 100.0,
+                        height: 100.0,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(0.0),
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            wrapWithModel(
+                              model: _model.fontFamilyModel1,
+                              updateCallback: () => setState(() {}),
+                              child: SectionDropdownWidget(
+                                componentName: 'Font family',
                               ),
-                              wrapWithModel(
-                                model: _model.fontFamilyModel2,
-                                updateCallback: () => setState(() {}),
-                                child: SectionDropdownWidget(
-                                  componentName: 'Size',
-                                ),
+                            ),
+                            wrapWithModel(
+                              model: _model.fontFamilyModel2,
+                              updateCallback: () => setState(() {}),
+                              child: SectionDropdownWidget(
+                                componentName: 'Size',
                               ),
-                              wrapWithModel(
-                                model: _model.fontFamilyModel3,
-                                updateCallback: () => setState(() {}),
-                                child: SectionDropdownWidget(
-                                  componentName: 'Style',
-                                ),
+                            ),
+                            wrapWithModel(
+                              model: _model.fontFamilyModel3,
+                              updateCallback: () => setState(() {}),
+                              child: SectionDropdownWidget(
+                                componentName: 'Style',
                               ),
-                              wrapWithModel(
-                                model: _model.fontFamilyModel4,
-                                updateCallback: () => setState(() {}),
-                                child: SectionDropdownWidget(
-                                  componentName: 'Weight',
-                                ),
+                            ),
+                            wrapWithModel(
+                              model: _model.fontFamilyModel4,
+                              updateCallback: () => setState(() {}),
+                              child: SectionDropdownWidget(
+                                componentName: 'Weight',
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
