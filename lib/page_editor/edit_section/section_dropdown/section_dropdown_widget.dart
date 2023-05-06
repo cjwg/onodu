@@ -87,8 +87,8 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                       FormFieldController<String>(
                     _model.dropDownValue ??= '',
                   ),
-                  options: <String>[],
-                  optionLabels: <String>[],
+                  options: ['', '5', '10', '15', '20'],
+                  optionLabels: ['0', '5', '10', '15', '20'],
                   onChanged: (val) =>
                       setState(() => _model.dropDownValue = val),
                   width: 60.0,
