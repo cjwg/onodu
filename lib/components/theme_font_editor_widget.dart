@@ -1,4 +1,3 @@
-import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/page_editor/edit_section/section_dropdown/section_dropdown_widget.dart';
@@ -41,14 +40,6 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-          width: MediaQuery.of(context).size.width * 1.0,
-          height: 55.0,
-          decoration: BoxDecoration(
-            color: FlutterFlowTheme.of(context).accent3,
-            borderRadius: BorderRadius.circular(15.0),
-          ),
-        ),
         DefaultTabController(
           length: 3,
           initialIndex: 0,
@@ -56,22 +47,12 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
             children: [
               Align(
                 alignment: Alignment(0.0, 0),
-                child: FlutterFlowButtonTabBar(
-                  useToggleButtonStyle: false,
-                  labelStyle: FlutterFlowTheme.of(context).bodyMedium,
-                  unselectedLabelStyle: FlutterFlowTheme.of(context).bodyMedium,
+                child: TabBar(
                   labelColor: FlutterFlowTheme.of(context).primaryText,
                   unselectedLabelColor:
                       FlutterFlowTheme.of(context).primaryText,
-                  backgroundColor:
-                      FlutterFlowTheme.of(context).primaryBackground,
-                  unselectedBackgroundColor:
-                      FlutterFlowTheme.of(context).accent3,
-                  borderWidth: 4.0,
-                  borderRadius: 15.0,
-                  elevation: 0.0,
-                  buttonMargin:
-                      EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 0.0),
+                  labelStyle: FlutterFlowTheme.of(context).bodyMedium,
+                  indicatorColor: FlutterFlowTheme.of(context).primaryText,
                   tabs: [
                     Tab(
                       text: 'Heading',
@@ -92,6 +73,53 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
                       child: ClipRRect(
+                        borderRadius: BorderRadius.circular(0.0),
+                        child: Container(
+                          width: 100.0,
+                          height: 100.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(0.0),
+                          ),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              wrapWithModel(
+                                model: _model.fontFamilyModel1,
+                                updateCallback: () => setState(() {}),
+                                child: SectionDropdownWidget(
+                                  componentName: 'Font family',
+                                ),
+                              ),
+                              wrapWithModel(
+                                model: _model.fontFamilyModel2,
+                                updateCallback: () => setState(() {}),
+                                child: SectionDropdownWidget(
+                                  componentName: 'Size',
+                                ),
+                              ),
+                              wrapWithModel(
+                                model: _model.fontFamilyModel3,
+                                updateCallback: () => setState(() {}),
+                                child: SectionDropdownWidget(
+                                  componentName: 'Style',
+                                ),
+                              ),
+                              wrapWithModel(
+                                model: _model.fontFamilyModel4,
+                                updateCallback: () => setState(() {}),
+                                child: SectionDropdownWidget(
+                                  componentName: 'Weight',
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                      child: ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
                         child: Container(
                           width: 100.0,
@@ -108,28 +136,28 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 wrapWithModel(
-                                  model: _model.fontFamilyModel1,
+                                  model: _model.fontFamilyModel5,
                                   updateCallback: () => setState(() {}),
                                   child: SectionDropdownWidget(
                                     componentName: 'Font family',
                                   ),
                                 ),
                                 wrapWithModel(
-                                  model: _model.fontFamilyModel2,
+                                  model: _model.fontFamilyModel6,
                                   updateCallback: () => setState(() {}),
                                   child: SectionDropdownWidget(
                                     componentName: 'Size',
                                   ),
                                 ),
                                 wrapWithModel(
-                                  model: _model.fontFamilyModel3,
+                                  model: _model.fontFamilyModel7,
                                   updateCallback: () => setState(() {}),
                                   child: SectionDropdownWidget(
                                     componentName: 'Style',
                                   ),
                                 ),
                                 wrapWithModel(
-                                  model: _model.fontFamilyModel4,
+                                  model: _model.fontFamilyModel8,
                                   updateCallback: () => setState(() {}),
                                   child: SectionDropdownWidget(
                                     componentName: 'Weight',
@@ -141,19 +169,58 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                         ),
                       ),
                     ),
-                    Text(
-                      'Tab View 2',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Nunito',
-                            fontSize: 32.0,
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child: Container(
+                          width: 100.0,
+                          height: 100.0,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            borderRadius: BorderRadius.circular(15.0),
                           ),
-                    ),
-                    Text(
-                      'Tab View 3',
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Nunito',
-                            fontSize: 32.0,
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                20.0, 0.0, 0.0, 0.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                wrapWithModel(
+                                  model: _model.fontFamilyModel9,
+                                  updateCallback: () => setState(() {}),
+                                  child: SectionDropdownWidget(
+                                    componentName: 'Font family',
+                                  ),
+                                ),
+                                wrapWithModel(
+                                  model: _model.fontFamilyModel10,
+                                  updateCallback: () => setState(() {}),
+                                  child: SectionDropdownWidget(
+                                    componentName: 'Size',
+                                  ),
+                                ),
+                                wrapWithModel(
+                                  model: _model.fontFamilyModel11,
+                                  updateCallback: () => setState(() {}),
+                                  child: SectionDropdownWidget(
+                                    componentName: 'Style',
+                                  ),
+                                ),
+                                wrapWithModel(
+                                  model: _model.fontFamilyModel12,
+                                  updateCallback: () => setState(() {}),
+                                  child: SectionDropdownWidget(
+                                    componentName: 'Weight',
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
+                        ),
+                      ),
                     ),
                   ],
                 ),
