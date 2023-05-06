@@ -44,9 +44,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
           padding: EdgeInsetsDirectional.fromSTEB(0.0, 46.0, 0.0, 0.0),
           child: Container(
             width: MediaQuery.of(context).size.width * 1.0,
-            height: 1.0,
+            height: 2.0,
             decoration: BoxDecoration(
-              color: Color(0xFFB0ADA9),
+              color: FlutterFlowTheme.of(context).accent3,
             ),
           ),
         ),
@@ -63,7 +63,7 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                       FlutterFlowTheme.of(context).primaryText,
                   labelStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Nunito',
-                        fontSize: 14.0,
+                        fontSize: 16.0,
                         fontWeight: FontWeight.w500,
                       ),
                   indicatorColor: FlutterFlowTheme.of(context).primaryText,

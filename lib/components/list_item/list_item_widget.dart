@@ -160,9 +160,9 @@ class _ListItemWidgetState extends State<ListItemWidget> {
           ],
         ),
         Divider(
-          height: 1.0,
-          thickness: 1.0,
-          color: Color(0xFFB0ADA9),
+          height: 2.0,
+          thickness: 2.0,
+          color: FlutterFlowTheme.of(context).accent3,
         ),
       ],
     );
