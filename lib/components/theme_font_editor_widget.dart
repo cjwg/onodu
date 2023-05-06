@@ -60,22 +60,22 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                   useToggleButtonStyle: true,
                   labelStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Nunito',
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.w600,
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.bold,
                       ),
                   unselectedLabelStyle:
                       FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Nunito',
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.w600,
+                            fontSize: 14.0,
+                            fontWeight: FontWeight.bold,
                           ),
                   labelColor: FlutterFlowTheme.of(context).primaryBackground,
                   unselectedLabelColor:
                       FlutterFlowTheme.of(context).primaryText,
                   backgroundColor: FlutterFlowTheme.of(context).secondaryText,
                   unselectedBackgroundColor:
-                      FlutterFlowTheme.of(context).accent3,
-                  borderColor: FlutterFlowTheme.of(context).accent3,
+                      FlutterFlowTheme.of(context).secondaryBackground,
+                  borderColor: FlutterFlowTheme.of(context).secondaryBackground,
                   borderWidth: 4.0,
                   borderRadius: 15.0,
                   elevation: 0.0,
