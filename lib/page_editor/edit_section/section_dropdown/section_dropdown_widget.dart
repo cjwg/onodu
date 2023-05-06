@@ -45,72 +45,84 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width * 1.0,
-      height: 63.0,
-      decoration: BoxDecoration(),
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Expanded(
-            child: Container(
-              width: 100.0,
-              height: MediaQuery.of(context).size.height * 1.0,
-              decoration: BoxDecoration(),
-              alignment: AlignmentDirectional(-1.0, 0.0),
-              child: Align(
-                alignment: AlignmentDirectional(-1.0, 0.0),
-                child: Text(
-                  widget.componentName,
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Nunito',
-                        fontSize: 17.0,
-                        fontWeight: FontWeight.w500,
-                      ),
-                ),
-              ),
-            ),
-          ),
-          Container(
-            width: 90.0,
-            decoration: BoxDecoration(),
-            child: Align(
-              alignment: AlignmentDirectional(1.0, 0.0),
-              child: FlutterFlowDropDown<String>(
-                controller: _model.dropDownValueController ??=
-                    FormFieldController<String>(
-                  _model.dropDownValue ??= '',
-                ),
-                options: <String>[],
-                optionLabels: <String>[],
-                onChanged: (val) => setState(() => _model.dropDownValue = val),
-                width: 180.0,
-                height: 30.0,
-                searchHintTextStyle:
-                    FlutterFlowTheme.of(context).bodyLarge.override(
-                          fontFamily: 'Nunito',
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                        ),
-                textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Nunito',
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.w500,
+    return Column(
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        Container(
+          width: MediaQuery.of(context).size.width * 1.0,
+          height: 63.0,
+          decoration: BoxDecoration(),
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Container(
+                  width: 100.0,
+                  height: MediaQuery.of(context).size.height * 1.0,
+                  decoration: BoxDecoration(),
+                  alignment: AlignmentDirectional(-1.0, 0.0),
+                  child: Align(
+                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    child: Text(
+                      widget.componentName,
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Nunito',
+                            fontSize: 17.0,
+                            fontWeight: FontWeight.w500,
+                          ),
                     ),
-                hintText: 'None',
-                searchHintText: 'Search for an item...',
-                elevation: 2.0,
-                borderColor: Colors.transparent,
-                borderWidth: 0.0,
-                borderRadius: 0.0,
-                margin: EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 4.0),
-                hidesUnderline: true,
-                isSearchable: false,
+                  ),
+                ),
               ),
-            ),
+              Container(
+                width: 90.0,
+                decoration: BoxDecoration(),
+                child: Align(
+                  alignment: AlignmentDirectional(1.0, 0.0),
+                  child: FlutterFlowDropDown<String>(
+                    controller: _model.dropDownValueController ??=
+                        FormFieldController<String>(
+                      _model.dropDownValue ??= '',
+                    ),
+                    options: <String>[],
+                    optionLabels: <String>[],
+                    onChanged: (val) =>
+                        setState(() => _model.dropDownValue = val),
+                    width: 180.0,
+                    height: 30.0,
+                    searchHintTextStyle:
+                        FlutterFlowTheme.of(context).bodyLarge.override(
+                              fontFamily: 'Nunito',
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                            ),
+                    textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Nunito',
+                          fontSize: 16.0,
+                          fontWeight: FontWeight.w500,
+                        ),
+                    hintText: 'None',
+                    searchHintText: 'Search for an item...',
+                    elevation: 2.0,
+                    borderColor: Colors.transparent,
+                    borderWidth: 0.0,
+                    borderRadius: 0.0,
+                    margin:
+                        EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 4.0),
+                    hidesUnderline: true,
+                    isSearchable: false,
+                  ),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
+        ),
+        Divider(
+          height: 4.0,
+          thickness: 4.0,
+          color: FlutterFlowTheme.of(context).secondaryBackground,
+        ),
+      ],
     );
   }
 }
