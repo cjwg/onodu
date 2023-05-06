@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -106,21 +105,13 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                       ),
                   hintText: 'None',
                   searchHintText: 'Search for an item...',
+                  fillColor: FlutterFlowTheme.of(context).accent3,
                   elevation: 0.0,
                   borderColor: Colors.transparent,
                   borderWidth: 0.0,
                   borderRadius: 0.0,
                   margin: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
-                  hidesUnderline: true,
                   isSearchable: false,
-                ),
-              ),
-              Container(
-                width: 50.0,
-                height: 50.0,
-                child: custom_widgets.NativeDropdown(
-                  width: 50.0,
-                  height: 50.0,
                 ),
               ),
             ],
