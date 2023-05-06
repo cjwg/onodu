@@ -48,9 +48,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
     return Container(
       width: MediaQuery.of(context).size.width * 1.0,
       height: 63.0,
-      decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).primaryBackground,
-      ),
+      decoration: BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -59,9 +57,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
             child: Container(
               width: 100.0,
               height: MediaQuery.of(context).size.height * 1.0,
-              decoration: BoxDecoration(
-                color: FlutterFlowTheme.of(context).primaryBackground,
-              ),
+              decoration: BoxDecoration(),
               alignment: AlignmentDirectional(-1.0, 0.0),
               child: Align(
                 alignment: AlignmentDirectional(-1.0, 0.0),
@@ -78,11 +74,9 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
           ),
           Container(
             width: 90.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).primaryBackground,
-            ),
+            decoration: BoxDecoration(),
             child: Align(
-              alignment: AlignmentDirectional(-1.0, 0.0),
+              alignment: AlignmentDirectional(1.0, 0.0),
               child: FlutterFlowDropDown<String>(
                 controller: _model.dropDownValueController ??=
                     FormFieldController<String>(
@@ -105,7 +99,6 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                     ),
                 hintText: 'None',
                 searchHintText: 'Search for an item...',
-                fillColor: FlutterFlowTheme.of(context).primaryBackground,
                 elevation: 2.0,
                 borderColor: Colors.transparent,
                 borderWidth: 0.0,

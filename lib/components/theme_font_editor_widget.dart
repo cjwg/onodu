@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/page_editor/edit_section/section_dropdown/section_dropdown_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -64,6 +65,8 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                       FlutterFlowTheme.of(context).primaryText,
                   backgroundColor:
                       FlutterFlowTheme.of(context).primaryBackground,
+                  unselectedBackgroundColor:
+                      FlutterFlowTheme.of(context).accent3,
                   borderWidth: 4.0,
                   borderRadius: 15.0,
                   elevation: 0.0,
@@ -88,19 +91,53 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                     Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
-                      child: Container(
-                        width: 100.0,
-                        height: 100.0,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).info,
-                        ),
-                        child: Text(
-                          'Tab View 1',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Nunito',
-                                    fontSize: 32.0,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(15.0),
+                        child: Container(
+                          width: 100.0,
+                          height: 100.0,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                20.0, 0.0, 0.0, 0.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                wrapWithModel(
+                                  model: _model.fontFamilyModel1,
+                                  updateCallback: () => setState(() {}),
+                                  child: SectionDropdownWidget(
+                                    componentName: 'Font family',
                                   ),
+                                ),
+                                wrapWithModel(
+                                  model: _model.fontFamilyModel2,
+                                  updateCallback: () => setState(() {}),
+                                  child: SectionDropdownWidget(
+                                    componentName: 'Size',
+                                  ),
+                                ),
+                                wrapWithModel(
+                                  model: _model.fontFamilyModel3,
+                                  updateCallback: () => setState(() {}),
+                                  child: SectionDropdownWidget(
+                                    componentName: 'Style',
+                                  ),
+                                ),
+                                wrapWithModel(
+                                  model: _model.fontFamilyModel4,
+                                  updateCallback: () => setState(() {}),
+                                  child: SectionDropdownWidget(
+                                    componentName: 'Weight',
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
                       ),
                     ),
