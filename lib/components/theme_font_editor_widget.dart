@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/page_editor/edit_section/section_dropdown/section_dropdown_widget.dart';
@@ -47,6 +48,7 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
             height: 2.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).accent3,
+              borderRadius: BorderRadius.circular(15.0),
             ),
           ),
         ),
@@ -57,16 +59,32 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
             children: [
               Align(
                 alignment: Alignment(0.0, 0),
-                child: TabBar(
-                  labelColor: FlutterFlowTheme.of(context).primaryText,
-                  unselectedLabelColor:
-                      FlutterFlowTheme.of(context).primaryText,
+                child: FlutterFlowButtonTabBar(
+                  useToggleButtonStyle: true,
                   labelStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Nunito',
                         fontSize: 16.0,
                         fontWeight: FontWeight.bold,
                       ),
-                  indicatorColor: FlutterFlowTheme.of(context).primaryText,
+                  unselectedLabelStyle:
+                      FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Nunito',
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                  labelColor: FlutterFlowTheme.of(context).primaryText,
+                  unselectedLabelColor:
+                      FlutterFlowTheme.of(context).primaryText,
+                  backgroundColor:
+                      FlutterFlowTheme.of(context).primaryBackground,
+                  unselectedBackgroundColor:
+                      FlutterFlowTheme.of(context).accent3,
+                  borderColor: FlutterFlowTheme.of(context).accent2,
+                  borderWidth: 4.0,
+                  borderRadius: 20.0,
+                  elevation: 0.0,
+                  buttonMargin:
+                      EdgeInsetsDirectional.fromSTEB(5.0, 5.0, 5.0, 0.0),
                   tabs: [
                     Tab(
                       text: 'Heading',
