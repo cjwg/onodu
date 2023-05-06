@@ -61,13 +61,13 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                   labelStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Nunito',
                         fontSize: 14.0,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
                       ),
                   unselectedLabelStyle:
                       FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Nunito',
                             fontSize: 14.0,
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w600,
                           ),
                   labelColor: FlutterFlowTheme.of(context).primaryText,
                   unselectedLabelColor:
