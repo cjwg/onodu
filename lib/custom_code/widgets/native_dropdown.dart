@@ -31,43 +31,41 @@ class _NativeDropdownState extends State<NativeDropdown> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.fromLTRB(100, 140, 20, 20),
-        child: Column(children: [
-          SizedBox(
-              width: 150,
-              height: 34,
-              child: AdaptivePicker(
-                  key: key1,
-                  type: AdaptivePickerType.material,
-                  items: items,
-                  value: selectedItem,
-                  dropDownItemTextColor: Colors.green,
-                  onChanged: (val) {
-                    setState(() {
-                      selectedItem = val ?? 0;
-                      selectedDate =
-                          DateTime.now().add(Duration(days: selectedItem));
-                    });
-                  })),
-          const SizedBox(height: 12),
-          SizedBox(
-              width: 150,
-              height: 34,
-              child: AdaptiveDatePicker(
-                key: key2,
-                type: AdaptiveDatePickerType.material,
-                initialDate: selectedDate,
-                firstDate: DateTime.now(),
-                lastDate: DateTime.now().add(const Duration(days: 10)),
-                onChanged: (date) {
-                  setState(() {
-                    selectedDate = date;
-                    selectedItem = daysBetween(DateTime.now(), selectedDate);
-                  });
-                },
-              ))
-        ]));
+    return Column(children: [
+      SizedBox(
+          width: 150,
+          height: 34,
+          child: AdaptivePicker(
+              key: key1,
+              type: AdaptivePickerType.adaptive,
+              items: items,
+              value: selectedItem,
+              dropDownItemTextColor: Colors.green,
+              onChanged: (val) {
+                setState(() {
+                  selectedItem = val ?? 0;
+                  selectedDate =
+                      DateTime.now().add(Duration(days: selectedItem));
+                });
+              })),
+      const SizedBox(height: 12),
+      SizedBox(
+          width: 150,
+          height: 34,
+          child: AdaptiveDatePicker(
+            key: key2,
+            type: AdaptiveDatePickerType.adaptive,
+            initialDate: selectedDate,
+            firstDate: DateTime.now(),
+            lastDate: DateTime.now().add(const Duration(days: 10)),
+            onChanged: (date) {
+              setState(() {
+                selectedDate = date;
+                selectedItem = daysBetween(DateTime.now(), selectedDate);
+              });
+            },
+          ))
+    ]);
   }
 
   int daysBetween(DateTime from, DateTime to) {
