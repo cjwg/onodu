@@ -528,7 +528,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                         .override(
                                           fontFamily: 'Poppins',
                                           fontSize: 30.0,
-                                          fontWeight: FontWeight.bold,
+                                          fontWeight: FontWeight.w900,
                                         ),
                                   ),
                                 ),
@@ -556,6 +556,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Nunito',
+                                            fontSize: 16.0,
                                             fontWeight: FontWeight.w500,
                                           ),
                                     ),
