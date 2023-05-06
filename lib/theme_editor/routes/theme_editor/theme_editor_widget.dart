@@ -526,9 +526,9 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Nunito',
-                                          fontSize: 36.0,
-                                          fontWeight: FontWeight.w500,
+                                          fontFamily: 'Poppins',
+                                          fontSize: 30.0,
+                                          fontWeight: FontWeight.bold,
                                         ),
                                   ),
                                 ),
@@ -536,16 +536,29 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                   alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Text(
                                     'Sub heading',
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyMedium,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                   ),
                                 ),
                                 Align(
                                   alignment: AlignmentDirectional(-1.0, 0.0),
-                                  child: Text(
-                                    'Body copy is typically written in paragraphs, with sentences that are easy to read and understand. It can vary in length depending on the medium and purpose, but its main function is to engage and inform the reader or audience. ',
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyMedium,
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 10.0, 0.0, 0.0),
+                                    child: Text(
+                                      'Body copy is typically written in paragraphs, with sentences that are easy to read and understand. It can vary in length depending on the medium and purpose, but its main function is to engage and inform the reader or audience. ',
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Nunito',
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                    ),
                                   ),
                                 ),
                                 Expanded(
