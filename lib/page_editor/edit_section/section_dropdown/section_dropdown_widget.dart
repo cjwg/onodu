@@ -87,7 +87,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                       FormFieldController<String>(
                     _model.dropDownValue ??= '',
                   ),
-                  options: ['', '5', '10', '15', '20'],
+                  options: ['0', '5', '10', '15', '20'],
                   optionLabels: ['0', '5', '10', '15', '20'],
                   onChanged: (val) =>
                       setState(() => _model.dropDownValue = val),
@@ -107,10 +107,11 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                   searchHintText: 'Search for an item...',
                   fillColor: FlutterFlowTheme.of(context).accent3,
                   elevation: 0.0,
-                  borderColor: Colors.transparent,
+                  borderColor: FlutterFlowTheme.of(context).accent2,
                   borderWidth: 0.0,
-                  borderRadius: 0.0,
+                  borderRadius: 5.0,
                   margin: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
+                  hidesUnderline: true,
                   isSearchable: false,
                 ),
               ),
