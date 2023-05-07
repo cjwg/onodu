@@ -8,8 +8,8 @@ import 'package:flutter/material.dart';
 
 import 'package:wheel_chooser/wheel_chooser.dart';
 
-class WheelChooser extends StatefulWidget {
-  const WheelChooser({
+class WheelPicker extends StatefulWidget {
+  const WheelPicker({
     Key? key,
     this.width,
     this.height,
@@ -19,19 +19,19 @@ class WheelChooser extends StatefulWidget {
   final double? height;
 
   @override
-  _WheelChooserState createState() => _WheelChooserState();
+  _WheelPickerState createState() => _WheelPickerState();
 }
 
-class _WheelChooserState extends State<WheelChooser> {
+class _WheelPickerState extends State<WheelPicker> {
   @override
   Widget build(BuildContext context) {
-    return Container(WheelChooser.integer(
+    return WheelChooser.integer(
       onValueChanged: (s) => print(s.toString()),
       maxValue: 20,
       minValue: 1,
       initValue: 9,
       horizontal: true,
       unSelectTextStyle: TextStyle(color: Colors.grey),
-    ));
+    );
   }
 }
