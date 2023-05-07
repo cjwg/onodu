@@ -117,7 +117,12 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                 ),
               ),
               Container(
-                child: custom_widgets.WheelPicker(),
+                width: 150.0,
+                height: 60.0,
+                child: custom_widgets.WheelPicker(
+                  width: 150.0,
+                  height: 60.0,
+                ),
               ),
             ],
           ),
