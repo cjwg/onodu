@@ -123,7 +123,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                 width: MediaQuery.of(context).size.width * 1.0,
                 height: 63.0,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  color: FlutterFlowTheme.of(context).primaryBackground,
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
@@ -137,7 +137,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                       icon: Icon(
                         Icons.close,
                         color: FlutterFlowTheme.of(context).primaryText,
-                        size: 30.0,
+                        size: 17.0,
                       ),
                       onPressed: () async {
                         setState(() {
@@ -163,7 +163,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
                       icon: FaIcon(
                         FontAwesomeIcons.check,
                         color: FlutterFlowTheme.of(context).primaryText,
-                        size: 30.0,
+                        size: 15.0,
                       ),
                       onPressed: () async {
                         setState(() {

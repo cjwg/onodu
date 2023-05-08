@@ -97,6 +97,7 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
               ),
               Expanded(
                 child: TabBarView(
+                  physics: const NeverScrollableScrollPhysics(),
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(0.0),
