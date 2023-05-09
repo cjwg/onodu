@@ -9,14 +9,20 @@ import 'package:flutter/material.dart';
 import 'package:wheel_chooser/wheel_chooser.dart';
 
 class WheelPicker extends StatefulWidget {
-  const WheelPicker({
-    Key? key,
-    this.width,
-    this.height,
-  }) : super(key: key);
+  const WheelPicker(
+      {Key? key,
+      this.width,
+      this.height,
+      this.values,
+      this.selectedValue,
+      required this.type})
+      : super(key: key);
 
   final double? width;
   final double? height;
+  final dynamic? values;
+  final String? selectedValue;
+  final String type;
 
   @override
   _WheelPickerState createState() => _WheelPickerState();
@@ -25,13 +31,25 @@ class WheelPicker extends StatefulWidget {
 class _WheelPickerState extends State<WheelPicker> {
   @override
   Widget build(BuildContext context) {
-    return WheelChooser.integer(
-      onValueChanged: (s) => print(s.toString()),
-      maxValue: 20,
-      minValue: 1,
-      initValue: 9,
-      horizontal: true,
-      unSelectTextStyle: TextStyle(color: Colors.grey),
-    );
+    if (widget.type == "font") {
+      return WheelChooser.custom(
+        onValueChanged: (a) => print(a),
+        children: <Widget>[
+          Text("data1"),
+          Text("data2"),
+          Text("data3"),
+        ],
+        horizontal: true,
+      );
+    } else {
+      return WheelChooser.integer(
+        onValueChanged: (s) => print(s.toString()),
+        maxValue: 20,
+        minValue: 1,
+        initValue: 9,
+        horizontal: true,
+        unSelectTextStyle: TextStyle(color: Colors.grey),
+      );
+    }
   }
 }

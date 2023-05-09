@@ -111,6 +111,9 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                       updateCallback: () => setState(() {}),
                       child: SectionDropdownWidget(
                         componentName: 'Padding',
+                        selectedValue: '\"\"',
+                        type: 'std',
+                        values: null!,
                       ),
                     ),
                   ),
@@ -132,6 +135,9 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                       updateCallback: () => setState(() {}),
                       child: SectionDropdownWidget(
                         componentName: 'Alignment',
+                        selectedValue: '\"\"',
+                        type: 'std',
+                        values: null!,
                       ),
                     ),
                   ),
@@ -143,6 +149,9 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                       updateCallback: () => setState(() {}),
                       child: SectionDropdownWidget(
                         componentName: 'Animation',
+                        selectedValue: '\"\"',
+                        type: 'std',
+                        values: null!,
                       ),
                     ),
                   ),

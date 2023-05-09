@@ -115,6 +115,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                               updateCallback: () => setState(() {}),
                               child: SectionDropdownWidget(
                                 componentName: 'Font family',
+                                selectedValue: '\"\"',
+                                type: 'font',
+                                values: null!,
                               ),
                             ),
                             wrapWithModel(
@@ -122,6 +125,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                               updateCallback: () => setState(() {}),
                               child: SectionDropdownWidget(
                                 componentName: 'Size',
+                                selectedValue: '\"\"',
+                                type: 'std',
+                                values: null!,
                               ),
                             ),
                             wrapWithModel(
@@ -129,6 +135,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                               updateCallback: () => setState(() {}),
                               child: SectionDropdownWidget(
                                 componentName: 'Style',
+                                selectedValue: '\"\"',
+                                type: 'std',
+                                values: null!,
                               ),
                             ),
                             wrapWithModel(
@@ -136,6 +145,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                               updateCallback: () => setState(() {}),
                               child: SectionDropdownWidget(
                                 componentName: 'Weight',
+                                selectedValue: '\"\"',
+                                type: 'std',
+                                values: null!,
                               ),
                             ),
                           ],
@@ -166,6 +178,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                                   updateCallback: () => setState(() {}),
                                   child: SectionDropdownWidget(
                                     componentName: 'Font family',
+                                    selectedValue: '\"\"',
+                                    type: 'font',
+                                    values: null!,
                                   ),
                                 ),
                                 wrapWithModel(
@@ -173,6 +188,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                                   updateCallback: () => setState(() {}),
                                   child: SectionDropdownWidget(
                                     componentName: 'Size',
+                                    selectedValue: '\"\"',
+                                    type: 'std',
+                                    values: null!,
                                   ),
                                 ),
                                 wrapWithModel(
@@ -180,6 +198,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                                   updateCallback: () => setState(() {}),
                                   child: SectionDropdownWidget(
                                     componentName: 'Style',
+                                    selectedValue: '\"\"',
+                                    type: 'std',
+                                    values: null!,
                                   ),
                                 ),
                                 wrapWithModel(
@@ -187,6 +208,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                                   updateCallback: () => setState(() {}),
                                   child: SectionDropdownWidget(
                                     componentName: 'Weight',
+                                    selectedValue: '\"\"',
+                                    type: 'std',
+                                    values: null!,
                                   ),
                                 ),
                               ],
@@ -219,6 +243,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                                   updateCallback: () => setState(() {}),
                                   child: SectionDropdownWidget(
                                     componentName: 'Font family',
+                                    selectedValue: '\"\"',
+                                    type: 'font',
+                                    values: null!,
                                   ),
                                 ),
                                 wrapWithModel(
@@ -226,6 +253,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                                   updateCallback: () => setState(() {}),
                                   child: SectionDropdownWidget(
                                     componentName: 'Size',
+                                    selectedValue: '\"\"',
+                                    type: 'std',
+                                    values: null!,
                                   ),
                                 ),
                                 wrapWithModel(
@@ -233,6 +263,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                                   updateCallback: () => setState(() {}),
                                   child: SectionDropdownWidget(
                                     componentName: 'Style',
+                                    selectedValue: '\"\"',
+                                    type: 'std',
+                                    values: null!,
                                   ),
                                 ),
                                 wrapWithModel(
@@ -240,6 +273,9 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                                   updateCallback: () => setState(() {}),
                                   child: SectionDropdownWidget(
                                     componentName: 'Weight',
+                                    selectedValue: '\"\"',
+                                    type: 'std',
+                                    values: null!,
                                   ),
                                 ),
                               ],

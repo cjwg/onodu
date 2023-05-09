@@ -13,10 +13,16 @@ class SectionDropdownWidget extends StatefulWidget {
   const SectionDropdownWidget({
     Key? key,
     String? componentName,
+    required this.values,
+    required this.selectedValue,
+    required this.type,
   })  : this.componentName = componentName ?? 'Name',
         super(key: key);
 
   final String componentName;
+  final dynamic values;
+  final String? selectedValue;
+  final String? type;
 
   @override
   _SectionDropdownWidgetState createState() => _SectionDropdownWidgetState();
