@@ -575,7 +575,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                       child: Stack(
                                         children: [
                                           wrapWithModel(
-                                            model: _model.themeFontEditorModel,
+                                            model: _model.themeFontEditorModel1,
                                             updateCallback: () =>
                                                 setState(() {}),
                                             child: ThemeFontEditorWidget(),
@@ -606,6 +606,81 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                 curve: Curves.ease,
                               );
                             },
+                          ),
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                25.0, 0.0, 25.0, 0.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Align(
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                  child: Text(
+                                    'Heading',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Montserrat',
+                                          fontSize: 30.0,
+                                          fontWeight: FontWeight.w900,
+                                        ),
+                                  ),
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                  child: Text(
+                                    'Sub heading',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Montserrat',
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
+                                ),
+                                Align(
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 15.0, 0.0, 0.0),
+                                    child: Text(
+                                      'Body copy is typically written in paragraphs, with sentences that are easy to read and understand. It can vary in length depending on the medium and purpose, but its main function is to engage and inform the reader or audience. ',
+                                      style: TextStyle(
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 16.0,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 25.0, 0.0, 0.0),
+                                    child: Container(
+                                      width: MediaQuery.of(context).size.width *
+                                          1.0,
+                                      height: 100.0,
+                                      decoration: BoxDecoration(),
+                                      child: Stack(
+                                        children: [
+                                          wrapWithModel(
+                                            model: _model.themeFontEditorModel2,
+                                            updateCallback: () =>
+                                                setState(() {}),
+                                            child: ThemeFontEditorWidget(),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],

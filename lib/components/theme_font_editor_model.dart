@@ -11,6 +11,16 @@ class ThemeFontEditorModel extends FlutterFlowModel {
 
   // Model for FontFamily.
   late SectionDropdownModel fontFamilyModel1;
+  // Model for Size.
+  late SectionDropdownModel sizeModel;
+  // Model for Style.
+  late SectionDropdownModel styleModel;
+  // Model for Weight.
+  late SectionDropdownModel weightModel;
+  // Model for LineHeight.
+  late SectionDropdownModel lineHeightModel;
+  // Model for TextAlignment.
+  late SectionDropdownModel textAlignmentModel;
   // Model for FontFamily.
   late SectionDropdownModel fontFamilyModel2;
   // Model for FontFamily.
@@ -27,17 +37,16 @@ class ThemeFontEditorModel extends FlutterFlowModel {
   late SectionDropdownModel fontFamilyModel8;
   // Model for FontFamily.
   late SectionDropdownModel fontFamilyModel9;
-  // Model for FontFamily.
-  late SectionDropdownModel fontFamilyModel10;
-  // Model for FontFamily.
-  late SectionDropdownModel fontFamilyModel11;
-  // Model for FontFamily.
-  late SectionDropdownModel fontFamilyModel12;
 
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {
     fontFamilyModel1 = createModel(context, () => SectionDropdownModel());
+    sizeModel = createModel(context, () => SectionDropdownModel());
+    styleModel = createModel(context, () => SectionDropdownModel());
+    weightModel = createModel(context, () => SectionDropdownModel());
+    lineHeightModel = createModel(context, () => SectionDropdownModel());
+    textAlignmentModel = createModel(context, () => SectionDropdownModel());
     fontFamilyModel2 = createModel(context, () => SectionDropdownModel());
     fontFamilyModel3 = createModel(context, () => SectionDropdownModel());
     fontFamilyModel4 = createModel(context, () => SectionDropdownModel());
@@ -46,13 +55,15 @@ class ThemeFontEditorModel extends FlutterFlowModel {
     fontFamilyModel7 = createModel(context, () => SectionDropdownModel());
     fontFamilyModel8 = createModel(context, () => SectionDropdownModel());
     fontFamilyModel9 = createModel(context, () => SectionDropdownModel());
-    fontFamilyModel10 = createModel(context, () => SectionDropdownModel());
-    fontFamilyModel11 = createModel(context, () => SectionDropdownModel());
-    fontFamilyModel12 = createModel(context, () => SectionDropdownModel());
   }
 
   void dispose() {
     fontFamilyModel1.dispose();
+    sizeModel.dispose();
+    styleModel.dispose();
+    weightModel.dispose();
+    lineHeightModel.dispose();
+    textAlignmentModel.dispose();
     fontFamilyModel2.dispose();
     fontFamilyModel3.dispose();
     fontFamilyModel4.dispose();
@@ -61,9 +72,6 @@ class ThemeFontEditorModel extends FlutterFlowModel {
     fontFamilyModel7.dispose();
     fontFamilyModel8.dispose();
     fontFamilyModel9.dispose();
-    fontFamilyModel10.dispose();
-    fontFamilyModel11.dispose();
-    fontFamilyModel12.dispose();
   }
 
   /// Additional helper methods are added here.
