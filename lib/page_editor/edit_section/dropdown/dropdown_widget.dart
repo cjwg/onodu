@@ -6,16 +6,16 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'section_dropdown_model.dart';
-export 'section_dropdown_model.dart';
+import 'dropdown_model.dart';
+export 'dropdown_model.dart';
 
-class SectionDropdownWidget extends StatefulWidget {
-  const SectionDropdownWidget({
+class DropdownWidget extends StatefulWidget {
+  const DropdownWidget({
     Key? key,
     String? componentName,
-    required this.values,
-    required this.selectedValue,
-    required this.type,
+    this.values,
+    this.selectedValue,
+    this.type,
   })  : this.componentName = componentName ?? 'Name',
         super(key: key);
 
@@ -25,11 +25,11 @@ class SectionDropdownWidget extends StatefulWidget {
   final String? type;
 
   @override
-  _SectionDropdownWidgetState createState() => _SectionDropdownWidgetState();
+  _DropdownWidgetState createState() => _DropdownWidgetState();
 }
 
-class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
-  late SectionDropdownModel _model;
+class _DropdownWidgetState extends State<DropdownWidget> {
+  late DropdownModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -40,7 +40,7 @@ class _SectionDropdownWidgetState extends State<SectionDropdownWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => SectionDropdownModel());
+    _model = createModel(context, () => DropdownModel());
   }
 
   @override

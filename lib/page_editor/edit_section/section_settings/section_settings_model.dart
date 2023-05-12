@@ -1,8 +1,8 @@
 import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/page_editor/edit_section/dropdown/dropdown_widget.dart';
 import '/page_editor/edit_section/section_color/section_color_widget.dart';
-import '/page_editor/edit_section/section_dropdown/section_dropdown_widget.dart';
 import '/page_editor/edit_section/section_toggle/section_toggle_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,13 +20,13 @@ class SectionSettingsModel extends FlutterFlowModel {
   // Model for SectionForeground.
   late SectionColorModel sectionForegroundModel;
   // Model for SectionPadding.
-  late SectionDropdownModel sectionPaddingModel;
+  late DropdownModel sectionPaddingModel;
   // Model for SectionFullHeight.
   late SectionToggleModel sectionFullHeightModel;
   // Model for SectionAlignment.
-  late SectionDropdownModel sectionAlignmentModel;
+  late DropdownModel sectionAlignmentModel;
   // Model for SectionAnimation.
-  late SectionDropdownModel sectionAnimationModel;
+  late DropdownModel sectionAnimationModel;
 
   /// Initialization and disposal methods.
 
@@ -36,10 +36,10 @@ class SectionSettingsModel extends FlutterFlowModel {
     sectionBackgroundImageModel =
         createModel(context, () => SectionToggleModel());
     sectionForegroundModel = createModel(context, () => SectionColorModel());
-    sectionPaddingModel = createModel(context, () => SectionDropdownModel());
+    sectionPaddingModel = createModel(context, () => DropdownModel());
     sectionFullHeightModel = createModel(context, () => SectionToggleModel());
-    sectionAlignmentModel = createModel(context, () => SectionDropdownModel());
-    sectionAnimationModel = createModel(context, () => SectionDropdownModel());
+    sectionAlignmentModel = createModel(context, () => DropdownModel());
+    sectionAnimationModel = createModel(context, () => DropdownModel());
   }
 
   void dispose() {

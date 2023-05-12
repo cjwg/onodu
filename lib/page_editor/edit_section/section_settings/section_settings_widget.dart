@@ -1,8 +1,8 @@
 import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/page_editor/edit_section/dropdown/dropdown_widget.dart';
 import '/page_editor/edit_section/section_color/section_color_widget.dart';
-import '/page_editor/edit_section/section_dropdown/section_dropdown_widget.dart';
 import '/page_editor/edit_section/section_toggle/section_toggle_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -109,11 +109,11 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                     child: wrapWithModel(
                       model: _model.sectionPaddingModel,
                       updateCallback: () => setState(() {}),
-                      child: SectionDropdownWidget(
+                      child: DropdownWidget(
                         componentName: 'Padding',
                         selectedValue: '\"\"',
                         type: 'std',
-                        values: null!,
+                        values: null,
                       ),
                     ),
                   ),
@@ -133,11 +133,11 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                     child: wrapWithModel(
                       model: _model.sectionAlignmentModel,
                       updateCallback: () => setState(() {}),
-                      child: SectionDropdownWidget(
+                      child: DropdownWidget(
                         componentName: 'Alignment',
                         selectedValue: '\"\"',
                         type: 'std',
-                        values: null!,
+                        values: null,
                       ),
                     ),
                   ),
@@ -147,11 +147,11 @@ class _SectionSettingsWidgetState extends State<SectionSettingsWidget> {
                     child: wrapWithModel(
                       model: _model.sectionAnimationModel,
                       updateCallback: () => setState(() {}),
-                      child: SectionDropdownWidget(
+                      child: DropdownWidget(
                         componentName: 'Animation',
                         selectedValue: '\"\"',
                         type: 'std',
-                        values: null!,
+                        values: null,
                       ),
                     ),
                   ),

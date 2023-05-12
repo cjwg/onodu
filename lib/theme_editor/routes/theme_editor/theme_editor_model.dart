@@ -5,6 +5,8 @@ import '/components/theme_font_editor_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/page_editor/edit_section/dropdown/dropdown_widget.dart';
+import '/page_editor/edit_section/section_toggle/section_toggle_widget.dart';
 import '/theme_editor/edit_theme_palette_actions/edit_theme_palette_actions_widget.dart';
 import '/theme_editor/palette_item/palette_item_widget.dart';
 import '/theme_editor/routes/edit_theme_actions/edit_theme_actions_widget.dart';
@@ -58,11 +60,21 @@ class ThemeEditorModel extends FlutterFlowModel {
   // Model for Nav.
   late BottomSheetNavModel navModel;
   // Model for ThemeFontEditor component.
-  late ThemeFontEditorModel themeFontEditorModel1;
+  late ThemeFontEditorModel themeFontEditorModel;
   // Model for BottomSheetNav component.
   late BottomSheetNavModel bottomSheetNavModel2;
-  // Model for ThemeFontEditor component.
-  late ThemeFontEditorModel themeFontEditorModel2;
+  // Model for Padding.
+  late DropdownModel paddingModel1;
+  // Model for Padding.
+  late DropdownModel paddingModel2;
+  // Model for Padding.
+  late DropdownModel paddingModel3;
+  // Model for Padding.
+  late DropdownModel paddingModel4;
+  // Model for Padding.
+  late DropdownModel paddingModel5;
+  // Model for SectionToggle component.
+  late SectionToggleModel sectionToggleModel;
   // Model for BottomSheetNav component.
   late BottomSheetNavModel bottomSheetNavModel3;
   // Model for BottomSheetNav component.
@@ -90,9 +102,14 @@ class ThemeEditorModel extends FlutterFlowModel {
     editThemePaletteActionsModel =
         createModel(context, () => EditThemePaletteActionsModel());
     navModel = createModel(context, () => BottomSheetNavModel());
-    themeFontEditorModel1 = createModel(context, () => ThemeFontEditorModel());
+    themeFontEditorModel = createModel(context, () => ThemeFontEditorModel());
     bottomSheetNavModel2 = createModel(context, () => BottomSheetNavModel());
-    themeFontEditorModel2 = createModel(context, () => ThemeFontEditorModel());
+    paddingModel1 = createModel(context, () => DropdownModel());
+    paddingModel2 = createModel(context, () => DropdownModel());
+    paddingModel3 = createModel(context, () => DropdownModel());
+    paddingModel4 = createModel(context, () => DropdownModel());
+    paddingModel5 = createModel(context, () => DropdownModel());
+    sectionToggleModel = createModel(context, () => SectionToggleModel());
     bottomSheetNavModel3 = createModel(context, () => BottomSheetNavModel());
     bottomSheetNavModel4 = createModel(context, () => BottomSheetNavModel());
     bottomSheetNavModel5 = createModel(context, () => BottomSheetNavModel());
@@ -115,9 +132,14 @@ class ThemeEditorModel extends FlutterFlowModel {
     paletteItemModel5.dispose();
     editThemePaletteActionsModel.dispose();
     navModel.dispose();
-    themeFontEditorModel1.dispose();
+    themeFontEditorModel.dispose();
     bottomSheetNavModel2.dispose();
-    themeFontEditorModel2.dispose();
+    paddingModel1.dispose();
+    paddingModel2.dispose();
+    paddingModel3.dispose();
+    paddingModel4.dispose();
+    paddingModel5.dispose();
+    sectionToggleModel.dispose();
     bottomSheetNavModel3.dispose();
     bottomSheetNavModel4.dispose();
     bottomSheetNavModel5.dispose();

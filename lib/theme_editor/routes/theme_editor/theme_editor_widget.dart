@@ -5,6 +5,8 @@ import '/components/theme_font_editor_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/page_editor/edit_section/dropdown/dropdown_widget.dart';
+import '/page_editor/edit_section/section_toggle/section_toggle_widget.dart';
 import '/theme_editor/edit_theme_palette_actions/edit_theme_palette_actions_widget.dart';
 import '/theme_editor/palette_item/palette_item_widget.dart';
 import '/theme_editor/routes/edit_theme_actions/edit_theme_actions_widget.dart';
@@ -575,7 +577,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                       child: Stack(
                                         children: [
                                           wrapWithModel(
-                                            model: _model.themeFontEditorModel1,
+                                            model: _model.themeFontEditorModel,
                                             updateCallback: () =>
                                                 setState(() {}),
                                             child: ThemeFontEditorWidget(),
@@ -657,26 +659,52 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                     ),
                                   ),
                                 ),
+                                wrapWithModel(
+                                  model: _model.paddingModel1,
+                                  updateCallback: () => setState(() {}),
+                                  child: DropdownWidget(
+                                    componentName: 'Padding',
+                                  ),
+                                ),
+                                wrapWithModel(
+                                  model: _model.paddingModel2,
+                                  updateCallback: () => setState(() {}),
+                                  child: DropdownWidget(
+                                    componentName: '- Top',
+                                  ),
+                                ),
                                 Expanded(
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 25.0, 0.0, 0.0),
-                                    child: Container(
-                                      width: MediaQuery.of(context).size.width *
-                                          1.0,
-                                      height: 100.0,
-                                      decoration: BoxDecoration(),
-                                      child: Stack(
-                                        children: [
-                                          wrapWithModel(
-                                            model: _model.themeFontEditorModel2,
-                                            updateCallback: () =>
-                                                setState(() {}),
-                                            child: ThemeFontEditorWidget(),
-                                          ),
-                                        ],
-                                      ),
+                                  child: wrapWithModel(
+                                    model: _model.paddingModel3,
+                                    updateCallback: () => setState(() {}),
+                                    child: DropdownWidget(
+                                      componentName: '- Bottom',
                                     ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: wrapWithModel(
+                                    model: _model.paddingModel4,
+                                    updateCallback: () => setState(() {}),
+                                    child: DropdownWidget(
+                                      componentName: '- Left',
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: wrapWithModel(
+                                    model: _model.paddingModel5,
+                                    updateCallback: () => setState(() {}),
+                                    child: DropdownWidget(
+                                      componentName: '- Right',
+                                    ),
+                                  ),
+                                ),
+                                wrapWithModel(
+                                  model: _model.sectionToggleModel,
+                                  updateCallback: () => setState(() {}),
+                                  child: SectionToggleWidget(
+                                    title: 'Full height sections',
                                   ),
                                 ),
                               ],

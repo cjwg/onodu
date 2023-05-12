@@ -7,7 +7,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class SectionDropdownModel extends FlutterFlowModel {
+class DropdownModel extends FlutterFlowModel {
   ///  Local state fields for this component.
 
   bool isSelecting = false;

@@ -1,7 +1,7 @@
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/page_editor/edit_section/section_dropdown/section_dropdown_widget.dart';
+import '/page_editor/edit_section/dropdown/dropdown_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -113,61 +113,61 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                             wrapWithModel(
                               model: _model.fontFamilyModel1,
                               updateCallback: () => setState(() {}),
-                              child: SectionDropdownWidget(
+                              child: DropdownWidget(
                                 componentName: 'Font family',
                                 selectedValue: '\"\"',
                                 type: 'font',
-                                values: null!,
+                                values: null,
                               ),
                             ),
                             wrapWithModel(
                               model: _model.sizeModel,
                               updateCallback: () => setState(() {}),
-                              child: SectionDropdownWidget(
+                              child: DropdownWidget(
                                 componentName: 'Size',
                                 selectedValue: '\"\"',
                                 type: 'std',
-                                values: null!,
+                                values: null,
                               ),
                             ),
                             wrapWithModel(
                               model: _model.styleModel,
                               updateCallback: () => setState(() {}),
-                              child: SectionDropdownWidget(
+                              child: DropdownWidget(
                                 componentName: 'Style',
                                 selectedValue: '\"\"',
                                 type: 'std',
-                                values: null!,
+                                values: null,
                               ),
                             ),
                             wrapWithModel(
                               model: _model.weightModel,
                               updateCallback: () => setState(() {}),
-                              child: SectionDropdownWidget(
+                              child: DropdownWidget(
                                 componentName: 'Weight',
                                 selectedValue: '\"\"',
                                 type: 'std',
-                                values: null!,
+                                values: null,
                               ),
                             ),
                             wrapWithModel(
                               model: _model.lineHeightModel,
                               updateCallback: () => setState(() {}),
-                              child: SectionDropdownWidget(
+                              child: DropdownWidget(
                                 componentName: 'Line height',
                                 selectedValue: '\"\"',
                                 type: 'std',
-                                values: null!,
+                                values: null,
                               ),
                             ),
                             wrapWithModel(
                               model: _model.textAlignmentModel,
                               updateCallback: () => setState(() {}),
-                              child: SectionDropdownWidget(
+                              child: DropdownWidget(
                                 componentName: 'Text alignment',
                                 selectedValue: '\"\"',
                                 type: 'std',
-                                values: null!,
+                                values: null,
                               ),
                             ),
                           ],
@@ -196,41 +196,41 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                                 wrapWithModel(
                                   model: _model.fontFamilyModel2,
                                   updateCallback: () => setState(() {}),
-                                  child: SectionDropdownWidget(
+                                  child: DropdownWidget(
                                     componentName: 'Font family',
                                     selectedValue: '\"\"',
                                     type: 'font',
-                                    values: null!,
+                                    values: null,
                                   ),
                                 ),
                                 wrapWithModel(
                                   model: _model.fontFamilyModel3,
                                   updateCallback: () => setState(() {}),
-                                  child: SectionDropdownWidget(
+                                  child: DropdownWidget(
                                     componentName: 'Size',
                                     selectedValue: '\"\"',
                                     type: 'std',
-                                    values: null!,
+                                    values: null,
                                   ),
                                 ),
                                 wrapWithModel(
                                   model: _model.fontFamilyModel4,
                                   updateCallback: () => setState(() {}),
-                                  child: SectionDropdownWidget(
+                                  child: DropdownWidget(
                                     componentName: 'Style',
                                     selectedValue: '\"\"',
                                     type: 'std',
-                                    values: null!,
+                                    values: null,
                                   ),
                                 ),
                                 wrapWithModel(
                                   model: _model.fontFamilyModel5,
                                   updateCallback: () => setState(() {}),
-                                  child: SectionDropdownWidget(
+                                  child: DropdownWidget(
                                     componentName: 'Weight',
                                     selectedValue: '\"\"',
                                     type: 'std',
-                                    values: null!,
+                                    values: null,
                                   ),
                                 ),
                               ],
@@ -261,41 +261,41 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                                 wrapWithModel(
                                   model: _model.fontFamilyModel6,
                                   updateCallback: () => setState(() {}),
-                                  child: SectionDropdownWidget(
+                                  child: DropdownWidget(
                                     componentName: 'Font family',
                                     selectedValue: '\"\"',
                                     type: 'font',
-                                    values: null!,
+                                    values: null,
                                   ),
                                 ),
                                 wrapWithModel(
                                   model: _model.fontFamilyModel7,
                                   updateCallback: () => setState(() {}),
-                                  child: SectionDropdownWidget(
+                                  child: DropdownWidget(
                                     componentName: 'Size',
                                     selectedValue: '\"\"',
                                     type: 'std',
-                                    values: null!,
+                                    values: null,
                                   ),
                                 ),
                                 wrapWithModel(
                                   model: _model.fontFamilyModel8,
                                   updateCallback: () => setState(() {}),
-                                  child: SectionDropdownWidget(
+                                  child: DropdownWidget(
                                     componentName: 'Style',
                                     selectedValue: '\"\"',
                                     type: 'std',
-                                    values: null!,
+                                    values: null,
                                   ),
                                 ),
                                 wrapWithModel(
                                   model: _model.fontFamilyModel9,
                                   updateCallback: () => setState(() {}),
-                                  child: SectionDropdownWidget(
+                                  child: DropdownWidget(
                                     componentName: 'Weight',
                                     selectedValue: '\"\"',
                                     type: 'std',
-                                    values: null!,
+                                    values: null,
                                   ),
                                 ),
                               ],
