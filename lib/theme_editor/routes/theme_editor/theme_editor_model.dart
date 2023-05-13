@@ -32,9 +32,9 @@ class ThemeEditorModel extends FlutterFlowModel {
   // Model for Palette.
   late ListItemModel paletteModel;
   // Model for Typography.
-  late ListItemModel typographyModel;
+  late ListItemModel typographyModel1;
   // Model for Layout.
-  late ListItemModel layoutModel;
+  late ListItemModel layoutModel1;
   // Model for Elements.
   late ListItemModel elementsModel;
   // Model for Animation.
@@ -77,6 +77,12 @@ class ThemeEditorModel extends FlutterFlowModel {
   late SectionToggleModel sectionToggleModel;
   // Model for BottomSheetNav component.
   late BottomSheetNavModel bottomSheetNavModel3;
+  // Model for Buttons.
+  late ListItemModel buttonsModel;
+  // Model for Typography.
+  late ListItemModel typographyModel2;
+  // Model for Layout.
+  late ListItemModel layoutModel2;
   // Model for BottomSheetNav component.
   late BottomSheetNavModel bottomSheetNavModel4;
   // Model for BottomSheetNav component.
@@ -87,8 +93,8 @@ class ThemeEditorModel extends FlutterFlowModel {
   void initState(BuildContext context) {
     bottomSheetTitleModel = createModel(context, () => BottomSheetTitleModel());
     paletteModel = createModel(context, () => ListItemModel());
-    typographyModel = createModel(context, () => ListItemModel());
-    layoutModel = createModel(context, () => ListItemModel());
+    typographyModel1 = createModel(context, () => ListItemModel());
+    layoutModel1 = createModel(context, () => ListItemModel());
     elementsModel = createModel(context, () => ListItemModel());
     animationModel = createModel(context, () => ListItemModel());
     themeBrowserModel = createModel(context, () => ListItemModel());
@@ -111,6 +117,9 @@ class ThemeEditorModel extends FlutterFlowModel {
     paddingModel5 = createModel(context, () => DropdownModel());
     sectionToggleModel = createModel(context, () => SectionToggleModel());
     bottomSheetNavModel3 = createModel(context, () => BottomSheetNavModel());
+    buttonsModel = createModel(context, () => ListItemModel());
+    typographyModel2 = createModel(context, () => ListItemModel());
+    layoutModel2 = createModel(context, () => ListItemModel());
     bottomSheetNavModel4 = createModel(context, () => BottomSheetNavModel());
     bottomSheetNavModel5 = createModel(context, () => BottomSheetNavModel());
   }
@@ -118,8 +127,8 @@ class ThemeEditorModel extends FlutterFlowModel {
   void dispose() {
     bottomSheetTitleModel.dispose();
     paletteModel.dispose();
-    typographyModel.dispose();
-    layoutModel.dispose();
+    typographyModel1.dispose();
+    layoutModel1.dispose();
     elementsModel.dispose();
     animationModel.dispose();
     themeBrowserModel.dispose();
@@ -141,6 +150,9 @@ class ThemeEditorModel extends FlutterFlowModel {
     paddingModel5.dispose();
     sectionToggleModel.dispose();
     bottomSheetNavModel3.dispose();
+    buttonsModel.dispose();
+    typographyModel2.dispose();
+    layoutModel2.dispose();
     bottomSheetNavModel4.dispose();
     bottomSheetNavModel5.dispose();
   }

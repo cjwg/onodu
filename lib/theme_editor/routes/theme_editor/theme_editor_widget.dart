@@ -153,7 +153,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                 );
                               },
                               child: wrapWithModel(
-                                model: _model.typographyModel,
+                                model: _model.typographyModel1,
                                 updateCallback: () => setState(() {}),
                                 child: ListItemWidget(
                                   leftIcon: Icon(
@@ -186,7 +186,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                 );
                               },
                               child: wrapWithModel(
-                                model: _model.layoutModel,
+                                model: _model.layoutModel1,
                                 updateCallback: () => setState(() {}),
                                 child: ListItemWidget(
                                   leftIcon: Icon(
@@ -728,6 +728,118 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                 curve: Curves.ease,
                               );
                             },
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              25.0, 0.0, 25.0, 0.0),
+                          child: ListView(
+                            padding: EdgeInsets.zero,
+                            shrinkWrap: true,
+                            scrollDirection: Axis.vertical,
+                            children: [
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  setState(() {
+                                    _model.currentThemeProperties = 'palette';
+                                  });
+                                  await _model.pageViewController?.nextPage(
+                                    duration: Duration(milliseconds: 300),
+                                    curve: Curves.ease,
+                                  );
+                                },
+                                child: wrapWithModel(
+                                  model: _model.buttonsModel,
+                                  updateCallback: () => setState(() {}),
+                                  child: ListItemWidget(
+                                    leftIcon: Icon(
+                                      FFIcons
+                                          .kinterfaceTextFormattingTextSquare,
+                                    ),
+                                    title: 'Buttons',
+                                    rightIcon: FaIcon(
+                                      FontAwesomeIcons.angleRight,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 20.0,
+                                    ),
+                                    bottomRadius: false,
+                                    topRadius: false,
+                                  ),
+                                ),
+                              ),
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  setState(() {
+                                    _model.currentThemeProperties =
+                                        'typography';
+                                  });
+                                  await _model.pageViewController?.nextPage(
+                                    duration: Duration(milliseconds: 300),
+                                    curve: Curves.ease,
+                                  );
+                                },
+                                child: wrapWithModel(
+                                  model: _model.typographyModel2,
+                                  updateCallback: () => setState(() {}),
+                                  child: ListItemWidget(
+                                    leftIcon: Icon(
+                                      FFIcons.kinterfaceTextFormattingSmallCaps,
+                                    ),
+                                    title: 'Text inputs',
+                                    rightIcon: FaIcon(
+                                      FontAwesomeIcons.angleRight,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 20.0,
+                                    ),
+                                    bottomRadius: false,
+                                    topRadius: false,
+                                  ),
+                                ),
+                              ),
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  setState(() {
+                                    _model.currentThemeProperties = 'layout';
+                                  });
+                                  await _model.pageViewController?.nextPage(
+                                    duration: Duration(milliseconds: 300),
+                                    curve: Curves.ease,
+                                  );
+                                },
+                                child: wrapWithModel(
+                                  model: _model.layoutModel2,
+                                  updateCallback: () => setState(() {}),
+                                  child: ListItemWidget(
+                                    leftIcon: Icon(
+                                      FFIcons.kinterfaceEditAlignSelection1,
+                                    ),
+                                    title: 'Carousels',
+                                    rightIcon: FaIcon(
+                                      FontAwesomeIcons.angleRight,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 20.0,
+                                    ),
+                                    bottomRadius: false,
+                                    topRadius: false,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
