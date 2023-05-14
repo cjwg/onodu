@@ -50,27 +50,24 @@ class _SectionToggleWidgetState extends State<SectionToggleWidget> {
       ),
       child: Align(
         alignment: AlignmentDirectional(0.0, 0.0),
-        child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 17.0, 0.0),
-          child: SwitchListTile.adaptive(
-            value: _model.switchListTileValue ??= false,
-            onChanged: (newValue) async {
-              setState(() => _model.switchListTileValue = newValue!);
-            },
-            title: Text(
-              widget.title!,
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Nunito',
-                    fontSize: 17.0,
-                    fontWeight: FontWeight.w500,
-                  ),
-            ),
-            tileColor: FlutterFlowTheme.of(context).primaryBackground,
-            activeColor: Color(0x27CCDBDC),
-            dense: false,
-            controlAffinity: ListTileControlAffinity.trailing,
-            contentPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+        child: SwitchListTile.adaptive(
+          value: _model.switchListTileValue ??= false,
+          onChanged: (newValue) async {
+            setState(() => _model.switchListTileValue = newValue!);
+          },
+          title: Text(
+            widget.title!,
+            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                  fontFamily: 'Nunito',
+                  fontSize: 17.0,
+                  fontWeight: FontWeight.w500,
+                ),
           ),
+          tileColor: FlutterFlowTheme.of(context).primaryBackground,
+          activeColor: Color(0x27CCDBDC),
+          dense: false,
+          controlAffinity: ListTileControlAffinity.trailing,
+          contentPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
         ),
       ),
     );

@@ -21,6 +21,8 @@ class ThemeFontEditorModel extends FlutterFlowModel {
   late DropdownModel lineHeightModel;
   // Model for TextAlignment.
   late DropdownModel textAlignmentModel;
+  // Model for MaxTextWidth.
+  late DropdownModel maxTextWidthModel;
   // Model for FontFamily.
   late DropdownModel fontFamilyModel2;
   // Model for FontFamily.
@@ -47,6 +49,7 @@ class ThemeFontEditorModel extends FlutterFlowModel {
     weightModel = createModel(context, () => DropdownModel());
     lineHeightModel = createModel(context, () => DropdownModel());
     textAlignmentModel = createModel(context, () => DropdownModel());
+    maxTextWidthModel = createModel(context, () => DropdownModel());
     fontFamilyModel2 = createModel(context, () => DropdownModel());
     fontFamilyModel3 = createModel(context, () => DropdownModel());
     fontFamilyModel4 = createModel(context, () => DropdownModel());
@@ -64,6 +67,7 @@ class ThemeFontEditorModel extends FlutterFlowModel {
     weightModel.dispose();
     lineHeightModel.dispose();
     textAlignmentModel.dispose();
+    maxTextWidthModel.dispose();
     fontFamilyModel2.dispose();
     fontFamilyModel3.dispose();
     fontFamilyModel4.dispose();

@@ -170,6 +170,18 @@ class _ThemeFontEditorWidgetState extends State<ThemeFontEditorWidget> {
                                 values: null,
                               ),
                             ),
+                            Expanded(
+                              child: wrapWithModel(
+                                model: _model.maxTextWidthModel,
+                                updateCallback: () => setState(() {}),
+                                child: DropdownWidget(
+                                  componentName: 'Max text width',
+                                  selectedValue: '\"\"',
+                                  type: 'std',
+                                  values: null,
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),

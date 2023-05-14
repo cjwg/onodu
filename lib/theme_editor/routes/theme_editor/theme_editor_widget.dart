@@ -75,7 +75,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
         ),
         child: Container(
           width: double.infinity,
-          height: 620.0,
+          height: 743.0,
           child: PageView(
             controller: _model.pageViewController ??=
                 PageController(initialPage: 0),
@@ -673,38 +673,39 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                     componentName: '- Top',
                                   ),
                                 ),
-                                Expanded(
-                                  child: wrapWithModel(
-                                    model: _model.paddingModel3,
-                                    updateCallback: () => setState(() {}),
-                                    child: DropdownWidget(
-                                      componentName: '- Bottom',
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: wrapWithModel(
-                                    model: _model.paddingModel4,
-                                    updateCallback: () => setState(() {}),
-                                    child: DropdownWidget(
-                                      componentName: '- Left',
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: wrapWithModel(
-                                    model: _model.paddingModel5,
-                                    updateCallback: () => setState(() {}),
-                                    child: DropdownWidget(
-                                      componentName: '- Right',
-                                    ),
+                                wrapWithModel(
+                                  model: _model.paddingModel3,
+                                  updateCallback: () => setState(() {}),
+                                  child: DropdownWidget(
+                                    componentName: '- Bottom',
                                   ),
                                 ),
                                 wrapWithModel(
-                                  model: _model.sectionToggleModel,
+                                  model: _model.paddingModel4,
+                                  updateCallback: () => setState(() {}),
+                                  child: DropdownWidget(
+                                    componentName: '- Left',
+                                  ),
+                                ),
+                                wrapWithModel(
+                                  model: _model.paddingModel5,
+                                  updateCallback: () => setState(() {}),
+                                  child: DropdownWidget(
+                                    componentName: '- Right',
+                                  ),
+                                ),
+                                wrapWithModel(
+                                  model: _model.sectionToggleModel1,
                                   updateCallback: () => setState(() {}),
                                   child: SectionToggleWidget(
                                     title: 'Full height sections',
+                                  ),
+                                ),
+                                wrapWithModel(
+                                  model: _model.sectionToggleModel2,
+                                  updateCallback: () => setState(() {}),
+                                  child: SectionToggleWidget(
+                                    title: 'Snap to section',
                                   ),
                                 ),
                               ],

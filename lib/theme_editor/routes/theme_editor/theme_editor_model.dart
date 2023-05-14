@@ -74,7 +74,9 @@ class ThemeEditorModel extends FlutterFlowModel {
   // Model for Padding.
   late DropdownModel paddingModel5;
   // Model for SectionToggle component.
-  late SectionToggleModel sectionToggleModel;
+  late SectionToggleModel sectionToggleModel1;
+  // Model for SectionToggle component.
+  late SectionToggleModel sectionToggleModel2;
   // Model for BottomSheetNav component.
   late BottomSheetNavModel bottomSheetNavModel3;
   // Model for Buttons.
@@ -115,7 +117,8 @@ class ThemeEditorModel extends FlutterFlowModel {
     paddingModel3 = createModel(context, () => DropdownModel());
     paddingModel4 = createModel(context, () => DropdownModel());
     paddingModel5 = createModel(context, () => DropdownModel());
-    sectionToggleModel = createModel(context, () => SectionToggleModel());
+    sectionToggleModel1 = createModel(context, () => SectionToggleModel());
+    sectionToggleModel2 = createModel(context, () => SectionToggleModel());
     bottomSheetNavModel3 = createModel(context, () => BottomSheetNavModel());
     buttonsModel = createModel(context, () => ListItemModel());
     typographyModel2 = createModel(context, () => ListItemModel());
@@ -148,7 +151,8 @@ class ThemeEditorModel extends FlutterFlowModel {
     paddingModel3.dispose();
     paddingModel4.dispose();
     paddingModel5.dispose();
-    sectionToggleModel.dispose();
+    sectionToggleModel1.dispose();
+    sectionToggleModel2.dispose();
     bottomSheetNavModel3.dispose();
     buttonsModel.dispose();
     typographyModel2.dispose();
