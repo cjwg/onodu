@@ -885,7 +885,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                         ),
                         Expanded(
                           child: FlutterFlowSwipeableStack(
-                            topCardHeightFraction: 0.8,
+                            topCardHeightFraction: 0.72,
                             middleCardHeightFraction: 0.68,
                             bottomCardHeightFraction: 0.75,
                             topCardWidthFraction: 0.9,
@@ -901,27 +901,15 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                 () => Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
                                       color: Color(0xFFF71010),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(25.0),
-                                      ),
                                     ),
                                 () => Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
                                       color: FlutterFlowTheme.of(context)
                                           .secondary,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(25.0),
-                                      ),
                                     ),
                                 () => Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
                                       color: FlutterFlowTheme.of(context).info,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(25.0),
-                                      ),
                                     ),
                               ][index]();
                             },
