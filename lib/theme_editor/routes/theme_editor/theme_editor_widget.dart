@@ -66,6 +66,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
       ),
       child: Container(
         width: MediaQuery.of(context).size.width * 1.0,
+        height: 620.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).primaryBackground,
           borderRadius: BorderRadius.only(
@@ -79,6 +80,7 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
           width: double.infinity,
           height: 743.0,
           child: PageView(
+            physics: const NeverScrollableScrollPhysics(),
             controller: _model.pageViewController ??=
                 PageController(initialPage: 0),
             scrollDirection: Axis.horizontal,
@@ -901,15 +903,27 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                 () => Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
                                       color: Color(0xFFF71010),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(25.0),
+                                      ),
                                     ),
                                 () => Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
                                       color: FlutterFlowTheme.of(context)
                                           .secondary,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(25.0),
+                                      ),
                                     ),
                                 () => Card(
                                       clipBehavior: Clip.antiAliasWithSaveLayer,
                                       color: FlutterFlowTheme.of(context).info,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(25.0),
+                                      ),
                                     ),
                               ][index]();
                             },
