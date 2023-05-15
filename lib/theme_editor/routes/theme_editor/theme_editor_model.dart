@@ -3,6 +3,7 @@ import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/components/list_item/list_item_widget.dart';
 import '/components/theme_font_editor_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_swipeable_stack.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/page_editor/edit_section/dropdown/dropdown_widget.dart';
@@ -15,6 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:swipeable_card_stack/swipeable_card_stack.dart';
 
 class ThemeEditorModel extends FlutterFlowModel {
   ///  Local state fields for this component.
@@ -89,6 +91,8 @@ class ThemeEditorModel extends FlutterFlowModel {
   late BottomSheetNavModel bottomSheetNavModel4;
   // Model for BottomSheetNav component.
   late BottomSheetNavModel bottomSheetNavModel5;
+  // State field(s) for SwipeableStack widget.
+  late SwipeableCardSectionController swipeableStackController;
 
   /// Initialization and disposal methods.
 
@@ -125,6 +129,7 @@ class ThemeEditorModel extends FlutterFlowModel {
     layoutModel2 = createModel(context, () => ListItemModel());
     bottomSheetNavModel4 = createModel(context, () => BottomSheetNavModel());
     bottomSheetNavModel5 = createModel(context, () => BottomSheetNavModel());
+    swipeableStackController = SwipeableCardSectionController();
   }
 
   void dispose() {

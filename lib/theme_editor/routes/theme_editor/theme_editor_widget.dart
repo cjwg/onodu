@@ -3,6 +3,7 @@ import '/components/bottom_sheet_title/bottom_sheet_title_widget.dart';
 import '/components/list_item/list_item_widget.dart';
 import '/components/theme_font_editor_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_swipeable_stack.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/page_editor/edit_section/dropdown/dropdown_widget.dart';
@@ -15,6 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:swipeable_card_stack/swipeable_card_stack.dart';
 import 'theme_editor_model.dart';
 export 'theme_editor_model.dart';
 
@@ -879,6 +881,54 @@ class _ThemeEditorWidgetState extends State<ThemeEditorWidget> {
                                 curve: Curves.ease,
                               );
                             },
+                          ),
+                        ),
+                        Expanded(
+                          child: FlutterFlowSwipeableStack(
+                            topCardHeightFraction: 0.8,
+                            middleCardHeightFraction: 0.68,
+                            bottomCardHeightFraction: 0.75,
+                            topCardWidthFraction: 0.9,
+                            middleCardWidthFraction: 0.85,
+                            bottomCardWidthFraction: 0.8,
+                            onSwipeFn: (index) {},
+                            onLeftSwipe: (index) {},
+                            onRightSwipe: (index) {},
+                            onUpSwipe: (index) {},
+                            onDownSwipe: (index) {},
+                            itemBuilder: (context, index) {
+                              return [
+                                () => Card(
+                                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                                      color: Color(0xFFF71010),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(25.0),
+                                      ),
+                                    ),
+                                () => Card(
+                                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondary,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(25.0),
+                                      ),
+                                    ),
+                                () => Card(
+                                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                                      color: FlutterFlowTheme.of(context).info,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(25.0),
+                                      ),
+                                    ),
+                              ][index]();
+                            },
+                            itemCount: 3,
+                            controller: _model.swipeableStackController,
+                            enableSwipeUp: false,
+                            enableSwipeDown: false,
                           ),
                         ),
                       ],
