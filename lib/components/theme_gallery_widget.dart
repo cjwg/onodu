@@ -46,7 +46,7 @@ class _ThemeGalleryWidgetState extends State<ThemeGalleryWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
+      padding: EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 30.0),
       child: Container(
         width: MediaQuery.of(context).size.width * 1.0,
         height: MediaQuery.of(context).size.height * 1.0,
@@ -63,21 +63,37 @@ class _ThemeGalleryWidgetState extends State<ThemeGalleryWidget> {
                     width: MediaQuery.of(context).size.width * 1.0,
                     height: MediaQuery.of(context).size.height * 1.0,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      color: FlutterFlowTheme.of(context).tertiary,
                       borderRadius: BorderRadius.circular(25.0),
                     ),
                   ),
-                  Image.network(
-                    'https://picsum.photos/seed/683/600',
-                    width: 100.0,
-                    height: 100.0,
-                    fit: BoxFit.cover,
+                  Container(
+                    width: MediaQuery.of(context).size.width * 1.0,
+                    height: MediaQuery.of(context).size.height * 1.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      borderRadius: BorderRadius.circular(25.0),
+                    ),
+                    child: Image.network(
+                      'https://picsum.photos/seed/683/600',
+                      width: 100.0,
+                      height: 100.0,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  Image.network(
-                    'https://picsum.photos/seed/58/600',
-                    width: 100.0,
-                    height: 100.0,
-                    fit: BoxFit.cover,
+                  Container(
+                    width: MediaQuery.of(context).size.width * 1.0,
+                    height: MediaQuery.of(context).size.height * 1.0,
+                    decoration: BoxDecoration(
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      borderRadius: BorderRadius.circular(25.0),
+                    ),
+                    child: Image.network(
+                      'https://picsum.photos/seed/58/600',
+                      width: 100.0,
+                      height: 100.0,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ],
               ),
