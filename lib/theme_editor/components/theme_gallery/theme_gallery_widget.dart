@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart'
-    as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -18,12 +16,6 @@ class ThemeGalleryWidget extends StatefulWidget {
 
 class _ThemeGalleryWidgetState extends State<ThemeGalleryWidget> {
   late ThemeGalleryModel _model;
-
-  int get pageViewCurrentIndex => _model.pageViewController != null &&
-          _model.pageViewController!.hasClients &&
-          _model.pageViewController!.page != null
-      ? _model.pageViewController!.page!.round()
-      : 0;
 
   @override
   void setState(VoidCallback callback) {
@@ -76,10 +68,10 @@ class _ThemeGalleryWidgetState extends State<ThemeGalleryWidget> {
               padding: EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
               tabs: [
                 Tab(
-                  text: 'Gallery',
+                  text: 'My themes',
                 ),
                 Tab(
-                  text: 'My themes',
+                  text: 'Favourites',
                 ),
               ],
             ),
@@ -89,99 +81,46 @@ class _ThemeGalleryWidgetState extends State<ThemeGalleryWidget> {
               children: [
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 30.0),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width * 1.0,
-                    height: MediaQuery.of(context).size.height * 1.0,
-                    child: Stack(
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 0.0, 50.0),
-                          child: PageView(
-                            controller: _model.pageViewController ??=
-                                PageController(initialPage: 0),
-                            scrollDirection: Axis.horizontal,
-                            children: [
-                              Container(
-                                width: MediaQuery.of(context).size.width * 1.0,
-                                height:
-                                    MediaQuery.of(context).size.height * 1.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context).tertiary,
-                                  borderRadius: BorderRadius.circular(25.0),
-                                ),
-                              ),
-                              Container(
-                                width: MediaQuery.of(context).size.width * 1.0,
-                                height:
-                                    MediaQuery.of(context).size.height * 1.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  borderRadius: BorderRadius.circular(25.0),
-                                ),
-                                child: Image.network(
-                                  'https://picsum.photos/seed/683/600',
-                                  width: 100.0,
-                                  height: 100.0,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                              Container(
-                                width: MediaQuery.of(context).size.width * 1.0,
-                                height:
-                                    MediaQuery.of(context).size.height * 1.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  borderRadius: BorderRadius.circular(25.0),
-                                ),
-                                child: Image.network(
-                                  'https://picsum.photos/seed/58/600',
-                                  width: 100.0,
-                                  height: 100.0,
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ],
-                          ),
+                      EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 25.0, 25.0),
+                  child: ListView(
+                    padding: EdgeInsets.zero,
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      Card(
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25.0),
                         ),
-                        Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 10.0),
-                            child: smooth_page_indicator.SmoothPageIndicator(
-                              controller: _model.pageViewController ??=
-                                  PageController(initialPage: 0),
-                              count: 3,
-                              axisDirection: Axis.horizontal,
-                              onDotClicked: (i) async {
-                                await _model.pageViewController!.animateToPage(
-                                  i,
-                                  duration: Duration(milliseconds: 500),
-                                  curve: Curves.ease,
-                                );
-                              },
-                              effect: smooth_page_indicator.SlideEffect(
-                                spacing: 8.0,
-                                radius: 16.0,
-                                dotWidth: 7.0,
-                                dotHeight: 8.0,
-                                dotColor: FlutterFlowTheme.of(context).accent2,
-                                activeDotColor:
-                                    FlutterFlowTheme.of(context).primary,
-                                paintStyle: PaintingStyle.fill,
+                        child: Stack(
+                          children: [
+                            Image.network(
+                              'https://picsum.photos/seed/983/600',
+                              width: MediaQuery.of(context).size.width * 1.0,
+                              height: 225.0,
+                              fit: BoxFit.cover,
+                            ),
+                            Container(
+                              width: MediaQuery.of(context).size.width * 1.0,
+                              height: 50.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
                               ),
                             ),
-                          ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
-                Container(),
+                Text(
+                  'Tab View 3',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        fontFamily: 'Nunito',
+                        fontSize: 32.0,
+                      ),
+                ),
               ],
             ),
           ),

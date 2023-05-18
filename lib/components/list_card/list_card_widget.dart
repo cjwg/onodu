@@ -63,13 +63,13 @@ class _ListCardWidgetState extends State<ListCardWidget> {
               height: 250.0,
               fit: BoxFit.cover,
             ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
-              child: Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(25.0, 25.0, 0.0, 0.0),
+                  child: Text(
                     widget.title,
                     textAlign: TextAlign.start,
                     style: FlutterFlowTheme.of(context).titleMedium.override(
@@ -78,16 +78,29 @@ class _ListCardWidgetState extends State<ListCardWidget> {
                           fontSize: 24.0,
                         ),
                   ),
-                  Text(
-                    widget.subtitle,
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Nunito',
-                          color: FlutterFlowTheme.of(context).primary,
-                          fontWeight: FontWeight.w500,
-                        ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
+                    child: Text(
+                      widget.subtitle,
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Nunito',
+                            color: FlutterFlowTheme.of(context).primary,
+                            fontWeight: FontWeight.w500,
+                          ),
+                    ),
                   ),
-                ],
-              ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width * 1.0,
+                  height: 100.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
