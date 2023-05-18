@@ -79,6 +79,7 @@ class _PageTabWidgetState extends State<PageTabWidget> {
           elevation: 0.0,
         ),
         body: SafeArea(
+          top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [

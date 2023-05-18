@@ -170,7 +170,7 @@ class _SectionWidgetState extends State<SectionWidget> {
                       ).then((value) => setState(() {}));
                     },
                     child: Icon(
-                      FFIcons.kinterfaceEditCarouselVertical1,
+                      FFIcons.kinterfaceSettingCog2,
                       color: FlutterFlowTheme.of(context).primaryBackground,
                       size: 24.0,
                     ),

@@ -44,6 +44,7 @@ class _ResetPasswordWidgetState extends State<ResetPasswordWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: SafeArea(
+          top: true,
           child: Padding(
             padding: EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 30.0, 0.0),
             child: Column(
