@@ -1,5 +1,4 @@
 import '/components/bottom_sheet_nav/bottom_sheet_nav_widget.dart';
-import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/theme_editor/palette_item/palette_item_widget.dart';

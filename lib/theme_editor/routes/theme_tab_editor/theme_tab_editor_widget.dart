@@ -1,5 +1,4 @@
 import '/components/bottom_sheet_nav/bottom_sheet_nav_widget.dart';
-import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/theme_editor/palette_item/palette_item_widget.dart';
@@ -51,12 +50,13 @@ class _ThemeTabEditorWidgetState extends State<ThemeTabEditorWidget> {
         ),
       ),
       child: DefaultTabController(
-        length: 3,
+        length: 6,
         initialIndex: 0,
         child: Column(
           children: [
             Expanded(
               child: TabBarView(
+                physics: const NeverScrollableScrollPhysics(),
                 children: [
                   Padding(
                     padding:
@@ -203,34 +203,42 @@ class _ThemeTabEditorWidgetState extends State<ThemeTabEditorWidget> {
                           fontSize: 32.0,
                         ),
                   ),
+                  Text(
+                    'Tab View 4',
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Nunito',
+                          fontSize: 32.0,
+                        ),
+                  ),
+                  Text(
+                    'Tab View 5',
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Nunito',
+                          fontSize: 32.0,
+                        ),
+                  ),
+                  Text(
+                    'Tab View 6',
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Nunito',
+                          fontSize: 32.0,
+                        ),
+                  ),
                 ],
               ),
             ),
             Align(
               alignment: Alignment(0.0, 0),
-              child: FlutterFlowButtonTabBar(
-                useToggleButtonStyle: true,
+              child: TabBar(
+                isScrollable: true,
+                labelColor: FlutterFlowTheme.of(context).primaryText,
+                unselectedLabelColor: FlutterFlowTheme.of(context).primaryText,
                 labelStyle: FlutterFlowTheme.of(context).titleMedium.override(
                       fontFamily: 'Nunito',
                       fontSize: 12.0,
                     ),
-                unselectedLabelStyle:
-                    FlutterFlowTheme.of(context).titleMedium.override(
-                          fontFamily: 'Nunito',
-                          fontSize: 12.0,
-                        ),
-                labelColor: FlutterFlowTheme.of(context).primaryText,
-                unselectedLabelColor:
-                    FlutterFlowTheme.of(context).secondaryText,
-                backgroundColor:
-                    FlutterFlowTheme.of(context).secondaryBackground,
-                unselectedBackgroundColor: FlutterFlowTheme.of(context).accent3,
-                borderWidth: 0.0,
-                borderRadius: 0.0,
-                elevation: 0.0,
-                buttonMargin:
-                    EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
-                padding: EdgeInsetsDirectional.fromSTEB(4.0, 4.0, 4.0, 4.0),
+                indicatorColor: FlutterFlowTheme.of(context).primaryText,
+                indicatorWeight: 1.0,
                 tabs: [
                   Tab(
                     text: 'Palette',
@@ -249,6 +257,15 @@ class _ThemeTabEditorWidgetState extends State<ThemeTabEditorWidget> {
                     icon: Icon(
                       FFIcons.kinterfaceEditAlignSelection1,
                     ),
+                  ),
+                  Tab(
+                    text: 'Example 4',
+                  ),
+                  Tab(
+                    text: 'Example 5',
+                  ),
+                  Tab(
+                    text: 'Example 6',
                   ),
                 ],
               ),
