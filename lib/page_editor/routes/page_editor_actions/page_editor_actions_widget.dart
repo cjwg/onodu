@@ -63,8 +63,7 @@ class _PageEditorActionsWidgetState extends State<PageEditorActionsWidget> {
               action: () async {
                 await showModalBottomSheet(
                   isScrollControlled: true,
-                  backgroundColor:
-                      FlutterFlowTheme.of(context).primaryBackground,
+                  backgroundColor: Color(0x00FBF8F0),
                   context: context,
                   builder: (bottomSheetContext) {
                     return Padding(
